@@ -390,6 +390,7 @@ html body .tc.on::after{content:'✓';position:absolute;top:8px;left:8px;width:2
 .rqm{display:flex;gap:6px 16px;flex-wrap:wrap;color:var(--m);font-size:13px;margin:10px 0 6px}.rqm b{color:var(--t)}.rqm a{color:var(--pt);font-weight:600}
 .rqd{background:var(--soft);border-radius:12px;padding:10px 12px;margin:8px 0;font-size:14px;line-height:1.9}.rqd b{color:var(--pt)}
 .rqx{font-size:13px;color:var(--m);background:var(--soft2);border:1px dashed var(--b2);border-radius:10px;padding:8px 10px;margin:8px 0}
+.vcs{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0}.vch{font:inherit;font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid var(--b2);background:var(--bg);color:var(--t);cursor:pointer}.vch:hover{border-color:var(--p2);color:var(--p2)}.vch.f{background:var(--okbg);color:var(--ok);border-color:transparent}
 .rqw{color:var(--r);background:rgba(196,68,58,.09);border-radius:10px;padding:8px 10px;font-size:13px;margin:8px 0}
 .rqa{margin-top:10px}.rqa label{display:block;font-size:12px;color:var(--m);margin-bottom:4px}.rqa textarea{width:100%;min-height:64px}
 .rqb{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.rqb .btn{height:38px;font-size:13px}.rqf .btn.on{background:var(--p);color:#fff}
@@ -428,6 +429,78 @@ html body .tc.on::after{content:'✓';position:absolute;top:8px;left:8px;width:2
 @keyframes spUp{from{opacity:0;transform:translateY(14px)}to{opacity:var(--o,1);transform:none}}
 @keyframes spBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes spSpin{to{transform:rotate(360deg)}}
+/* ===== إضافات: الإحصائيات وطلبات الباحثين والنماذج ===== */
+.sb{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--track);width:100%}.sb i{display:block;height:100%;transition:width .5s}
+.c1{background:var(--p2)}.c2{background:var(--g)}.c3{background:var(--b2)}
+.lgd{display:flex;gap:16px;font-size:12.5px;color:var(--m);margin:-4px 0 10px;flex-wrap:wrap}.lgd i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-left:6px}
+.sd{border:1px solid var(--b);border-radius:var(--rm);margin-bottom:8px;background:var(--soft)}.sd[open]{background:var(--card);box-shadow:var(--sh)}
+.sd summary{display:flex;align-items:center;gap:12px;padding:11px 14px;cursor:pointer;flex-wrap:wrap;list-style:none}.sd summary::-webkit-details-marker{display:none}
+.sdm{color:var(--m);font-size:12.5px;flex:1;min-width:120px}.sdn{font:700 22px var(--fd);color:var(--pt);min-width:30px;text-align:center}.sdc{font-size:12.5px;color:var(--m);white-space:nowrap}
+.sdb{padding:4px 14px 12px;display:grid;gap:6px}.sdr{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:7px 10px;border-radius:var(--rs);background:var(--soft);color:var(--t);text-decoration:none}.sdr span:first-child{flex:1;min-width:140px;font-weight:600}.sdr:hover{background:var(--hov)}
+.sg2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}.sg2 .cd{margin:0}
+.btn.sm{padding:0 12px;height:34px;font-size:13px}.btn.on{background:var(--p);color:#fff}
+.fb{border:1px solid var(--b);border-radius:var(--rm);padding:12px;margin-bottom:10px;background:var(--soft)}
+/* الفلتر الذكي (مدمج) */
+.sxbar{position:relative;flex-wrap:nowrap;align-items:center}.sxbar .sch{min-width:160px!important}.sxbar select{flex:none;min-width:0;max-width:130px}.sxbar>.btn{flex:none}.sxanc{flex:none;position:static}
+.sxfb.btn{white-space:nowrap}.sxn{background:var(--p);color:#fff;border-radius:10px;padding:0 7px;font-size:11px;margin-inline-start:4px}
+.sxpop{position:absolute;top:calc(100% + 6px);right:0;width:min(620px,100%);max-height:72vh;overflow:auto;z-index:30;background:var(--card);border:1px solid var(--b2);border-radius:var(--rc);box-shadow:0 18px 50px rgba(10,25,26,.28);padding:14px;display:flex;flex-direction:column;gap:12px}.sxpop[hidden]{display:none}
+.sxr{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.sxq>b,.sxg>b{display:block;font-size:12px;color:var(--m);margin-bottom:6px}
+.sxc{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--b2);background:var(--card);color:var(--t);border-radius:20px;padding:4px 11px;font:500 12.5px var(--f);cursor:pointer;transition:.15s}.sxc:hover{border-color:var(--p2)}
+.sxc i{font-style:normal;font-size:11px;background:var(--soft);color:var(--m);border-radius:10px;padding:0 7px;min-width:20px;text-align:center}
+.sxc.on{background:var(--p);color:#fff;border-color:var(--p)}.sxc.on i{background:rgba(255,255,255,.22);color:#fff}.sxc.s{border-style:dashed;color:var(--pt)}.sxc.v{cursor:default;background:var(--gbg);color:var(--gbt);border-color:transparent}.sxc.v span,.sxc.v u{cursor:pointer}.sxc.v u{text-decoration:none;opacity:.6}
+.sxd summary{cursor:pointer;font-size:12.5px;font-weight:600;color:var(--pt)}.sxf{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:10px}.sxg>div{display:flex;gap:5px;flex-wrap:wrap}
+.sxt{border-top:1px dashed var(--b);padding-top:10px}.btn.sm{height:34px;padding:0 12px;font-size:12.5px}
+.sxcn{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.sxp{display:inline-flex;align-items:center;gap:5px;padding:2px 10px;border-radius:20px;font-size:11.5px;font-weight:600;background:var(--soft);color:var(--m)}.sxp.g{background:color-mix(in srgb,var(--p2) 14%,var(--card));color:var(--pt)}.sxp u{text-decoration:none;cursor:pointer;opacity:.6}
+.sxa{color:var(--r);font-size:12px;cursor:pointer;font-weight:600}
+#rl>article[data-sx=r]{box-shadow:var(--sh),inset -5px 0 0 var(--r)}#rl>article[data-sx=o]{box-shadow:var(--sh),inset -5px 0 0 var(--o)}#rl>article[data-sx=y]{box-shadow:var(--sh),inset -5px 0 0 var(--y)}
+@media(max-width:700px){.sxbar{flex-wrap:wrap}.sxbar .sch{flex:1 0 100%}}
+.stw{overflow:auto;border-radius:var(--rs);box-shadow:var(--sh);background:var(--card);max-height:70vh}.stt{border-collapse:collapse;min-width:100%;font-size:12.5px}.stt th,.stt td{border:1px solid var(--b2);padding:6px 4px;text-align:center}.stt th{background:var(--soft);color:var(--pt);font-weight:700;position:sticky;top:0}.stt td.nz{cursor:pointer;font-weight:700;color:var(--pt)}.stt td.nz:hover{background:var(--hov)}.stt td.z{color:var(--m);opacity:.45}.stt .dn{background:var(--soft);font-weight:700;min-width:120px}.stt .sn{min-width:110px;text-align:right}.stt tr.tr td{font-weight:800;background:color-mix(in srgb,var(--p2) 12%,var(--card));border-top:2px solid var(--p2)}.stt .sd0{min-width:110px}
+</style><style>/* ===== GSX ===== */
+.gx label{display:block;font-size:12.5px;font-weight:600;color:var(--m);margin:0 0 6px}
+.gx-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.gx-f{margin:12px 0}.gx-f input{margin-bottom:8px}
+.gx-hint{margin:10px 0 0;padding:9px 13px;border-radius:10px;background:var(--gbg);color:var(--gbt);font-size:13px;line-height:1.7}
+.gx-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.gx-chips button{border:1px solid var(--b2);background:var(--soft);color:var(--pt);border-radius:20px;padding:4px 12px;font:600 12px var(--f);cursor:pointer;transition:background .2s}
+.gx-chips button:hover{background:var(--hov)}
+.gx-rc{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--b);border-radius:var(--rs);background:var(--soft);margin-bottom:8px}
+.gx-rc label.gx-ck{display:flex;gap:9px;align-items:center;margin:0;cursor:pointer;font-size:14px;color:var(--t)}
+.gx-rc input[type=checkbox]{width:18px;height:18px;flex:none;accent-color:var(--p2)}
+.gx-rc select{height:40px}
+.gx-w{color:var(--o)}
+.gx-pv{margin-top:12px}.gx-pv b{display:block;font-size:12.5px;color:var(--m);margin-bottom:6px}
+.gx-pv pre,.gx-pre{margin:0;white-space:pre-wrap;word-wrap:break-word;font:14px/1.9 var(--f);padding:12px 14px;border-radius:var(--rs);background:var(--soft);border:1px solid var(--b);border-right:4px solid #25d366}
+.gx-num{padding:12px 14px;border-radius:var(--rs);background:var(--rbg);color:var(--r);font-size:14px;margin-bottom:14px}.gx-num p{margin:6px 0 0;color:var(--t)}
+.gx-steps{display:flex;gap:8px;overflow:auto;padding-bottom:10px;margin-bottom:12px}
+.gx-st{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--b2);background:var(--card);color:var(--m);border-radius:20px;padding:5px 12px 5px 8px;font:600 12.5px var(--f);cursor:pointer;white-space:nowrap}
+.gx-st i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--soft);font-style:normal;font-size:12px}
+.gx-st.on{border-color:var(--p2);color:var(--pt);box-shadow:0 0 0 3px color-mix(in srgb,var(--p2) 14%,transparent)}
+.gx-st.ok i{background:var(--ok);color:#fff}
+.gx-to{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.gx-to b{font-size:16px}.gx-role{margin-inline-start:8px;padding:2px 10px;border-radius:12px;background:var(--soft);border:1px solid var(--b);font-size:12px;color:var(--m)}
+.gx-to small{color:var(--m)}
+#gxqt{line-height:1.9;font-size:14px}
+.gx-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.gx-act .btn:first-child{flex:1;min-width:170px;background:#25d366;color:#052e16}
+.gx-done{display:flex;flex-direction:column;align-items:center;gap:14px;padding:26px 10px;text-align:center}
+.gx-wc{padding:13px 15px;border-radius:var(--rs);background:var(--soft);border:1px solid var(--b);border-right:4px solid var(--r);margin-bottom:10px}
+.gx-wh{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.gx-wh b{color:var(--r)}.gx-d{margin-inline-start:auto;color:var(--m);font-size:12.5px}
+.gx-wm{font-size:13px;color:var(--m);margin-top:4px}
+.gx-wc p{margin:8px 0;line-height:1.8;white-space:pre-wrap}
+.gx-ws{display:flex;gap:6px;flex-wrap:wrap}.gx-wa{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.gx-wa .btn{height:36px;font-size:13px}
+.qb.warn i{color:var(--r);background:var(--rbg)}
+@media(max-width:560px){.gx-row,.gx-rc{grid-template-columns:1fr}}
+
+.gx-seg{display:flex;gap:6px;margin-bottom:14px;padding:5px;border-radius:var(--rm);background:var(--card);box-shadow:var(--sh);overflow:auto}
+.gx-seg button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;background:none;height:40px;padding:0 16px;border-radius:var(--rs);font:600 14px var(--f);color:var(--m);cursor:pointer;white-space:nowrap;transition:background .2s,color .2s}
+.gx-seg button.on{background:var(--p);color:#fff}.gx-seg button:not(.on):hover{background:var(--hov);color:var(--pt)}
+.gx-stats{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}.gx-s{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;background:var(--soft);border:1px solid var(--b);font-size:13px;color:var(--m)}.gx-s b{font-size:16px;color:var(--pt)}.gx-s.r b{color:var(--r)}.gx-s.o b{color:var(--o)}
+.gx-rm{display:block;color:var(--m);font-size:11.5px;margin-top:2px}
+.gx-p{margin:-6px 0 12px;color:var(--m);font-size:13.5px;line-height:1.8}
+.gx-mc{max-width:640px}.gx-b{margin-top:18px}.gx-ft{display:flex;gap:10px;margin-top:18px}.gx-ft .btn:first-child{flex:1}
+.gx-tc{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:12px 14px;border:1px solid var(--b);border-radius:var(--rs);background:var(--soft);margin-bottom:8px}
+.gx-tt{flex:1;min-width:0}.gx-tt b{margin-inline-end:8px}.gx-tt p{margin:6px 0 0;color:var(--m);font-size:13px;line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap}
+.gx-ta{display:flex;gap:6px;flex:none;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:560px){.gx-tc{flex-direction:column}.gx-ta{justify-content:flex-start}}
 </style></head><body>
 <div id="appSplash" role="status" aria-label="جارٍ التحميل"><div class="aspl"><i class="aspr"></i><img data-l alt=""></div><h1>منظومة الدراسات العليا</h1><p>الإدارة</p><div class="aspb"><i></i></div></div>
 <script>(function(){var s=document.getElementById('appSplash'),t=Date.now(),d=0;function h(){if(d||!s)return;d=1;s.classList.add('out');setTimeout(function(){s.remove()},700)}function g(){setTimeout(h,Math.max(0,1500-(Date.now()-t)))}if(document.readyState=='complete')g();else addEventListener('load',g);setTimeout(h,5000)})()</script>
@@ -438,7 +511,7 @@ html body .tc.on::after{content:'✓';position:absolute;top:8px;left:8px;width:2
 <script>window.FBREADY=new Promise(function(r){window.__fbr=r});</script>
 <script type="module">
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js';
-import {getDatabase,ref,get,update,push,query,orderByChild,orderByKey,equalTo,startAt,startAfter,limitToLast,serverTimestamp,onValue} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-database.js';
+import {getDatabase,ref,get,update,push,query,orderByChild,orderByKey,equalTo,startAt,startAfter,limitToLast,serverTimestamp,onValue,runTransaction} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-database.js';
 import {getAuth,setPersistence,browserSessionPersistence,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,onAuthStateChanged,EmailAuthProvider,reauthenticateWithCredential,updatePassword,sendPasswordResetEmail} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-auth.js';
 
 /* ===== إعدادات المشروع (غيّر databaseURL هنا فقط إن لزم) ===== */
@@ -450,10 +523,10 @@ const app=initializeApp(CFG,'gs-admin'),db=getDatabase(app),auth=getAuth(app),sA
 let OFF=0;onValue(ref(db,'.info/serverTimeOffset'),s=>{OFF=+s.val()||0});
 
 /* ===== أدوات ===== */
-const PERMS=['log','print','committee','req_extend','req_suspend','req_plan','req_committee','req_defense','req_sup'],REQ_TYPES=['extend','suspend','plan','committee','defense','sup'];
-const PUBF=['name','job','nationality','dept','specialty','degree','status','phone','enrollDate','enrollEnd','regDate','coursesDate','committeeDate','defenseDate','titleAr','titleEn','created'],PRIVF=['natId','foreignId','birthPlace','notes'];
-const PUBS=['faculty','univ','alertDays','vd','dean','vp'];
-const DEF={faculty:'التربية للطفولة المبكرة',univ:'جامعة بني سويف',alertDays:'30',dg:'',vd:'',dean:'',vp:'',pres:'أ.د/ طارق علي محمد',regDecision:'',adminEmail:''};PERMS.forEach(k=>DEF['pm_'+k]='1');
+const PERMS=['log','print','committee','req_extend','req_suspend','req_plan','req_committee','req_defense','req_sup','warn'],REQ_TYPES=['extend','suspend','plan','committee','defense','sup'];
+const PUBF=['name','job','nationality','dept','specialty','degree','status','phone','enrollDate','enrollEnd','regDate','coursesDate','committeeDate','defenseDate','titleAr','titleEn','created','rtype','gender'],PRIVF=['natId','foreignId','birthPlace','notes'];
+const PUBS=['faculty','univ','alertDays','vd','vdPhone','dean','vp'];
+const DEF={faculty:'التربية للطفولة المبكرة',univ:'جامعة بني سويف',alertDays:'30',dg:'',vd:'',vdPhone:'',dean:'',vp:'',pres:'أ.د/ طارق علي محمد',regDecision:'',adminEmail:''};PERMS.forEach(k=>DEF['pm_'+k]='1');
 const NET='تعذّر الاتصال بالخادم — تحقق من الإنترنت';
 const mkErr=m=>{const e=new Error(m);e.app=1;return e};
 function fe(e){if(e&&e.app)return e;const c=String((e&&e.code)||'')+' '+String((e&&e.message)||e);let m;
@@ -538,13 +611,13 @@ async function loadSET(){const[a,b]=await Promise.all([get(ref(db,'public/settin
 async function baseline(){const s=await get(query(ref(db,'activity'),orderByKey(),limitToLast(1)));let k='-';s.forEach(c=>{k=c.key});ST.actKey=k}
 
 async function all(){need();await baseline();
- const[items,ev,set,rq,sp,lg]=await Promise.all([syncR(),loadEV(),loadSET(),loadRQ(),loadSUP(),syncLG()]);
+ const[items,ev,set,rq,sp,lg,tp,rm,fm,rr]=await Promise.all([syncR(),loadEV(),loadSET(),loadRQ(),loadSUP(),syncLG(),loadTPL(),remLoad(),loadFORMS().catch(()=>[]),loadRR().catch(()=>[])]);
  const researchers=Object.entries(items).map(([id,it])=>rowOf(id,it));
- return{researchers,events:ev.filter(e=>items[e.rid]),settings:set,requests:rq,supervisors:supList(),logs:lgList()}}
-async function poll(){need();const s=await get(query(ref(db,'activity'),orderByKey(),startAfter(ST.actKey||'-')));let rq=false,lg=false,last=null;
- s.forEach(c=>{last=c.key;if((c.val()||{}).kind==='request')rq=true;else lg=true});if(last)ST.actKey=last;
- if(rq||!ST.RQ)await loadRQ();if(lg||!ST.LG)await syncLG();return{rq,lg}}
-async function reqList(){await poll();return{requests:ST.RQ,supervisors:supList()}}
+ return{researchers,events:ev.filter(e=>items[e.rid]),settings:set,requests:rq,supervisors:supList(),logs:lgList(),templates:tp,remlog:rm,forms:fm,rr}}
+async function poll(){need();const s=await get(query(ref(db,'activity'),orderByKey(),startAfter(ST.actKey||'-')));let rq=false,lg=false,rr=false,last=null;
+ s.forEach(c=>{last=c.key;const k=(c.val()||{}).kind;if(k==='request')rq=true;else if(k==='rreq')rr=true;else lg=true});if(last)ST.actKey=last;
+ if(rq||!ST.RQ)await loadRQ();if(lg||!ST.LG)await syncLG();if(rr||!ST.RR)await loadRR().catch(()=>{ST.RR=ST.RR||[]});return{rq,lg,rr}}
+async function reqList(){await poll();return{requests:ST.RQ,supervisors:supList(),rr:ST.RR}}
 async function ov(){await poll();await loadSUP();return{supervisors:supList(),logs:lgList()}}
 async function auditList(){need();const out=[],ym=cairo().ym,y=+ym.slice(0,4),m=+ym.slice(4),pm=m===1?(y-1)+'12':y+String(m-1).padStart(2,'0');
  for(const k of[ym,pm]){const s=await get(query(ref(db,'audit/'+k),orderByKey(),limitToLast(150)));s.forEach(c=>{const v=c.val();out.push({id:c.key,at:v.at||'',act:v.act||'',ref:v.ref||'',info:v.info||''})})}
@@ -580,16 +653,18 @@ async function saveR(r){need();const sups=arr(r.supervisors),com=arr(r.committee
  sids.forEach(s=>upd['sup_researchers/'+s+'/'+id]=true);oldSids.filter(s=>!sids.includes(s)).forEach(s=>upd['sup_researchers/'+s+'/'+id]=null);
  const pub={},priv={};PUBF.forEach(k=>{if(k==='created')pub[k]=created;else pub[k]=String(r[k]==null?'':r[k])});PRIVF.forEach(k=>priv[k]=String(r[k]==null?'':r[k]));
  pub.supervisors=JSON.stringify(sups.map(s=>({n:s.n,j:s.j})));priv.sup=JSON.stringify(sups.map(s=>({n:s.n,j:s.j,natId:clean(s.natId)})));
+ {const rk=async x=>{const c=clean(x.natId)||String(x.foreignId||'').replace(/[\s\-]/g,'').toUpperCase().replace(/[^A-Z0-9]/g,'');return c.length>=8?await rHash(c):null},nh=await rk(r),op=(items[id]||{}).priv||{},oh=items[id]?await rk(op):null,ac=(await get(ref(db,'res_acc/'+id))).val(),al=(await get(ref(db,'res_alias/'+id))).val();
+ if(nh){if(!(al&&al.h))upd['rsec/'+nh]=id;if(oh&&oh!==nh)upd['rsec/'+oh]=null;if(ac&&ac.h&&ac.h!==nh)upd['rsec/'+ac.h]=null;upd['res_acc/'+id]={h:nh,at:cairo().d,id:1}}}
  upd['researchers_pub/'+id]=pub;upd['researchers_priv/'+id]=priv;upd['researchers_com/'+id]=JSON.stringify(com);
  upd['researchers_idx/'+id]={n:pub.name,dg:pub.degree,st:pub.status,u:sv()};upd['meta/rev']=sv();
  aud(upd,r.id?'تعديل باحث':'إضافة باحث',pub.name,pub.degree);
  await update(ref(db),upd);return{row:{...r,id,created},newSupervisorAccounts:creds}}
 
 async function delR(id){need();const items=await syncR(),SUP=await loadSUP(),it=items[id]||{},p=it.pub||{},upd={};
- ['researchers_pub','researchers_priv','researchers_com','researchers_arch','logs','logs_arch','docs'].forEach(n=>upd[n+'/'+id]=null);
+ ['researchers_pub','researchers_priv','researchers_com','researchers_arch','logs','logs_arch','docs','warnings','rem_log'].forEach(n=>upd[n+'/'+id]=null);
  upd['researchers_idx/'+id]={del:true,u:sv()};Object.keys(SUP).forEach(s=>upd['sup_researchers/'+s+'/'+id]=null);
- const[a,b,c]=await Promise.all([get(query(ref(db,'logs_adm'),orderByChild('rid'),equalTo(id))),get(query(ref(db,'events'),orderByChild('rid'),equalTo(id))),get(query(ref(db,'requests'),orderByChild('rid'),equalTo(id)))]);
- a.forEach(s=>{upd['logs_adm/'+s.key]={del:true,rid:id,sid:(s.val()||{}).sid||'',u:sv()}});b.forEach(s=>{upd['events/'+s.key]=null});c.forEach(s=>{upd['requests/'+s.key]=null});
+ const[a,b,c,d4]=await Promise.all([get(query(ref(db,'logs_adm'),orderByChild('rid'),equalTo(id))),get(query(ref(db,'events'),orderByChild('rid'),equalTo(id))),get(query(ref(db,'requests'),orderByChild('rid'),equalTo(id))),get(query(ref(db,'rreq'),orderByChild('rid'),equalTo(id))).catch(()=>({forEach(){}}))]);
+ a.forEach(s=>{upd['logs_adm/'+s.key]={del:true,rid:id,sid:(s.val()||{}).sid||'',u:sv()}});b.forEach(s=>{upd['events/'+s.key]=null});c.forEach(s=>{upd['requests/'+s.key]=null});d4.forEach(s=>{upd['rreq/'+s.key]=null});
  upd['meta/rev']=sv();aud(upd,'حذف باحث',p.name||id,p.degree||'');await update(ref(db),upd);
  if(ST.RQ)ST.RQ=ST.RQ.filter(q=>q.rid!==id);if(ST.EV)ST.EV=ST.EV.filter(e=>e.rid!==id);return{done:true}}
 async function saveEV(e){need();const id=e.id||nk(),v={rid:String(e.rid||''),type:String(e.type||''),due:String(e.due||''),note:String(e.note||''),done:String(e.done||'0')};await update(ref(db),{['events/'+id]:v});return{row:{id,...v}}}
@@ -623,13 +698,13 @@ async function importRows(rows){need();const items=await syncR(),have={};Object.
  return{n}}
 
 /* ===== النسخ الاحتياطي: تصدير / استيراد / تنظيف ===== */
-const FLAT=['public','settings_private','supervisors','sup_researchers','researchers_pub','researchers_priv','researchers_com','researchers_arch','requests','events','docs'];
+const FLAT=['public','settings_private','supervisors','sup_researchers','researchers_pub','researchers_priv','researchers_com','researchers_arch','requests','rreq','events','docs','warnings','rem_log'];
 async function exportAll(o={}){need();const since=+o.since||0,cb=o.onProgress||(()=>{}),out={_meta:{app:'gs-portal',schema:2,exportedAt:new Date().toISOString(),mode:since?'delta':'full',since:since||null,maxU:0,counts:{}}};let rids;
  const mx=await get(query(ref(db,'researchers_idx'),orderByChild('u'),limitToLast(1)));mx.forEach(s=>{out._meta.maxU=(s.val()||{}).u||0});
  if(since){const s=await get(query(ref(db,'researchers_idx'),orderByChild('u'),startAt(since)));rids=[];s.forEach(c=>{if(!(c.val()||{}).del)rids.push(c.key)});out.researchers_pub={};out.researchers_priv={};out.researchers_com={};out.logs={};let k=0;
   await pool(rids,15,async id=>{const[a,b,c,l]=await Promise.all([get(ref(db,'researchers_pub/'+id)),get(ref(db,'researchers_priv/'+id)),get(ref(db,'researchers_com/'+id)),get(ref(db,'logs/'+id))]);
    if(a.exists())out.researchers_pub[id]=a.val();if(b.exists())out.researchers_priv[id]=b.val();if(c.exists())out.researchers_com[id]=c.val();if(l.exists())out.logs[id]=l.val();cb('researchers',++k,rids.length)});
-  for(const n of['public','settings_private','supervisors','sup_researchers','requests','events']){out[n]=(await get(ref(db,n))).val()||{};cb(n)}}
+  for(const n of['public','settings_private','supervisors','sup_researchers','requests','rreq','events','warnings','rem_log']){out[n]=(await get(ref(db,n))).val()||{};cb(n)}}
  else{for(const n of FLAT){out[n]=(await get(ref(db,n))).val()||{};cb(n)}rids=Object.keys(out.researchers_pub);out.logs={};let k=0;
   await pool(rids,20,async id=>{const l=await get(ref(db,'logs/'+id));if(l.exists())out.logs[id]=l.val();cb('logs',++k,rids.length)});out.logs_arch=(await get(ref(db,'logs_arch'))).val()||{}}
  Object.values(out.supervisors||{}).forEach(s=>{delete s.code;delete s.password});if(out.public&&out.public.settings)delete out.public.settings.password;
@@ -637,7 +712,7 @@ async function exportAll(o={}){need();const since=+o.since||0,cb=o.onProgress||(
 async function readBackup(file){let buf=await file.arrayBuffer(),u8=new Uint8Array(buf);if(u8[0]===0x1f&&u8[1]===0x8b){if(typeof DecompressionStream==='undefined')throw mkErr('المتصفح لا يدعم فك ضغط الملف — استخدم ملف .json عادي');buf=await new Response(new Blob([u8]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer()}
  let o;try{o=JSON.parse(new TextDecoder().decode(buf))}catch(e){throw mkErr('الملف ليس نسخة احتياطية صالحة')}return o}
 const DG=['دبلوم عام','دبلوم خاص','ماجستير','دكتوراه'],STS=['نشط','موقوف','مشطوب','استكمال ملاحظات','منح'],ISO=/^\d{4}-\d{2}-\d{2}$/;
-function planImport(data){const plan={researchers:0,logs:0,requests:0,events:0,errors:[],updates:{}},U=plan.updates;
+function planImport(data){const plan={researchers:0,logs:0,requests:0,events:0,errors:[],updates:{},warnMax:{}},U=plan.updates;
  if(!data||!data._meta||data._meta.app!=='gs-portal')throw mkErr('هذا الملف ليس نسخة من هذه المنظومة');if((data._meta.schema||0)>2)throw mkErr('نسخة أحدث من المدعوم — حدّث التطبيق أولاً');
  const pubs=data.researchers_pub||{},privs=data.researchers_priv||{},coms=data.researchers_com||{};
  for(const id in pubs){const p=pubs[id]||{},v=privs[id]||{},e=[];if(!p.name||String(p.name).trim().length<3)e.push('الاسم ناقص');if(!DG.includes(p.degree))e.push('الدرجة غير معروفة: '+p.degree);if(!STS.includes(p.status))e.push('الحالة غير معروفة: '+p.status);
@@ -647,14 +722,15 @@ function planImport(data){const plan={researchers:0,logs:0,requests:0,events:0,e
  for(const rid in data.logs||{})if(U['researchers_pub/'+rid])for(const lid in data.logs[rid]){const l=data.logs[rid][lid];U['logs/'+rid+'/'+lid]=l;U['logs_adm/'+lid]={rid,sid:l.sid,type:l.type,date:l.date,data:JSON.stringify(stripLog(l.type,l.data)),u:sv()};plan.logs++}
  for(const id in data.requests||{}){U['requests/'+id]=data.requests[id];plan.requests++}for(const id in data.events||{}){U['events/'+id]=data.events[id];plan.events++}
  for(const rid in data.docs||{})for(const d in data.docs[rid])U['docs/'+rid+'/'+d]=data.docs[rid][d];
+ for(const rid in data.warnings||{})for(const w in data.warnings[rid]){const x=data.warnings[rid][w]||{};U['warnings/'+rid+'/'+w]=x;if(x.yr&&x.no)plan.warnMax[x.yr]=Math.max(plan.warnMax[x.yr]||0,+x.no)}for(const rid in data.rem_log||{})U['rem_log/'+rid]=data.rem_log[rid];
  for(const n of['researchers_arch','logs_arch'])for(const id in data[n]||{})U[n+'/'+id]=data[n][id];
  for(const sid in data.supervisors||{})U['supervisors/'+sid]=data.supervisors[sid];for(const sid in data.sup_researchers||{})U['sup_researchers/'+sid]=data.sup_researchers[sid];
- if(data.public&&data.public.settings)U['public/settings']=data.public.settings;if(data.settings_private)U['settings_private']=data.settings_private;return plan}
+ if(data.public&&data.public.settings)U['public/settings']=data.public.settings;if(data.public&&data.public.templates)U['public/templates']=data.public.templates;if(data.public&&data.public.forms)U['public/forms']=data.public.forms;for(const id in data.rreq||{})U['rreq/'+id]=data.rreq[id];if(data.settings_private)U['settings_private']=data.settings_private;return plan}
 async function applyChunks(updates,cb=()=>{},maxPaths=300,maxBytes=1.5e6){const keys=Object.keys(updates);let batch={},n=0,bytes=0,done=0;
  const flush=async()=>{if(!n)return;await update(ref(db),batch);done+=n;cb(done,keys.length);batch={};n=0;bytes=0};
  for(const k of keys){const sz=JSON.stringify(updates[k]==null?null:updates[k]).length;if(n>=maxPaths||bytes+sz>maxBytes)await flush();batch[k]=updates[k];n++;bytes+=sz}await flush()}
 async function importBackup(data,o={}){need();const plan=planImport(data);if(o.dry)return{researchers:plan.researchers,logs:plan.logs,requests:plan.requests,events:plan.events,errors:plan.errors};
- plan.updates['meta/rev']=sv();aud(plan.updates,'استيراد نسخة احتياطية (دمج)',plan.researchers+' باحث',plan.logs+' سجل');await applyChunks(plan.updates,o.onProgress);ST.R=null;ST.LG=null;await IDB.clear();
+ plan.updates['meta/rev']=sv();aud(plan.updates,'استيراد نسخة احتياطية (دمج)',plan.researchers+' باحث',plan.logs+' سجل');await applyChunks(plan.updates,o.onProgress);for(const y in plan.warnMax)await runTransaction(ref(db,'counters/warn/'+y),c=>Math.max(c||0,plan.warnMax[y]));ST.R=null;ST.LG=null;await IDB.clear();
  return{researchers:plan.researchers,logs:plan.logs,requests:plan.requests,events:plan.events,errors:plan.errors}}
 async function compact(){need();const upd={};let a=0,b=0,c=0;
  const i=await get(ref(db,'researchers_idx'));i.forEach(s=>{if((s.val()||{}).del){upd['researchers_idx/'+s.key]=null;a++}});
@@ -662,7 +738,85 @@ async function compact(){need();const upd={};let a=0,b=0,c=0;
  const cut=Date.now()+OFF-90*864e5,ac=await get(ref(db,'activity'));ac.forEach(s=>{if(((s.val()||{}).t||0)<cut){upd['activity/'+s.key]=null;c++}});
  upd['meta/epoch']=(await epoch())+1;aud(upd,'تنظيف سنوي','',a+' باحث محذوف، '+b+' سجل محذوف، '+c+' نشاط قديم');await applyChunks(upd);ST.R=null;ST.LG=null;await IDB.clear();return{n:{researchers:a,logs:b,activity:c}}}
 
+/* ===== النماذج والإنذارات والتذكيرات ===== */
+async function loadTPL(){const s=await get(ref(db,'public/templates')),o=[];s.forEach(c=>{const v=c.val()||{};o.push({id:c.key,k:v.k||'warn',to:v.to||'r',t:v.t||'',b:v.b||'',o:+v.o||0})});o.sort((a,b)=>a.o-b.o);return ST.TPL=o}
+async function tplSave(d){need();const a=(d.items||[]).slice(0,80),map={};
+ a.forEach((x,i)=>{const id=String(x.id||nk()).replace(/[.#$\[\]\/]/g,'').slice(0,40)||nk();map[id]={k:['warn','remind','reason'].includes(x.k)?x.k:'remind',to:['r','s','v'].includes(x.to)?x.to:'r',t:String(x.t||'').slice(0,80),b:String(x.b||'').slice(0,3000),o:i}});
+ const upd={'public/templates':map};aud(upd,'تعديل النماذج','',a.length+' نموذج');await update(ref(db),upd);return{items:await loadTPL()}}
+async function remLoad(){const s=await get(ref(db,'rem_log')),o={};s.forEach(c=>{o[c.key]=c.val()||{}});return ST.REM=o}
+async function remMark(d){need();const t=cairo().d,k=({r:'r',s:'s',v:'v'})[d.k]||'r',upd={};(d.rids||[]).slice(0,500).forEach(id=>{upd['rem_log/'+String(id).replace(/[.#$\[\]\/]/g,'')+'/'+k]=t});await update(ref(db),upd);return{}}
+const wnRow=(rid,id,v)=>({id,rid,sid:v.sid||'',no:+v.no||0,yr:+v.yr||0,date:v.date||'',reason:v.reason||'',ord:+v.ord||1,x:v.x||'',sent:v.sent||{},created:v.created||''});
+async function warnList(){need();const s=await get(ref(db,'warnings')),o=[];s.forEach(r=>{r.forEach(c=>{o.push(wnRow(r.key,c.key,c.val()||{}))})});o.sort((a,b)=>String(b.date).localeCompare(String(a.date))||b.no-a.no);return{warnings:o}}
+async function warnOf(d){need();const s=await get(ref(db,'warnings/'+d.rid)),o=[];s.forEach(c=>{o.push(wnRow(d.rid,c.key,c.val()||{}))});return{warnings:o}}
+async function warnNo(yr){const r=await runTransaction(ref(db,'counters/warn/'+yr),c=>(c||0)+1);if(!r.committed)throw mkErr('تعذّر توليد رقم الإنذار');return r.snapshot.val()}
+async function warnSave(d){need();const reason=String(d.reason||'').trim().slice(0,1000),date=String(d.date||'').slice(0,10),rid=String(d.rid||'');
+ if(!reason)throw mkErr('اكتب سبب الإنذار');if(!ISO.test(date))throw mkErr('تاريخ غير صالح');if(!rid)throw mkErr('الباحث غير محدد');
+ const prior=await get(ref(db,'warnings/'+rid)),yr=+date.slice(0,4),no=await warnNo(yr),id=nk(),ord=prior.numChildren()+1,x=JSON.stringify(d.x||{}).slice(0,800),rec={sid:'admin',no,yr,date,reason,ord,x,created:cairo().t},upd={};
+ upd['warnings/'+rid+'/'+id]=rec;const it=((ST.R&&ST.R.items)||{})[rid];aud(upd,'توجيه إنذار',(it&&it.pub&&it.pub.name)||rid,no+'/'+yr);await update(ref(db),upd);return{w:wnRow(rid,id,rec)}}
+async function warnSent(d){need();const k=({r:'r',s:'s',v:'v'})[d.k];if(!k)return{};await update(ref(db),{['warnings/'+d.rid+'/'+d.id+'/sent/'+k]:cairo().t});return{}}
+async function warnDel(d){need();const s=await get(ref(db,'warnings/'+d.rid+'/'+d.id)),v=s.val()||{},upd={};upd['warnings/'+d.rid+'/'+d.id]=null;aud(upd,'حذف إنذار',d.rid,(v.no||'')+'/'+(v.yr||''));await update(ref(db),upd);return{done:true}}
+
 /* ===== الواجهة الموحّدة التي تستدعيها الصفحة ===== */
+/* ===== طلبات الباحثين + النماذج المرنة + تصنيف الباحثين ===== */
+const TOO={vd:'وكيل الكلية للدراسات العليا',dean:'عميد الكلية',dept:'رئيس القسم',adm:'إدارة الدراسات العليا',lib:'مدير المكتبة الرقمية بالجامعة'};
+const mkF=(id,i,n,to,d,f,act,x)=>({id,i,n,to,d,f:f.map((q,j)=>({k:'q'+(j+1),...q})),act:act||null,on:1,...x});
+const DEFFORMS=[
+ mkF('stop','⏸️','طلب إيقاف قيد','vd','إيقاف القيد لفترة محددة بسبب ظرف طارئ.',[{l:'سبب الإيقاف',t:'select',r:1,o:'ظروف مرضية|ظروف عائلية|سفر / عمل|أخرى'},{l:'تفاصيل السبب',t:'textarea',r:1},{l:'بداية الإيقاف',t:'date',r:1},{l:'المدة المطلوبة',t:'select',r:1,o:'فصل دراسي واحد|فصلان دراسيان|سنة كاملة'}],{t:'status',v:'موقوف'},{att:'يُرفق ما يثبت السبب للإدارة ورقيًا.'}),
+ mkF('resume','▶️','طلب استئناف القيد','vd','العودة بعد فترة إيقاف.',[{l:'تاريخ العودة المطلوب',t:'date',r:1},{l:'ملاحظات',t:'textarea'}],{t:'status',v:'نشط'}),
+ mkF('drop','🗓️','طلب إسقاط مدة','vd','إسقاط مدة من مدة القيد بعذر مقبول (مرضي أو اجتماعي) لتمكين الباحث من المناقشة بعد انتهاء المواعيد.',[{l:'سبب الإسقاط',t:'select',r:1,o:'عذر مرضي|ظرف اجتماعي|أخرى'},{l:'رقم الشهادة المرضية وجهة إصدارها',t:'text',r:1,sh:['q1','عذر مرضي']},{l:'تاريخ الشهادة المرضية',t:'date',sh:['q1','عذر مرضي']},{l:'وصف الظرف الاجتماعي',t:'textarea',r:1,sh:['q1','ظرف اجتماعي']},{l:'تفاصيل إضافية',t:'textarea',sh:['q1','أخرى'],r:1},{l:'المدة المطلوب إسقاطها — من',t:'date',r:1},{l:'إلى',t:'date',r:1},{l:'هل أنهيت الرسالة وتنتظر المناقشة؟',t:'select',o:'نعم|لا'}],{t:'range',a:'q6',b:'q7'},{ov:1,att:'يُسلَّم أصل الشهادة أو المستند المؤيد للإدارة لاعتماد الطلب.'}),
+ mkF('ext','📅','طلب مد قيد','vd','مد مدة القيد.',[{l:'مدة المد المطلوبة',t:'select',r:1,o:'فصل دراسي واحد|فصلان دراسيان|سنة كاملة'},{l:'المبررات',t:'textarea',r:1}],{t:'months',f:'q1',m:{'فصل دراسي واحد':6,'فصلان دراسيان':12,'سنة كاملة':12}},{ov:1}),
+ mkF('cancel','🚫','طلب شطب قيد','dean','طلب شطب القيد بناءً على رغبة الباحث (إجراء نهائي).',[{l:'سبب الشطب',t:'select',r:1,o:'عدم الرغبة في الاستمرار|ظروف خاصة|أخرى'},{l:'تفاصيل',t:'textarea',r:1},{l:'أقرّ بأن الشطب إجراء نهائي',t:'chk',r:1}],{t:'status',v:'مشطوب'}),
+ mkF('defense','🎓','طلب تحديد موعد مناقشة','vd','اقتراح موعد لمناقشة الرسالة.',[{l:'الموعد المقترح',t:'date',r:1},{l:'ملاحظات',t:'textarea'}],{t:'set',f:'q1',p:'defenseDate'}),
+ mkF('title','✏️','طلب تعديل عنوان الرسالة','vd','',[{l:'العنوان الجديد بالعربية',t:'textarea',r:1},{l:'العنوان الجديد بالإنجليزية',t:'textarea'},{l:'المبررات',t:'textarea',r:1}]),
+ mkF('cert','📄','طلب إفادة / شهادة قيد','adm','',[{l:'الغرض من الإفادة',t:'text',r:1},{l:'الجهة المقدمة إليها',t:'text'}]),
+ mkF('vdreq','📨','طلب موجه لوكيل الكلية','vd','أي طلب آخر تريد رفعه للوكيل.',[{l:'موضوع الطلب',t:'text',r:1},{l:'نص الطلب',t:'textarea',r:1}]),
+ mkF('deanreq','🏛️','طلب موجه للعميد','dean','أي طلب آخر تريد رفعه للعميد.',[{l:'موضوع الطلب',t:'text',r:1},{l:'نص الطلب',t:'textarea',r:1}]),
+ mkF('libq','🔎','استعلام عن نقطة بحث (المكتبة الرقمية)','lib','استعلام المكتبة الرقمية عمّا إذا كان عنوان الرسالة مسجّلًا بكلية أخرى بإحدى الجامعات المصرية.',[{l:'عنوان النقطة البحثية بالعربية',t:'textarea',r:1,pf:'titleAr'},{l:'عنوان النقطة البحثية بالإنجليزية',t:'textarea',pf:'titleEn'}],null,{sv:2,sim:1,sg:'dean',att:'يُعبَّأ العنوان تلقائيًا من ملفك — راجعه وصحّحه إن لزم قبل الإرسال.',lt:'{المرسل_إليه}\nتحية طيبة وبعد،،،\n\nرجاء الإفادة عن نقطة بحث بالعنوان التالي: **«{عنوان النقطة البحثية بالعربية}»**\n{عنوان النقطة البحثية بالإنجليزية}\nحيث تقدّم الباحث / **{الباحث}** لتسجيل هذه النقطة لرسالة {الدرجة}[ في {التخصص}] بكلية {الكلية} – {الجامعة}.\n\n#لـــــــــــذا\nنرجو من سعادتكم إفادتنا عمّا إذا كان هذا الموضوع مسجّلًا بكلية أخرى بإحدى الجامعات المصرية من عدمه.\n\nولسيادتكم جزيل الشكر والتقدير،،،'}),
+ mkF('libplan','📚','تسليم الخطة البحثية للمكتبة الرقمية','lib','تسليم الخطة البحثية المعتمدة لرفعها على قاعدة بيانات المكتبة الرقمية بالجامعة.',[{l:'عنوان الرسالة بالعربية',t:'textarea',r:1,pf:'titleAr'},{l:'عنوان الرسالة بالإنجليزية',t:'textarea',pf:'titleEn'},{l:'تاريخ موافقة مجلس القسم',t:'date',r:1},{l:'تاريخ موافقة لجنة الدراسات العليا',t:'date',r:1},{l:'تاريخ موافقة مجلس الكلية',t:'date',r:1}],null,{sv:2,sg:'dean',att:'تُسلَّم نسخة الخطة البحثية المعتمدة للإدارة ورقيًا أو إلكترونيًا.',lt:'{المرسل_إليه}\nتحية طيبة وبعد،،،\n\nرجاء التفضل باستلام الخطة البحثية الخاصة بالباحث / **{الباحث}** بعنوان:\n**«{عنوان الرسالة بالعربية}»**\n{عنوان الرسالة بالإنجليزية}\nوذلك لرفعها على قاعدة بيانات المكتبة الرقمية وإفادة الكلية بذلك.\n\nمع العلم أن مجلس قسم {القسم} وافق على تسجيل الرسالة بتاريخ {تاريخ موافقة مجلس القسم}\nولجنة الدراسات العليا بالكلية بتاريخ {تاريخ موافقة لجنة الدراسات العليا}\nومجلس الكلية بتاريخ {تاريخ موافقة مجلس الكلية}\n\nوتفضلوا سيادتكم بقبول وافر التقدير والاحترام،،،'})
+];
+const FORMS_VER=2;
+const fmParse=(id,x)=>{try{const o=JSON.parse(x);return o&&o.n?{...o,id}:null}catch(e){return null}};
+async function loadFORMS(){let v=(await get(ref(db,'public/forms'))).val();
+ if(!v){v={};const u={'public/forms_sv':FORMS_VER};DEFFORMS.forEach((f,i)=>{const s=JSON.stringify({...f,o:i+1});v[f.id]=s;u['public/forms/'+f.id]=s});await update(ref(db),u)}
+ else{const sv=+((await get(ref(db,'public/forms_sv'))).val()||1);
+  if(sv<FORMS_VER){const u={'public/forms_sv':FORMS_VER};let mx=0;Object.values(v).forEach(x=>{const o=fmParse('',x);if(o&&o.o>mx)mx=o.o});
+   DEFFORMS.filter(f=>(f.sv||1)>sv&&!v[f.id]).forEach(f=>{const s=JSON.stringify({...f,o:++mx});v[f.id]=s;u['public/forms/'+f.id]=s});await update(ref(db),u)}}
+ return ST.FORMS=Object.entries(v).map(([id,x])=>fmParse(id,x)).filter(Boolean).sort((a,b)=>(a.o||99)-(b.o||99))}
+async function formSave(d){need();const f=d.f||{};if(!String(f.n||'').trim())throw mkErr('اكتب اسم النموذج');if((f.f||[]).length>30)throw mkErr('الحد الأقصى 30 حقلًا');
+ const id=String(d.id||'').replace(/[^\w-]/g,'')||'f'+nk().replace(/[^\w]/g,'').slice(-8),o={...f};delete o.id;const s=JSON.stringify(o);if(s.length>12000)throw mkErr('النموذج كبير جدًا — قلّل عدد الحقول أو الخيارات');
+ const upd={['public/forms/'+id]:s};aud(upd,'حفظ نموذج طلب',o.n,'');await update(ref(db),upd);return{id}}
+async function formDel(id){need();const upd={['public/forms/'+id]:null};aud(upd,'حذف نموذج طلب',id,'');await update(ref(db),upd);return{}}
+async function formsRestore(){need();const u={'public/forms_sv':FORMS_VER};DEFFORMS.forEach((f,i)=>u['public/forms/'+f.id]=JSON.stringify({...f,o:i+1}));aud(u,'استعادة النماذج الافتراضية','','');await update(ref(db),u);return{}}
+const rrRow=(id,v)=>({id,rid:v.rid||'',form:v.form||'',title:v.title||'',to:v.to||'',status:v.status||'pending',data:v.data||'{}',adminNote:v.adminNote||'',created:v.created||'',decided:v.decided||'',fx:v.fx||''});
+async function loadRR(){const[a,b]=await Promise.all([get(query(ref(db,'rreq'),orderByChild('status'),equalTo('pending'))),get(query(ref(db,'rreq'),orderByKey(),limitToLast(300)))]),m={};
+ [a,b].forEach(s=>s.forEach(c=>{m[c.key]=rrRow(c.key,c.val()||{})}));return ST.RR=Object.values(m).sort((x,y)=>x.id<y.id?1:-1)}
+const dAdd=(s,n)=>{const d=new Date(s+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)};
+const dAddM=(s,n)=>{const d=new Date(s+'T00:00:00Z');d.setUTCMonth(d.getUTCMonth()+n);return d.toISOString().slice(0,10)};
+const ISOD=/^\d{4}-\d{2}-\d{2}$/;
+async function rrDecide(b){need();const q=(ST.RR||await loadRR()).find(x=>x.id===b.id);if(!q)throw mkErr('الطلب غير موجود');
+ if(!['approved','rejected','pending'].includes(b.status))throw mkErr('حالة غير معروفة');const note=String(b.adminNote||'').trim().slice(0,500);
+ if(b.status==='rejected'&&!note)throw mkErr('اكتب سبب الرفض ليصل للباحث');
+ const upd={},dec=b.status==='pending'?'':cairo().d;let fx=q.fx||'';
+ if(b.status==='approved'&&b.apply&&q.status!=='approved'){const it=(await syncR())[q.rid];if(!it)throw mkErr('ملف الباحث غير موجود');
+  const f=(ST.FORMS||await loadFORMS()).find(x=>x.id===q.form),a=f&&f.act;let v={};try{v=JSON.parse(q.data).v||{}}catch(e){}
+  const p=it.pub||{},P='researchers_pub/'+q.rid+'/',I='researchers_idx/'+q.rid+'/',out=[];
+  if(a){
+   if(a.t==='status'){upd[P+'status']=a.v;upd[I+'st']=a.v;out.push('الحالة: '+(p.status||'—')+' ← '+a.v)}
+   else if(a.t==='months'){const m=(a.m||{})[v[a.f]];if(m&&ISOD.test(p.enrollEnd||'')){const n=dAddM(p.enrollEnd,m);upd[P+'enrollEnd']=n;out.push('انتهاء القيد: '+p.enrollEnd+' ← '+n)}}
+   else if(a.t==='range'){const x=v[a.a],y=v[a.b];if(ISOD.test(x||'')&&ISOD.test(y||'')&&ISOD.test(p.enrollEnd||'')){const n=Math.round((Date.parse(y)-Date.parse(x))/864e5)+1;if(n>0&&n<=1500){const e=dAdd(p.enrollEnd,n);upd[P+'enrollEnd']=e;out.push('أُسقطت مدة '+n+' يومًا — انتهاء القيد: '+p.enrollEnd+' ← '+e)}}}
+   else if(a.t==='set'&&ISOD.test(v[a.f]||'')&&/^(defenseDate|committeeDate|regDate|coursesDate)$/.test(a.p)){upd[P+a.p]=v[a.f];out.push(a.p+' ← '+v[a.f])}}
+  if(Object.keys(upd).length){upd[I+'u']=sv();upd['meta/rev']=sv()}fx=out.join(' • ').slice(0,300)}
+ upd['rreq/'+q.id+'/status']=b.status;upd['rreq/'+q.id+'/adminNote']=note;upd['rreq/'+q.id+'/decided']=dec;if(fx)upd['rreq/'+q.id+'/fx']=fx;
+ aud(upd,{approved:'موافقة على طلب باحث',rejected:'رفض طلب باحث',pending:'إعادة طلب باحث للمراجعة'}[b.status],q.title,(((ST.R||{}).items||{})[q.rid]||{pub:{}}).pub.name||q.rid);
+ await update(ref(db),upd);Object.assign(q,{status:b.status,adminNote:note,decided:dec,fx});return{row:{...q}}}
+async function rrDel(id){need();await update(ref(db),{['rreq/'+id]:null});if(ST.RR)ST.RR=ST.RR.filter(x=>x.id!==id);return{}}
+async function genderBulk(d){need();const upd={};let n=0;const flush=async()=>{if(Object.keys(upd).length){await update(ref(db),upd);for(const k in upd)delete upd[k]}};
+ for(const id in d.map||{}){const v=d.map[id];if(v!=='ذكر'&&v!=='أنثى')continue;upd['researchers_pub/'+id+'/gender']=v;upd['researchers_idx/'+id+'/u']=sv();if(++n%200===0)await flush()}
+ upd['meta/rev']=sv();aud(upd,'تحديد نوع الباحثين (ذكر/أنثى)',n+' باحث','');await flush();return{n}}
+async function rtypeBulk(d){need();const upd={};let n=0;const flush=async()=>{if(Object.keys(upd).length){await update(ref(db),upd);for(const k in upd)delete upd[k]}};
+ for(const id in d.map||{}){const v=d.map[id];if(v!=='داخلي'&&v!=='خارجي')continue;upd['researchers_pub/'+id+'/rtype']=v;upd['researchers_idx/'+id+'/u']=sv();if(++n%200===0)await flush()}
+ upd['meta/rev']=sv();aud(upd,'تصنيف الباحثين (داخلي/خارجي)',n+' باحث','');await flush();return{n}}
+
 async function call(a,d={}){const t0=Date.now();try{let r;
  switch(a){
   case'login':r=await login(d);break;
@@ -679,20 +833,58 @@ async function call(a,d={}){const t0=Date.now();try{let r;
   case'import':r=await importRows(d.rows);break;
   case'save':if(d.t==='researchers')r=await saveR(d.row);else if(d.t==='events')r=await saveEV(d.row);else if(d.t==='docs')r=await saveDoc(d.row);else throw mkErr('جدول غير معروف');break;
   case'del':if(d.t!=='researchers')throw mkErr('جدول غير معروف');r=await delR(d.id);break;
+    case'warn_list':r=await warnList();break;
+  case'warn_of':r=await warnOf(d);break;
+  case'warn_save':r=await warnSave(d);break;
+  case'warn_sent':r=await warnSent(d);break;
+  case'warn_del':r=await warnDel(d);break;
+  case'tpl_save':r=await tplSave(d);break;
+  case'rr_decide':r=await rrDecide(d);break;
+  case'rr_del':r=await rrDel(d.id);break;
+  case'form_save':r=await formSave(d);break;
+  case'form_del':r=await formDel(d.id);break;
+  case'forms_restore':r=await formsRestore();break;
+  case'rtype_bulk':r=await rtypeBulk(d);break;
+  case'gender_bulk':r=await genderBulk(d);break;
+  case'rem_mark':r=await remMark(d);break;
   default:throw mkErr('أمر غير معروف')}
  r=r||{};r.ok=1;r.now=Math.round((t0+Date.now())/2+OFF);return r}catch(e){throw fe(e)}}
 const wrap=f=>async(...a)=>{try{return await f(...a)}catch(e){throw fe(e)}};
 window.FB={call,resume:wrap(resume),logout,resetPw:wrap(resetPw),exportAll:wrap(exportAll),readBackup:wrap(readBackup),importBackup:wrap(importBackup),compact:wrap(compact),maxExportU:()=>ST.R&&ST.R.maxU||0,_ST:ST,_db:db};
 window.__fbr&&window.__fbr();
+/* ===== أكواد الباحثين (بوابة الباحث) — بدون حسابات: تحديث واحد سريع ===== */
+const RAL='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',rCode=()=>{const b=crypto.getRandomValues(new Uint8Array(10));return[...b].map(x=>RAL[x%32]).join('')},rHash=async c=>(await sha256Hex(PEPPER+'K'+c)).slice(0,32);
+const rBase=()=>{let b=localStorage.resBase;if(!b){b=prompt('رابط تطبيق الباحث بعد الرفع (مرة واحدة):',location.href.replace(/[#?].*$/,'').replace(/[^\/]*\/[^\/]*$/,'')+'الباحث/')||'';localStorage.resBase=b}return b};
+const aliasDrop=async(id,upd,keep)=>{try{const a=(await get(ref(db,'res_alias/'+id))).val();if(a&&a.h&&a.h!==keep){if((await get(ref(db,'rsec/'+a.h))).val()===id)upd['rsec/'+a.h]=null;upd['res_alias/'+id]=null}}catch(e){}};
+async function resProvision(ids,items,acc,prog){const out=[],base=rBase(),upd={};let n=0;
+ for(const id of ids){const c=rCode(),h=await rHash(c),old=acc[id];upd['rsec/'+h]=id;if(old&&old.h)upd['rsec/'+old.h]=null;upd['res_acc/'+id]={h,at:cairo().d};acc[id]={h};await aliasDrop(id,upd,h);out.push({name:items[id].pub.name,code:c.slice(0,5)+'-'+c.slice(5),link:base?base+'#'+c:''});
+  if(++n%400===0){await update(ref(db),upd);for(const x in upd)delete upd[x]}prog(n,ids.length)}
+ aud(upd,'إنشاء/تصفير أكواد باحثين',out.length,'');await update(ref(db),upd);return out}
+function csvDl(rows){const t='\ufeffالاسم,الكود,رابط الدخول المباشر\n'+rows.map(r=>['"'+r.name.replace(/"/g,'""')+'"',r.code,r.link].join(',')).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/csv'}));a.download='researcher-codes-'+cairo().d+'.csv';a.click()}
+async function resPanel(){if(!UID)return toast('سجّل الدخول أولًا');const items=await syncR(),acc=(await get(ref(db,'res_acc'))).val()||{},AL=(await get(ref(db,'res_alias'))).val()||{},set=(await get(ref(db,'public/settings'))).val()||{},ids=Object.keys(items),miss=ids.filter(i=>!acc[i]);
+ const m=document.createElement('div');m.style.cssText='position:fixed;inset:0;background:#0008;z-index:99;display:grid;place-items:center;padding:14px';
+ const tg=(k,n,d)=>{const v=set[k]===undefined?d:set[k];return'<label style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #8883"><span>'+n+'</span><input type=checkbox data-k="'+k+'" '+(v!==false&&v?'checked':'')+'></label>'};
+ m.innerHTML='<div style="background:var(--card,#fff);color:var(--t,#111);border-radius:18px;padding:18px;width:100%;max-width:420px;max-height:90vh;overflow:auto"><h3 style="margin:0 0 8px">🎓 بوابة الباحث</h3><p style="margin:0 0 8px;font-size:13px">الباحثون: '+ids.length+' — لديهم كود: '+Object.keys(acc).filter(i=>items[i]).length+' — بدون كود: '+miss.length+'</p>'+
+ tg('pm_res','تفعيل البوابة للباحثين',true)+tg('pm_res_com','إظهار اللجنة للباحث',true)+tg('pm_res_req','السماح للباحثين بتقديم الطلبات',true)+tg('pm_res_rep','إظهار منحنى نسب الإنجاز',false)+
+ '<button id="rb1" style="width:100%;padding:11px;margin-top:12px;border:0;border-radius:10px;background:#6d28d9;color:#fff">🆔 تفعيل الدخول بالرقم القومي لكل الباحثين ('+ids.length+')</button><small style="display:block;margin-top:4px;color:#888">الباحث يدخل برقمه القومي فقط (أو رقم الجواز للأجنبي) ويتحدّث تلقائيًا عند تعديل رقم أي باحث.</small><input id="rq" placeholder="ابحث باسم باحث لتغيير كوده أو إيقافه" style="width:100%;padding:10px;margin-top:10px"><div id="rl"></div><div id="rs" style="font-size:13px;margin-top:8px"></div><button id="rx" style="width:100%;padding:9px;margin-top:8px">إغلاق</button></div>';
+ document.body.appendChild(m);const S=m.querySelector('#rs');m.querySelector('#rx').onclick=()=>m.remove();
+ m.querySelectorAll('[data-k]').forEach(c=>c.onchange=async()=>{await update(ref(db),{['public/settings/'+c.dataset.k]:c.checked,'meta/rev':sv()});toast('تم الحفظ ✅')});
+ const run=async l=>{try{const o=await resProvision(l,items,acc,(a,b)=>S.textContent='جارٍ الإصدار '+a+'/'+b);if(o.length){csvDl(o);S.textContent='تم ✅ — '+o.length+' كود في ثوانٍ. ملف CSV فيه الأكواد وروابط الدخول المباشر (لا تُحفظ الأكواد في أي مكان)'}else S.textContent='لا جديد'}catch(e){S.textContent='تعذّر: '+(e.message||e)}};
+ m.querySelector('#rb1').onclick=async()=>{try{const upd={};let n=0,no=[];const als=(await get(ref(db,'res_alias'))).val()||{};for(const id of ids){const p=(items[id].priv||{}),c=clean(p.natId)||String(p.foreignId||'').replace(/[\s\-]/g,'').toUpperCase().replace(/[^A-Z0-9]/g,'');if(c.length<8){no.push(items[id].pub.name);continue}const h=await rHash(c),old=acc[id];if(!als[id])upd['rsec/'+h]=id;if(old&&old.h&&old.h!==h)upd['rsec/'+old.h]=null;upd['res_acc/'+id]={h,at:cairo().d,id:1};acc[id]={h};n++}await update(ref(db),upd);S.textContent='تم ✅ — فُعّل الدخول برقم قومي لـ '+n+' باحث'+(no.length?' • بلا رقم صالح: '+no.slice(0,6).join('، ')+(no.length>6?'…':''):'')}catch(e){S.textContent='تعذّر: '+(e.message||e)}};
+ m.querySelector('#rq').oninput=e=>{const q=nn(e.target.value);m.querySelector('#rl').innerHTML=q.length<2?'':ids.filter(i=>nn(items[i].pub.name).includes(q)).slice(0,6).map(i=>'<div style="display:flex;gap:6px;margin-top:4px"><span style="flex:1">'+esc(items[i].pub.name)+'</span><button data-r="'+i+'">🔁 كود جديد</button>'+(acc[i]&&AL[i]?'<button data-n="'+i+'">↩ للرقم القومي</button>':'')+(acc[i]?'<button data-x="'+i+'">⛔ إيقاف</button>':'')+'</div>').join('');
+  m.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>confirm('سيتوقف الكود القديم فورًا. متابعة؟')&&run([b.dataset.r]));
+  m.querySelectorAll('[data-n]').forEach(b=>b.onclick=async()=>{const i=b.dataset.n;if(!confirm('سيُلغى الرقم الجديد للباحث ويرجع يدخل برقمه القومي. متابعة؟'))return;try{const u2={};await aliasDrop(i,u2);u2['rsec/'+acc[i].h]=i;await update(ref(db),u2);delete AL[i];b.remove();S.textContent='تم الإرجاع للرقم القومي ✅'}catch(e){S.textContent='تعذّر: '+(e.message||e)}});
+  m.querySelectorAll('[data-x]').forEach(b=>b.onclick=async()=>{const i=b.dataset.x;if(!confirm('إيقاف دخول هذا الباحث نهائيًا؟'))return;const u2={['rsec/'+acc[i].h]:null,['res_acc/'+i]:null};await aliasDrop(i,u2);await update(ref(db),u2);delete acc[i];S.textContent='تم الإيقاف ✅'})}}
+{const b=document.createElement('button');b.textContent='🎓 الباحثون';b.style.cssText='position:fixed;bottom:16px;left:16px;z-index:50;padding:10px 16px;border:0;border-radius:99px;background:#6d28d9;color:#fff;box-shadow:0 6px 20px #0004;cursor:pointer';b.onclick=()=>resPanel().catch(e=>toast(e.message||'تعذّر'));document.body.appendChild(b)}
 </script>
 <script>
 const LOGO='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCABgAGADASIAAhEBAxEB/8QAHAAAAgMBAAMAAAAAAAAAAAAABgcEBQgAAQID/8QAOBAAAQMDAwEFBgYCAgIDAAAAAQIDBAUGEQAHIRIIEyIxQRQyUWFxgRUjQlKCkWJyF6EkwTTw8f/EABsBAAEFAQEAAAAAAAAAAAAAAAIAAQMEBQYH/8QALxEAAQMDAgQDCAMBAAAAAAAAAQIDEQAEIRIxBSJBURMyYQYjcYGRscHRFKHw4f/aAAwDAQACEQMRAD8A1PrtdqJVqtAoVNk1OpymokKKguPPOnCUJH/3y9dOASYFKpelNuD2lbIsVxyGxIXXKk3kGPBIKEH4Lc90fQZPy0jd1t+bq3TfmUazIlRj2+ykl32ZtRfkoH6nCn3UH9v958hQ2ptFGi0qLdFzVWnxIDjTEqMJCsMukueJp0HCs9I/SPXz41ecbtrJAcvVZOAkZJJ2GMzTJClmECrm5e15fdVWpNHYp1EZPu9213zo+ql8f0kaCJu+G5ktZL941hBPOG3O6H9JA1VX5Mtx685ki1oobo4cSWm1AhK8AdRAPISTnA+Gms1utR3XapX6HQaxNq9RjNtexOQ23Y8dxCelKgsAqKRyen1zz8tB+4Uw00u3tCrWJgwCk4gKwYwTJ2ER1oUoBJCl7VVT7s3do0mns0q5bllPvUtNUebecQ70o/UpI6lZQOPPB+WplqdrLcOFKZjT48G4AtQQG1sd28sk4ASW8DJ/1Oh+VuveiaPVI9dS7HkvxjHYfVSkJX0KOFtlfhKU9OcYB50K7c1i3qDXnKjcUFU5pmM4YzPR1JMjHg6ufL584ONNbouRbOKvGUqUnYIyVHfcgdwPrSVo1DQcHvWvrF7S1m3bKFMqZeturdXdmNUOEFecFIc8s59FBJ02gQoAggg8gj11iu7tvajuImj1O1mKc1S3Kf7W+6XEoZZkqVl1vrOVZ6ucK8ufLXttlvpdOztZNsXY1JmUiOvunYrqup6H/k0r1TjnpzgjyxrNtksXqJtlAODzImSMx/h/fc1hSDzbd62nrtQKFXabctJjVekS25kGUgLaebPCh/6I8iDyDqfqoQQYNKu1jTfndGduzebFlW3ISaOxJDDZ6+lEx/OC4o/sByE/c+o08u0ruCuxtu3mIbxbqVZUYTCknxIQR+YsfRPH1UNIqBtzYtAt9F3zzWVMRm2Kk0h/pS3ISrIbYyPNalJClY90EDVlF01YoD7gJUrlRAnm6YkdT96QQVmBsN6kbV3BEsR+RatbgSIFQo70ibNkplBDLjYQAOpPm4cYCU+Xizqgtfb29e0NcsmruPLjUkOlJmyQe6YRnhppIx1ED0GB8SM6kWPasjtB3+lTzCo1Nj/+XVZYSA4tSsZbCgPIlPSgH3UgnnnWprh9ntqlQ7bocduDDaaCQ2yOkIQOAkfXkk+Z++qd4+zwQOcSdT79YEjeDmYknzEzHQAVOy2q5UGEnFC1obM7U2AEJdYjVeoo96VUB356vkjHQn+s/PTWpr8B2MBTlR+5TwEsgAJ+w8tKbuV/DVXW9wom2q4c+WqSVSXe6bZjo61O8ZI6cjjy+5GuNtPa+8vbpLa29Wo7CSf+x8q13uENNtlSVwR32p6PNNyGy282h1CvNK0gg/Y6XN7dnuwL2acU5R2qXNUDiXTgGVA/EpA6VfcffVWe05ZqGw69SrpZaA6lOOUwhCB6knq8hou/5Utlqqrp8x+RAwU93KktERnUqAKFB0ZSAoEEdRTnXfobuGTqSCK58kHesq3XYF8dnqoLmMrRV7ZlnunVFBVHkIPHdvt/oURwD/R9NQbi29RfVJReNs1VbqJCFIbpM9wqkILacraaWSe8CRyB59Otu1CnwqzT34M6OzLhSmyh1pwBSHEEeR1ke9olW7Nd2LYgQmKtbNRWqXTkywSY7oHSQFeYWkHBP6kkfPTuOXDx/kWQAuB8AFjsZ67ZwYkTRJ0jlX5ftQ/2eN5XtuLhRSKo+o27UXAl5KjxFcPAdHwHkFfLn01uFKgtIUkhSSMgg5BGsDztv6NTtvV3VXa20xV6skSKbBYGQQVZOR58jPPATxyTxrSnZc3BXeW34pc14uVGhKTFWVHKlskflKP2BT/HVm9WzdpVc288p0qwQCR1B6gHEjrQBJRCVUpO07Jm3zvJTbPp62yuIw3HbS4vpSHnfGok+nh6P60Fblyanbln23Y1RlOOS46VTZbanOoM9RKWmx8ggE4/y1B3oq0n/ma5Z7D7jUhipKDTiFYUgt4Skg/LpGhNt+Zc1wsrqEp2VKnSEIcedUVKUVKA5OtNHD1rWwtRHhtjVEZ1wRM9oJ9ZAofEABA3P2rcPZ1shuytsKb1tBM6qJE+SojnKxlCfsjp++dE90U/vJjcgjhSOnPzH/7ojYYbjMNsNJ6W2khCR8ABga8SIzctotOpyk/2NcJ7RWS+KW62wYUTI+P+xVu2d8FYUKWFzzolr29UK3Lx3MJhTpB/UQPCn6k4H30EbaW21c1qU2vXg41UqrIWuVGU+54oraiOlKMEdOQAfvqxsGlObl7jXZci3RIoFNcFIgMvZUy8pPK3On3T8Qcfr+WmzBsWhRVBbtKpzqx5D2VASP8ArXJMezl7bI/hgFK1FKlOCOUaTKBmevMRvtsJq6q9CjrJkDp+amUekU+LR/w9pCHo60dDzanC6lWU4UDkngj00sKltA9zSaeuMkwELNMdkIIU9FUf/jqeT40lokhJPUkoUnKFYOm7EgRKe2WocViM2T1FLLYQCfjga+xAJBIHHl8teh27hYSEoOB39KzFcxk0sbSr8axKvBs+owqzBE9llyN7S4h6Mw4UL62kOJACfEgnpHA6h0hIOBN35sdu+ttKrDDQXNhtmdEOOQ42CcD/AGT1J++gXemj/ht6Gow2+7XPgGWpxDZ8D0Y9QcWrrwhISOSUHjIzk6eVNkCpUuJJWhQElhDikLHPiSDgj76uOHwyh9G/5oRmRWONv6dTLosBcSsSYEl2l06W81jxOsxl9XhV+1SHUJWD+1fz1F7J9yqom6rNOUvpYq8ZyMoHy60jrQfr4SP5aX0qpzbIuq4IlNWhCSuXTXErT1BTJUUkY+gHOpG0c1VP3RtWQk4IqkdJ+ilhJ/6J1q2/DFs/yVFUocykdjknHxM0CnAoJEZFFl8WSm5N9bupUiot0xtt+RNXIcbKwlAAcPA58jnVTeVhR9tZ1DqMerqqaFSz3ijGLIQpstqwMk9QIUOdNbeejP292jKFVmZrlNZrrbSTKbQleF47pSSFcEEdGc/u0M7xMQ65aiX2ZdRlTaU53ylTXgV92t1bTiehOAkpcQn08iPTWS7xO5b4jbN6/cqSARA3MjJid42V8o3mS0ktKMZFbLZeRIaQ82rqQ4kLSfiCMjQRvVeSrH26qlQjqPt8hIhQkp95T7nhTj5gZV/HVf2e72bvbbCluKdC5tOQIEpJPIU2AEk/VHSf70GdpOkXPW65bYplXoFIg00ma2/U57TPVJChhXQvPUEgD0PvHSYt4ufDc6H7fugJxIpobU2YmwbApFC6QJDTIclKH6n1+JZ/s4+gGoV7b02dYzvscueqfVVHpbplOT38hSvQEDhP8iNIZ6p1i41inV3dqs3RJXwaRZkUrLg+CnglCAPmQdXEW3k7fwUuTZtJ2ziPjhDChUK/NB9O8wejPwbHGrJswVlTqpJ6CR+J+g+dDq7Uam9d4boHtFMt2g2ZTVHwP3A+VPqHx6Bjp+hT99XtElbrRMPSZdm3RGHvtw3HIz38VYUg/QgfXS9pNrol9VTpu3DS448S6/uFPUpax+7uT1ED1/TqYxV7cYlDuqttm5KbPi/BqfIaUg/APMLJH1xpLbScJSPpP5J/sUppiXO7Rbl/A0zaKyurfiDbLUaosAux0qBLxAyQUlpK+QSk8eejokJGSQEjkn0A0KWfclKuINJD9PkzoqT0LblpkLSD54KglwfPqSPqdVu+V7N2JtrV6gHAiXJaMOIM8l1wEAj/AFHUr+OqJbUtaWgM/ujnrWOaVayNz7vuVEOZ3E9596XCQpslt7LilFKlAeDg8E8a+tlWTWre3gtOj1iGYspdRjPhHWleWw4DnKSR+k/1q52+psSLtvURJuhm2plwS0sxpDpUA40yMqBKfdBUvGTxxq57OlmyJG9/581ipNUBlx9Uph0uNLUU9COlR8+V5/idajXEHFXNwgL92gQAUmZAAJCsCNWCOYyDkbUKmwEpMZNPHtMWG9eG36qjTkLNUoKzOYKPfKAPzEj54AV9UDSltOsUu6tuZMR9cOjrqz4iKYgIMmfM6QC6o9RKlLWT5nhI5J1rUgKBBAIPBB9dY63msqvbG3LPr1on2ah11KmkvNtgqhLUepTQPmjyPSR6ZHmNYztmeIMi3SqFpIUk9N5jYjfOx6jrUiHPDMnaqbbq9JvZ83MlU6pKLtIklLU1ltaVqSg8ocwk47xGeR/sPgdP/czb+n3zGjXTa1uUq6atOSgMS6lOWYbDAGQQ31gKz+0DzJJ+aGs7bKgzrNlVa4A9MdlMonCoMLcPszRJSsDAwt1KwCpJzkHjXmzdwb37P9XdostlNWo4Q3IlQAsqTHDnkQrH5Sz6g8H58HWg1etXTxbaX75GDI0hcRJGehIBB7gUKmykSRg/1RY3eTlDfet+sbkUygBhZadpVk0UlaljzSHugAEeWRnnRhaFIqanTJsDbx2nyHvfue8nCuUr/JLeSsn6FI0Uba7qbTXChBoBpFDqDnvRH2G4r3V8AeAv7E6aaVBaQpJCkkZBByDpXFwUHSUQfX9CJ+ZNCBS3ibKQKpJRUL8rFQvGck9QbmK7uG0f8I6fCB9c6YECnQqVGTFp8OPDjoGEtR2w2gfQAY1IUQkFSiABySfTQFe2+Vh2I04KhW2JUtI4hQVB54n4EA4T/IjVOXXzpEn0H6osCjCrt0puKudVkREsRUl1T8gDDIHJV1H3cfHWMd2NwH99dwoVKpi3mbehuhhhwoJASpQC5Kx6DyxnyAHlk6s7mv2+e0fUjSKU0mj2006kOILngyclJdV5rVwcIAxx5euru0/wHbeNMpKUrhymkKkKkzHQ2iaShQDMopCu5PvKQgnJGCRnII3V8nhqVJb57iMJB8s9T+vrjNEhvxDJwmot1NU61bIkxX2afXKXTA2w3T5qAp2OVlQCkSmwAV9QKigZwPXTO7K+367SsJVZms93PrykyMKHKGAD3Y++VK/kNKTa6ynN6rnjd3CmUywaIsLMF2Sp1tTvvFtBPqonn4J+Z1sNCENIShtKUISAlKUjAAHkANCwwuytyy4ZWs6lenYEAkTMkkSehUqJp3FhapGwr21ArtDpty0mTSKvEblwZSCh1lwcKH/ojzBHIOp+u0AJBkUNY33D2ku7ZWpN1egPTKxaTMpExTAWopaKVAhL6BwRwPHjHxxqZY24Nr124JEaM09D/En11OpLqkhsqluJH5UVsnAKAo5GccDHrrXakhaSlQCkkYIIyCNJzcHsuWXeTjs2lpXb1RWSoriIBYWr4qa4A/iU6lumba/QU3MpVEah9yOsHI9QO1Oham/LtSRmWJSr3veZAdphobFNgrlTXY8dMZxTiyO7bKCtTWfgpJAVn00AVF6pWrcpodGuistspcS0tQU5GU0onBSpAVjKfkcHTFrnZt3XtmHPg0d9isU6aEB9ESQEKeSg5T1IcwePgCdLiZtLuFTnfz7Or6VpOepENaxn6pBGtrhdutokKuApAAAT6xlRmTvMDYCKicUDsnNHre31QrFcrtIrt71qSxSZsOKpS3FK71L5ACsKWQnGR8dXdJ2ftu1lxnqilmqNvVRyne1LV1JQlaSGlKR5JWlwdJByOdDEo703PEEEWrVUFa2nHn26UWXJCmsFBcWUjqwQD9tXNO7Pm8N5vynK5JRSY894SJQlygA4v95aayOrgeYHlrFdseKOpi5u0oSQAQn4AEiAnc6ldhgR2nDjSfKmarK1fdCiW7cUUtqpF2F5hhaIKMR3no7uUyEY4QcA5H089X1o2TffaEksTK6RRLUQpLjq2Gu6ExwDBWhP61nHvnhPp8NNTb/srWdaLjU2sldxT0YUPaUBMdB+TXOf5E/TToQhLSEtoSlCEgJSlIwAB6AaNLdnanVbp1LmQpWYwByzkCEiJmKArWvfaq63LcpdpUWLRqNEbiQYqelttH/ZJ9STySfPVnrtdquSSZNKv//Z';
 let R=[],E=[],S={},V='home',Q='',FQ='',FS='',ALL=0;
 const DG=['دبلوم عام','دبلوم خاص','ماجستير','دكتوراه'],ST=['نشط','موقوف','مشطوب','استكمال ملاحظات','منح'],RL=['مشرف','ممتحن داخلي','ممتحن خارجي','رئيس اللجنة'];
-const FD=[['name','اسم الباحث'],['job','الوظيفة'],['nationality','الجنسية'],['dept','القسم'],['specialty','التخصص'],['degree','الدرجة','s',DG],['status','الحالة','s',ST],['natId','الرقم القومي'],['foreignId','الرقم الوطني / جواز السفر (للأجانب)'],['phone','رقم الموبايل'],['birthPlace','جهة الميلاد'],['enrollDate','تاريخ القيد','d'],['enrollEnd','تاريخ انتهاء القيد','d'],['regDate','تاريخ تسجيل الرسالة','d'],['coursesDate','تاريخ اجتياز المقررات','d'],['committeeDate','تاريخ اعتماد لجنة الحكم','d'],['defenseDate','تاريخ المناقشة','d'],['titleAr','عنوان الرسالة بالعربية','t'],['titleEn','عنوان الرسالة بالإنجليزية','t'],['notes','ملاحظات','t']];
+const FD=[['name','اسم الباحث'],['job','الوظيفة'],['nationality','الجنسية'],['gender','النوع (ذكر/أنثى)','s',['غير محدد','ذكر','أنثى']],['dept','القسم'],['specialty','التخصص'],['degree','الدرجة','s',DG],['status','الحالة','s',ST],['rtype','نوع الباحث (داخلي/خارجي)','s',['غير محدد','داخلي','خارجي']],['natId','الرقم القومي'],['foreignId','الرقم الوطني / جواز السفر (للأجانب)'],['phone','رقم الموبايل'],['birthPlace','جهة الميلاد'],['enrollDate','تاريخ القيد','d'],['enrollEnd','تاريخ انتهاء القيد','d'],['regDate','تاريخ تسجيل الرسالة','d'],['coursesDate','تاريخ اجتياز المقررات','d'],['committeeDate','تاريخ اعتماد لجنة الحكم','d'],['defenseDate','تاريخ المناقشة','d'],['titleAr','عنوان الرسالة بالعربية','t'],['titleEn','عنوان الرسالة بالإنجليزية','t'],['notes','ملاحظات','t']];
 const FL=Object.fromEntries(FD.map(f=>[f[0],f[1]]));FL.regDate='تاريخ التسجيل';FL.committeeDate='تاريخ اعتماد التشكيل';
-const XL={prev:'الوقف السابق',dur:'المدة المطلوب وقفها',why:'مبررات وقف القيد',cnt:'عدد الإشراف',fl:'هيئة معاونة / وافدين / تخصص بيني',newSup:'المشرفون بعد التعديل (سطر لكل مشرف: الاسم | الوظيفة والجهة)',newAr:'العنوان الجديد بالعربية',newEn:'العنوان الجديد بالإنجليزية',kind:'نوع التعديل (جوهري / غير جوهري)',reason:'سبب الشطب',ext:'مدة المد المطلوبة',round:'الدور',grade:'التقدير',dno:'رقم القرار',dd:'تاريخ القرار',rno:'رقم القرار الوزاري للائحة',rd:'تاريخ القرار الوزاري',dcn:'رقم موافقة مجلس القسم',fcn:'رقم موافقة مجلس الكلية',pd:'تاريخ موافقة رئيس الجامعة بالتفويض'};
-const XT={why:'t',newSup:'t',dd:'d',rd:'d',pd:'d'};
+const XL={lta:'عنوان الرسالة (النقطة البحثية) بالعربية',lte:'عنوان الرسالة (النقطة البحثية) بالإنجليزية',prev:'الوقف السابق',dur:'المدة المطلوب وقفها',why:'مبررات وقف القيد',cnt:'عدد الإشراف',fl:'هيئة معاونة / وافدين / تخصص بيني',newSup:'المشرفون بعد التعديل (سطر لكل مشرف: الاسم | الوظيفة والجهة)',newAr:'العنوان الجديد بالعربية',newEn:'العنوان الجديد بالإنجليزية',kind:'نوع التعديل (جوهري / غير جوهري)',reason:'سبب الشطب',ext:'مدة المد المطلوبة',round:'الدور',grade:'التقدير',dno:'رقم القرار',dd:'تاريخ القرار',rno:'رقم القرار الوزاري للائحة',rd:'تاريخ القرار الوزاري',dcn:'رقم موافقة مجلس القسم',fcn:'رقم موافقة مجلس الكلية',pd:'تاريخ موافقة رئيس الجامعة بالتفويض'};
+const XT={lta:'t',lte:'t',why:'t',newSup:'t',dd:'d',rd:'d',pd:'d'};
 const AP=[['ad','تاريخ موافقة مجلس القسم','d'],['ag','تاريخ موافقة لجنة الدراسات العليا','d'],['af','تاريخ موافقة مجلس الكلية','d'],['ses','رقم جلسة مجلس الدراسات العليا'],['sd','تاريخ الجلسة','d']];
 const C0=['name','job','nationality','dept','specialty','enrollDate','enrollEnd'],C1=[...C0,'regDate'];
 const DT={
@@ -704,6 +896,8 @@ stop:{n:'مذكرة إيقاف قيد',s:r=>'إيقاف قيد الباحث',f:C
 ext:{n:'مذكرة مد قيد',s:r=>'مد قيد الباحث',f:C1,b:[],ex:['ext'],xr:['ext'],cn:1,m:1},
 del:{n:'مذكرة شطب قيد',s:r=>'شطب قيد الباحث',f:C1,b:[],ex:['reason'],xr:['reason'],cn:1,m:1},
 gr:{n:'مذكرة منح',s:r=>'منح الباحث درجة '+r.degree,f:[...C1,'defenseDate','committeeDate','birthPlace','natId','phone'],b:['ti','sp','cm','rec'],ex:[],xr:[],m:1},
+libq:{n:'خطاب استعلام نقطة بحث (المكتبة الرقمية)',l:1,f:['name','degree','dept','specialty','titleAr','titleEn'],ex:['lta','lte'],xr:[],b:[]},
+libp:{n:'خطاب تسليم الخطة البحثية (المكتبة الرقمية)',l:2,f:['name','degree','dept','specialty','titleAr','titleEn'],ex:['lta','lte'],xr:[],b:[]},
 dec:{n:'قرار منح (قرار رئيس الجامعة)',ex:['dno','dd','rno','rd','dcn','fcn','round','grade','pd']}};
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const J=s=>{try{return JSON.parse(s)||[]}catch(e){return[]}},p2=n=>String(n).padStart(2,'0');
@@ -732,10 +926,10 @@ const rqSup=id=>SUPS.find(s=>s.id==id)||{name:'مشرف غير معروف',job:'
 const rqPend=()=>RQ.filter(q=>q.status=='pending').length;
 const rqAge=q=>{const d=D(q.date);if(!d)return 0;const T=now();T.setHours(0,0,0,0);return Math.round((T-d)/864e5)};
 const rqAgeT=n=>n<=0?'اليوم':n==1?'أمس':'منذ '+n+' يوم';
-const NAVS=[['home','الرئيسية'],['res','الباحثون'],['reqs','الطلبات'],['sups','المشرفون'],['due','المواعيد'],['set','الإعدادات']];
-const navHtml=()=>NAVS.map(x=>`<button class="${V==x[0]?'on':''}" onclick="go('${x[0]}')">${ic(x[0])}${x[1]}${x[0]=='reqs'&&rqPend()?`<b class=nb>${rqPend()}</b>`:''}${x[0]=='sups'&&repLateN()?`<b class=nb>${repLateN()}</b>`:''}</button>`).join('');
+const NAVS=[['home','الرئيسية'],['res','الباحثون'],['reqs','طلبات المشرفين'],['rr','طلبات الباحثين'],['sups','المشرفون'],['stats','الإحصائيات'],['due','المواعيد والتنبيهات'],['set','الإعدادات']];
+const navHtml=()=>NAVS.map(x=>`<button class="${V==x[0]?'on':''}" onclick="go('${x[0]}')">${ic(x[0])}${x[1]}${x[0]=='reqs'&&rqPend()?`<b class=nb>${rqPend()}</b>`:''}${x[0]=='rr'&&rrPend()?`<b class=nb>${rrPend()}</b>`:''}${x[0]=='sups'&&repLateN()?`<b class=nb>${repLateN()}</b>`:''}</button>`).join('');
 function rqNav(){const n=$('#nv');if(n&&n.children.length&&!n.querySelector('.sk'))n.innerHTML=navHtml()}
-function bcUp(){const n=alerts().length+rqPend();$('#bc').textContent=n||''}
+function bcUp(){const n=alerts().length+rqPend()+rrPend();$('#bc').textContent=n||''}
 function rqview(){if(V=='reqs')$('#mn').innerHTML=reqs()}
 function rqCtx(q,r){if(!r)return'';const sp=(r.supervisors||[]).map(s=>s.n).filter(Boolean),cm=(r.committee||[]).map(s=>s.n).filter(Boolean);
  return({extend:'انتهاء القيد الحالي: '+(fd(r.enrollEnd)||'—')+' • الحالة: '+(r.status||'—'),suspend:'الحالة الحالية: '+(r.status||'—')+' • انتهاء القيد: '+(fd(r.enrollEnd)||'—'),plan:'العنوان الحالي بالعربية: '+(r.titleAr||'—')+' • بالإنجليزية: '+(r.titleEn||'—'),committee:'اللجنة المعتمدة حالياً: '+(cm.length?cm.join('، '):'لا توجد')+(r.committeeDate?' • اعتُمدت '+fd(r.committeeDate):''),defense:'اعتماد اللجنة: '+(fd(r.committeeDate)||'—')+' • المناقشة الحالية: '+(fd(r.defenseDate)||'لم تُحدد'),sup:'المشرفون الحاليون ('+sp.length+'/4): '+(sp.join('، ')||'—')})[q.type]||''}
@@ -792,16 +986,16 @@ function rqDraft(q){const r=R.find(x=>x.id==q.rid);if(!r)return null;const d={..
  else if(q.type=='sup'){const p=String(x.who||'').split(/\s*[|｜–\-،]\s*/);d.supervisors.push({n:(p[0]||'').trim(),j:p.slice(1).join(' - ').trim(),natId:''})}
  return d}
 function rqApply(id){const q=RQ.find(x=>x.id==id),d=q&&rqDraft(q);if(!d)return toast('ملف الباحث غير موجود');edit(d.id,d);ED.d=1;toast(q.type=='sup'?'تم تجهيز التعديل — أضف الرقم القومي للمشرف ثم احفظ':'تم تجهيز التعديل — راجع البيانات ثم اضغط حفظ')}
-async function rqPoll(){if(document.hidden)return;try{const j=await apiq('req_list');
+async function rqPoll(){if(document.hidden)return;try{const j=await apiq('req_list');rrSync(j.rr);
  const old=new Set(RQ.map(q=>q.id)),sig=l=>l.map(q=>q.id+q.status+(q.adminNote||'')).join(), nw=(j.requests||[]).map(rqParse),fresh=nw.filter(q=>q.status=='pending'&&!old.has(q.id)),chg=sig(nw)!=sig(RQ);
  RQ=nw;if(j.supervisors)SUPS=j.supervisors;bcUp();rqNav();
  const typing=document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#rql');
  if(chg&&!typing){if(V=='reqs')rqview();else if(V=='home')go('home')}
  if(fresh.length){const q=fresh[0],rr=R.find(x=>x.id==q.rid),tt=(RQT[q.type]||{t:q.type}).t;toast('تم وصول طلب جديد: '+tt+(rr?' — '+rr.name:''));if('Notification' in window&&Notification.permission=='granted')new Notification('طلب جديد من مشرف',{body:tt+(rr?' — '+rr.name:'')+' ('+rqSup(q.sid).name+')'})}}catch(e){}}
-const PML=[['log','الملاحظات والاجتماعات والمهام والتقارير'],['print','الطباعة'],['committee','رؤية لجنة الحكم'],['req_extend','طلب مد القيد'],['req_suspend','طلب إيقاف القيد'],['req_plan','طلب تعديل العنوان/الخطة'],['req_committee','ترشيح لجنة الحكم'],['req_defense','طلب موعد المناقشة'],['req_sup','طلب إضافة/تغيير مشرف']];
+const PML=[['log','الملاحظات والاجتماعات والمهام والتقارير'],['print','الطباعة'],['committee','رؤية لجنة الحكم'],['req_extend','طلب مد القيد'],['req_suspend','طلب إيقاف القيد'],['req_plan','طلب تعديل العنوان/الخطة'],['req_committee','ترشيح لجنة الحكم'],['req_defense','طلب موعد المناقشة'],['req_sup','طلب إضافة/تغيير مشرف'],['warn','توجيه إنذار للباحث (يُرسل بواتساب للباحث ولوكيل الكلية)']];
 const pmHtml=()=>`<div class=cd id=pmc><h3>صلاحيات المشرفين</h3><p style="color:var(--m);font-size:13px;margin:0 0 10px">تتحكم فيما يستطيع المشرف فعله من بوابته — تسري فوراً على جميع المشرفين.</p><div class=pmk>${PML.map(p=>`<label><input type=checkbox id="pm_${p[0]}" ${S['pm_'+p[0]]=='0'?'':'checked'}>${p[1]}</label>`).join('')}</div><br><button class=btn onclick="spm()">${ic('save')}حفظ الصلاحيات</button></div>`;
 async function spm(){const d={};PML.forEach(p=>d['pm_'+p[0]]=$('#pm_'+p[0]).checked?'1':'0');try{await api('set',{d});await load();toast('تم حفظ الصلاحيات ✅')}catch(e){toast(e.message)}}
-async function load(){const j=await api('all');R=j.researchers.map(r=>({...r,supervisors:J(r.supervisors),committee:J(r.committee)}));E=j.events;S=j.settings;RQ=(j.requests||[]).map(rqParse);SUPS=j.supervisors||[];LG=(j.logs||[]).map(l=>({...l,data:JO(l.data)}));if(!S.vd)S.vd='أ.د/ هناء فؤاد';$('#sub').textContent='كلية '+S.faculty+' — '+S.univ;go(V);ntf()}
+async function load(){const j=await api('all');R=j.researchers.map(r=>({...r,supervisors:J(r.supervisors),committee:J(r.committee)}));E=j.events;S=j.settings;TPLS=j.templates||[];GSX.setTpls(TPLS);REM=j.remlog||{};RQ=(j.requests||[]).map(rqParse);FORMS=j.forms||[];RR=j.rr||[];SUPS=j.supervisors||[];LG=(j.logs||[]).map(l=>({...l,data:JO(l.data)}));if(!S.vd)S.vd='أ.د/ هناء فؤاد';$('#sub').textContent='كلية '+S.faculty+' — '+S.univ;go(V);ntf()}
 function dues(){const o=[],T=now();T.setHours(0,0,0,0);
 R.forEach(r=>{const add=(t,d)=>{if(d)o.push({rid:r.id,n:r.name,t,d:iso(d),k:Math.round((d-T)/864e5)})},dg=r.degree||'';
 if(r.status=='نشط'){add('انتهاء القيد',D(r.enrollEnd));
@@ -813,18 +1007,94 @@ E.filter(e=>e.done!='1'&&e.due).forEach(e=>{const r=R.find(x=>x.id==e.rid),d=D(e
 return o.sort((a,b)=>a.k-b.k)}
 const alerts=()=>dues().filter(a=>a.k<=+S.alertDays);
 const lbl=k=>k<0?'متأخر '+(-k)+' يوم':k==0?'اليوم':'بعد '+k+' يوم',cls=k=>k<0?'r':k<=7?'o':'y';
-const alist=(A,q)=>A.length?A.map(a=>`<div class="al ${cls(a.k)}" onclick="edit('${a.rid}')"><div><b>${esc(a.n)}</b><small>${esc(a.t)}</small></div><span>${lbl(a.k)}<small>${fd(a.d)}</small></span></div>`).join(''):`<div class=em>${ic('check')}${q?'لا توجد نتائج مطابقة للبحث':'لا توجد مواعيد قريبة'}</div>`;
+const alist=(A,q,rem)=>A.length?A.map((a,i)=>`<div class="al ${cls(a.k)}" onclick="edit('${a.rid}')"><div><b>${esc(a.n)}</b><small>${esc(a.t)}</small>${rem?remChip(a.rid):''}</div><span>${lbl(a.k)}<small>${fd(a.d)}</small></span>${rem?`<button class="btn g sm ib" title="تذكير واتساب" aria-label="تذكير واتساب" onclick="event.stopPropagation();remOne(${i})">${ic('wa')}</button>`:''}</div>`).join(''):`<div class=em>${ic('check')}${q?'لا توجد نتائج مطابقة للبحث':'لا توجد مواعيد قريبة'}</div>`;
 function ntf(){const A=alerts(),P=rqPend();bcUp();if((A.length||P)&&'Notification' in window&&Notification.permission=='granted'){const b=[];if(A.length)b.push(A.length+' موعد قريب/متأخر — الأقرب: '+A[0].n+' ('+A[0].t+')');if(P)b.push(P+' طلب من المشرفين بانتظار ردك');new Notification('منظومة الدراسات العليا',{body:b.join('\n')})}}
 function askN(){if(!('Notification' in window))return toast('المتصفح لا يدعم التنبيهات');Notification.requestPermission().then(p=>{toast(p=='granted'?'تم تفعيل التنبيهات':'التنبيهات غير مفعلة');ntf()})}
-function go(v){V=v;$('#nv').innerHTML=navHtml();const m=$('#mn'),ch=m.dataset.v!=v;m.dataset.v=v;m.innerHTML=({home,res,reqs,sups,due,set})[v]();if(ch){m.classList.remove('vi');void m.offsetWidth;m.classList.add('vi')}}
+function go(v){V=v;$('#nv').innerHTML=navHtml();const m=$('#mn'),ch=m.dataset.v!=v;m.dataset.v=v;m.innerHTML=({home,res,reqs,rr:rrv,sups,stats:stv,due,set})[v]();if(ch){m.classList.remove('vi');void m.offsetWidth;m.classList.add('vi')}}
 function home(){const A=alerts(),by=DG.map(g=>[g,R.filter(r=>r.degree==g).length]),mx=Math.max(1,...by.map(b=>b[1]));
 return `<div class=st>${[['إجمالي الباحثين',R.length],['قيدهم نشط',R.filter(r=>r.status=='نشط').length],['مواعيد قريبة',A.length],['مواعيد متأخرة',A.filter(a=>a.k<0).length]].map((s,i)=>`<div class="t${i}"><b>${s[1]}</b><span>${s[0]}</span></div>`).join('')}</div>
-${brief()}${rqHome()}<div class=cd><h3>اقترب موعدهم (خلال ${S.alertDays} يوم)</h3>${alist(A.slice(0,10))}</div>
+${brief()}${rrHome()}${rqHome()}<div class=cd><h3>اقترب موعدهم (خلال ${S.alertDays} يوم)</h3>${alist(A.slice(0,10))}</div>
 <div class=cd><h3>توزيع الباحثين حسب الدرجة</h3>${by.map(b=>`<div class=br><span>${b[0]}</span><i style="width:${b[1]/mx*80}%"></i><b>${b[1]}</b></div>`).join('')}</div>`}
-function res(){const A=dues(),l=R.filter(r=>(!Q||(r.name+(r.natId||'')+(r.foreignId||'')+r.dept).includes(Q))&&(!FQ||r.degree==FQ)&&(!FS||r.status==FS));
-return `<div class=tb><input class=sch placeholder="بحث بالاسم أو الرقم القومي/الوطني أو القسم" value="${esc(Q)}" oninput="Q=this.value;rl()"><select onchange="FQ=this.value;rl()"><option value="">كل الدرجات</option>${DG.map(d=>`<option ${FQ==d?'selected':''}>${d}</option>`).join('')}</select><select onchange="FS=this.value;rl()"><option value="">كل الحالات</option>${ST.map(d=>`<option ${FS==d?'selected':''}>${d}</option>`).join('')}</select>
-<select class=vsel title="شكل عرض الباحثين" aria-label="شكل عرض الباحثين" onchange="setLook('rl',this.value);rl()">${RLS.map(t=>`<option value="${t[0]}" ${LK.rl==t[0]?'selected':''}>عرض: ${t[1]}</option>`).join('')}</select><button class=btn onclick="edit()">${ic('plus')}باحث جديد</button><button class="btn w" onclick="xp()">${ic('down')}تصدير Excel</button><button class="btn w" onclick="$('#xf').click()">${ic('up')}استيراد</button><button class="btn w" onclick="tpl()" title="ملف Excel فارغ بالعناوين الصحيحة وورقة تعليمات">${ic('doc')}قالب الاستيراد</button><input id=xf type=file accept=".xlsx,.xls,.csv" hidden onchange="im(this.files[0])"></div><div class=rcnt id=rcn>${l.length} من ${R.length} باحث</div><div class=gr id=rl>${rcards(l,A)}</div>`}
-function rl(){const A=dues(),l=R.filter(r=>(!Q||(r.name+(r.natId||'')+(r.foreignId||'')+r.dept).includes(Q))&&(!FQ||r.degree==FQ)&&(!FS||r.status==FS));$('#rl').innerHTML=rcards(l,A);$('#rcn').textContent=l.length+' من '+R.length+' باحث'}
+/* ===== الفلتر الذكي للباحثين ===== */
+const SF={t:'',deg:[],st:[],dept:[],sup:[],rt:[],yr:[],fl:[],sort:'pri',more:0,L:[]};
+const sfN=t=>nz(String(t||'').replace(/[٠-٩]/g,c=>c.charCodeAt(0)-1632)).replace(/\s+/g,' ').trim();
+const lev1=(a,b)=>{if(Math.abs(a.length-b.length)>1)return false;let i=0,j=0,e=0;while(i<a.length&&j<b.length){if(a[i]==b[j]){i++;j++;continue}if(++e>1)return false;if(a.length>b.length)i++;else if(a.length<b.length)j++;else{i++;j++}}return e+(a.length-i)+(b.length-j)<=1};
+const SFL={
+expired:['⛔ قيد منتهٍ وهو نشط',(r,i)=>i.act&&i.left!=null&&i.left<0],
+endsoon:['⏳ ينتهي قيده قريبًا',(r,i,e)=>i.act&&i.left!=null&&i.left>=0&&i.left<=(e.end||90)],
+replate:['📝 تقرير دوري متأخر',(r,i)=>i.rep!=null&&i.rep<0],
+nosup:['👤 بلا مشرف',(r,i)=>i.th&&i.act&&!i.sp],
+overdue:['🔴 لديه موعد متأخر',(r,i)=>i.min!=null&&i.min<0],
+defsoon:['🎓 في مرحلة المناقشة',(r,i)=>i.act&&!!r.committeeDate&&!r.defenseDate],
+notitle:['📄 بلا عنوان رسالة',(r,i)=>i.th&&i.act&&!r.titleAr],
+incomplete:['📋 بيانات ناقصة',(r,i)=>i.miss>0],
+warn:['⚠️ عليه تحذيرات',(r,i)=>i.warn>0],
+nophone:['📵 بلا موبايل',r=>!r.phone],
+dup:['🔁 اسم مكرر محتمل',(r,i)=>i.dup]};
+const SFR=[['expired',/منتهي\S*\s*(?:ال)?قيد\S*|(?:انتهي|انتهت)\s*(?:مده\s*)?(?:ال)?(?:قيد|مده)\S*|قيد\S*\s*منتهي\S*|مدته?م?\s*منتهي\S*/g],
+['endsoon',/ينتهي\S*\s*(?:قيد\S*\s*)?(?:خلال\s*|في\s*|بعد\s*)?(\d+)?\s*(شهر|شهور|اشهر|يوم|ايام|اسبوع|اسابيع)?/g],
+['replate',/(?:تقرير|تقارير)\S*\s*(?:دوري\S*\s*)?متاخر\S*|متاخر\S*\s*(?:في|ب)?\s*(?:ال)?(?:تقرير|تقارير)\S*/g],
+['nosup',/(?:بدون|بلا|من غير|لا يوجد|ليس لدي\S*)\s*مشرف\S*/g],
+['notitle',/(?:بدون|بلا)\s*عنوان\S*/g],['nophone',/(?:بدون|بلا)\s*(?:موبايل|هاتف|تليفون|رقم)\S*/g],
+['overdue',/متاخر\S*|تاخر\S*/g],['defsoon',/مناقش\S*/g],['incomplete',/ناقص\S*|غير مكتمل\S*/g],
+['warn',/تحذير\S*|مشاك\S*|مخالف\S*/g],['dup',/مكرر\S*|تكرار/g]];
+const SFS=[['نشط',/(?:^| )(?:نشط|فعال)\S*/],['موقوف',/(?:^| )(?:موقوف|ايقاف|وقف)\S*/],['مشطوب',/(?:^| )(?:مشطوب|شطب)\S*/],['استكمال ملاحظات',/(?:^| )استكمال\S*(?: ملاحظات)?/],['منح',/(?:^| )منح(?: |$)/]];
+const SFW=new Set('باحث باحثين الباحثين باحثون عرض اعرض هات وريني كل الذين اللي الي قسم درجه حاله و او علي عن قيده قيدهم سنه عام من في'.split(' '));
+function sfParse(t){let s=' '+sfN(t)+' ';const o={deg:[],st:[],dept:[],rt:[],fl:[],yr:[],end:0,words:[],tags:[]};
+[...new Set(R.map(r=>r.dept).filter(Boolean))].sort((a,b)=>b.length-a.length).forEach(d=>{const n=sfN(d);if(n.length>2&&s.includes(n)){o.dept.push(d);o.tags.push('قسم '+d);s=s.replace(n,' ')}});
+DG.forEach(d=>{const n=sfN(d);if(s.includes(n)){o.deg.push(d);o.tags.push(d);s=s.replace(n,' ')}});
+if(/دبلوم/.test(s)){DG.filter(d=>/دبلوم/.test(d)&&!o.deg.includes(d)).forEach(d=>o.deg.push(d));o.tags.push('دبلوم');s=s.replace(/دبلوم\S*/g,' ')}
+SFR.forEach(([f,re])=>{s=s.replace(re,(m,n,u)=>{if(!o.fl.includes(f))o.fl.push(f);if(f=='endsoon'){const k=+n||(u?1:0);o.end=k?k*(/شهر|شهور|اشهر/.test(u||'')?30:/اسبوع|اسابيع/.test(u||'')?7:1):90;o.tags.push('ينتهي قيده خلال '+o.end+' يوم')}else o.tags.push(SFL[f][0].replace(/^\S+ /,''));return ' '})});
+SFS.forEach(([v,re])=>{if(re.test(s)){o.st.push(v);o.tags.push(v);s=s.replace(re,' ')}});
+['داخلي','خارجي'].forEach(v=>{const re=new RegExp(v+'\\S*');if(re.test(s)){o.rt.push(v);o.tags.push('باحث '+v);s=s.replace(re,' ')}});
+s=s.replace(/(?:^| )(20\d\d)(?= |$)/g,(m,y)=>{o.yr.push(y);o.tags.push('قيد '+y);return ' '});
+o.words=s.split(' ').filter(w=>w&&!SFW.has(w));return o}
+function sfScore(r,i){let s=0;const m=i.min;if(m!=null)s+=m<0?Math.min(40,25+(-m)/10):m<=7?20:m<=+S.alertDays?10:0;
+if(i.rep!=null&&i.rep<0)s+=15;if(i.th&&i.act&&!i.sp)s+=15;if(i.act&&i.left!=null&&i.left<0)s+=15;s+=Math.min(10,i.miss*2)+Math.min(10,i.warn*5);
+if(r.status=='موقوف'||r.status=='استكمال ملاحظات')s+=5;if(!i.act&&r.status!='موقوف'&&r.status!='استكمال ملاحظات')s=Math.min(s,10);return Math.min(100,Math.round(s))}
+function sfWhy(r,i){const w=[];if(i.act&&i.left!=null&&i.left<0)w.push(['قيد منتهٍ منذ '+-i.left+' يوم','r']);else if(i.act&&i.left!=null&&i.left<=+S.alertDays)w.push(['ينتهي القيد بعد '+i.left+' يوم','o']);
+if(i.rep!=null&&i.rep<0)w.push(['تقرير دوري متأخر '+-i.rep+' يوم','r']);if(i.th&&i.act&&!i.sp)w.push(['بلا مشرف','o']);if(i.miss)w.push(['ناقص '+i.miss+' بيانات','y']);if(i.warn)w.push([i.warn+' تحذير','y']);if(i.dup)w.push(['اسم مكرر؟','y']);return w}
+function sfInfo(){const T=now();T.setHours(0,0,0,0);const A=dues(),mn={},I={},nm={};
+A.forEach(a=>{if(mn[a.rid]==null||a.k<mn[a.rid])mn[a.rid]=a.k});R.forEach(r=>{const k=sfN(r.name);(nm[k]=nm[k]||new Set()).add(pid(r))});
+R.forEach(r=>{const e=D(r.enrollEnd),sp=(r.supervisors||[]).length,ri=needRep(r)?repInfo(r):null,h=sfN([r.name,r.natId,r.foreignId,r.dept,r.specialty,r.titleAr,r.titleEn,r.phone,r.job,...(r.supervisors||[]).map(x=>x.n)].join(' '));
+const i={act:r.status=='نشط',left:e?Math.round((e-T)/864e5):null,sp,th:isTh(r),rep:ri?ri.k:null,min:mn[r.id]??null,miss:EK.filter(k=>!r[k]).length,warn:chk(r).length,dup:nm[sfN(r.name)].size>1,h,hw:h.split(' ')};
+i.sc=sfScore(r,i);i.why=sfWhy(r,i);I[r.id]=i});return{I,A}}
+function sfEff(){const p=sfParse(SF.t),u=(a,b)=>[...new Set([...a,...b])];return{p,deg:u(SF.deg,p.deg),st:u(SF.st,p.st),dept:u(SF.dept,p.dept),rt:u(SF.rt,p.rt),yr:u(SF.yr,p.yr),sup:SF.sup,fl:u(SF.fl,p.fl),end:p.end,words:p.words}}
+function sfOk(r,i,e,k0){const g=(k,v)=>k0==k||!e[k].length||e[k].includes(v);
+return g('deg',r.degree)&&g('st',r.status)&&g('dept',r.dept)&&g('rt',rtOf(r))&&g('yr',(r.enrollDate||'').slice(0,4))&&(k0=='sup'||!e.sup.length||(r.supervisors||[]).some(s=>e.sup.includes((s.n||'').trim())))&&e.fl.every(f=>SFL[f][1](r,i,e))&&e.words.every(w=>i.h.includes(w)||(w.length>4&&i.hw.some(x=>lev1(x,w))))}
+const SFG=[['deg','الدرجة',r=>r.degree],['st','الحالة',r=>r.status],['rt','النوع',r=>rtOf(r)],['yr','سنة القيد',r=>(r.enrollDate||'').slice(0,4)],['dept','القسم',r=>r.dept],['sup','المشرف',r=>(r.supervisors||[]).map(s=>(s.n||'').trim())]];
+const sfSort={pri:(a,b)=>b.i.sc-a.i.sc,end:(a,b)=>(a.i.left==null)-(b.i.left==null)||(b.i.act-a.i.act)||a.i.left-b.i.left,new:(a,b)=>String(b.r.enrollDate||'').localeCompare(String(a.r.enrollDate||'')),name:(a,b)=>String(a.r.name).localeCompare(String(b.r.name),'ar'),comp:(a,b)=>b.i.miss-a.i.miss};
+function sfRun(){const {I,A}=sfInfo(),e=sfEff(),L=R.map(r=>({r,i:I[r.id]})).filter(x=>sfOk(x.r,x.i,e)).sort((a,b)=>sfSort[SF.sort](a,b)||sfSort.name(a,b));SF.L=L;
+const fac={};SFG.forEach(([k,,get])=>{const m=new Map();R.forEach(r=>{if(sfOk(r,I[r.id],e,k))[].concat(get(r)).filter(Boolean).forEach(v=>m.set(v,(m.get(v)||0)+1))});(k=='sup'?SF.sup:e[k]).forEach(v=>{if(!m.has(v))m.set(v,0)});fac[k]=[...m].sort((a,b)=>b[1]-a[1]||String(a[0]).localeCompare(String(b[0]),'ar'))});
+const urgent=L.filter(x=>x.i.sc>=50).length,n=L.length,nA=SFG.reduce((s,[k])=>s+SF[k].length,0)+SF.fl.length+e.p.tags.length+e.p.words.length;
+const x=(k,v,f)=>`<span class="sxp g">${esc(v)}<u onclick="${f}">✕</u></span>`;
+const ch=SFG.map(([k])=>SF[k].map(v=>`<span class="sxp g">${esc(v)}<u data-v="${esc(v)}" onclick="sfT('${k}',this.dataset.v)">✕</u></span>`).join('')).join('')+SF.fl.map(f=>`<span class="sxp g">${esc(SFL[f][0])}<u onclick="sfF('${f}')">✕</u></span>`).join('')+e.p.tags.concat(e.p.words.map(w=>'«'+w+'»')).map(t=>`<span class="sxp">🧠 ${esc(t)}</span>`).join('');
+return{pop:sfUi(e,I,fac,n),btn:'🎛️ فلاتر'+(nA?` <b class=sxn>${nA}</b>`:''),nA,cnt:`<span>${n} من ${R.length} باحث${urgent?' • 🔥 '+urgent+' عاجل':''}</span>${ch}${nA?`<a class=sxa onclick="sfClr()">مسح الكل</a>`:''}`,cards:sfCards(L,A)}}
+function sfCards(L,A){if(!L.length)return`<div class=em style="grid-column:1/-1">لا يوجد باحثون مطابقون — جرّب تخفيف الفلاتر</div>`;
+return L.map(({r,i})=>{const h=rcards([r],A);if(i.sc<20)return h;return h.replace('<article',`<article data-sx="${i.sc>=50?'r':i.sc>=30?'o':'y'}" title="${esc('أولوية '+i.sc+(i.why.length?' — '+i.why.map(w=>w[0]).join(' • '):''))}"`)}).join('')}
+function sfUi(e,I,fac,n){const sec=(t,b)=>b?`<div class=sxq><b>${t}</b><div class=sxr>${b}</div></div>`:'';
+const pre=Object.keys(SFL).map(f=>{const c=R.filter(r=>SFL[f][1](r,I[r.id],{end:e.end})).length,on=e.fl.includes(f);return`<button class="sxc ${on?'on':''}" onclick="sfF('${f}')" ${c||on?'':'style="opacity:.45"'}>${f=='endsoon'?'⏳ ينتهي قيده خلال '+(e.end||90)+' يوم':SFL[f][0]} <i>${c}</i></button>`}).join('');
+let sg=[];['deg','st','rt','yr','dept'].forEach(k=>{if(e[k].length)return;fac[k].forEach(([v,c])=>{if(c>=2&&c<n)sg.push([k,v,c,Math.abs(c/n-.5)])})});sg=sg.sort((a,b)=>a[3]-b[3]).slice(0,5);
+const sgh=n>3?sg.map(([k,v,c])=>`<button class="sxc s" data-v="${esc(v)}" onclick="sfT('${k}',this.dataset.v)">${esc(v)} <i>${c}</i></button>`).join(''):'';
+const fh=SFG.map(([k,l])=>{const x=fac[k].slice(0,k=='sup'?16:30);return x.length?`<div class=sxg><b>${l}</b><div>${x.map(([v,c])=>`<button class="sxc ${SF[k].includes(v)?'on':''}" data-v="${esc(v)}" onclick="sfT('${k}',this.dataset.v)">${esc(v)} <i>${c}</i></button>`).join('')}</div></div>`:''}).join('');
+let vw=[];try{vw=JSON.parse(localStorage.getItem('sf_views')||'[]')}catch(_){}
+const vh=vw.map((v,j)=>`<span class="sxc v"><span onclick="sfV(${j})">${esc(v.n)}</span><u onclick="sfVd(${j})" title="حذف">✕</u></span>`).join('');
+return sec('✨ فلاتر ذكية',pre)+sec('💡 ضيّق أكثر',sgh)+`<details class=sxd><summary>تفصيل: الدرجة • الحالة • القسم • المشرف • السنة</summary><div class=sxf>${fh}</div></details>`+sec('📌 عروضي',vh)+`<div class="sxr sxt"><button class="btn w sm" onclick="sfSave()">📌 حفظ العرض</button><button class="btn w sm" onclick="sfX()">${ic('down')}تصدير النتائج</button><button class="btn w sm" onclick="xp()">${ic('down')}تصدير الكل</button><button class="btn w sm" onclick="$('#xf').click()">${ic('up')}استيراد</button><button class="btn w sm" onclick="tpl()">${ic('doc')}قالب الاستيراد</button></div>`}
+function sfOpen(ev){ev.stopPropagation();SF.open^=1;$('#sfu').hidden=!SF.open}
+document.addEventListener('click',e=>{if(SF.open&&!e.composedPath().some(n=>n.classList&&n.classList.contains('sxanc'))){SF.open=0;const p=$('#sfu');if(p)p.hidden=true}});
+document.addEventListener('keydown',e=>{if(e.key=='Escape'&&SF.open){SF.open=0;const p=$('#sfu');if(p)p.hidden=true}});
+function sfF(f){SF.fl=SF.fl.includes(f)?SF.fl.filter(x=>x!=f):[...SF.fl,f];rl()}
+function sfT(k,v){SF[k]=SF[k].includes(v)?SF[k].filter(x=>x!=v):[...SF[k],v];rl()}
+function sfClr(){Object.assign(SF,{t:'',deg:[],st:[],dept:[],sup:[],rt:[],yr:[],fl:[]});const q=$('#sfq');if(q)q.value='';rl()}
+const sfSnap=()=>({t:SF.t,deg:SF.deg,st:SF.st,dept:SF.dept,sup:SF.sup,rt:SF.rt,yr:SF.yr,fl:SF.fl,sort:SF.sort});
+function sfSave(){const n=prompt('اسم العرض المحفوظ (مثال: متابعة الدكتوراه المتأخرة):');if(!n)return;try{const v=JSON.parse(localStorage.getItem('sf_views')||'[]');v.push({n:n.trim(),s:sfSnap()});localStorage.setItem('sf_views',JSON.stringify(v));toast('تم حفظ العرض')}catch(_){toast('تعذّر الحفظ في هذا المتصفح')}rl()}
+function sfV(j){try{const v=JSON.parse(localStorage.getItem('sf_views')||'[]')[j];if(v){Object.assign(SF,v.s);const q=$('#sfq');if(q)q.value=SF.t;const s=$('#sfs');if(s)s.value=SF.sort;rl()}}catch(_){}}
+function sfVd(j){try{const v=JSON.parse(localStorage.getItem('sf_views')||'[]');v.splice(j,1);localStorage.setItem('sf_views',JSON.stringify(v))}catch(_){}rl()}
+function sfX(){if(!SF.L.length)return toast('لا توجد نتائج للتصدير');const rows=[['الاسم','الدرجة','القسم','الحالة','النوع','تاريخ القيد','انتهاء القيد','المتبقي (يوم)','المشرفون','الموبايل','درجة الأولوية','أسباب المتابعة']].concat(SF.L.map(({r,i})=>[r.name,r.degree,r.dept,r.status,rtOf(r),fd(r.enrollDate),fd(r.enrollEnd),i.left??'',(r.supervisors||[]).map(s=>s.n).join('، '),r.phone||'',i.sc,i.why.map(w=>w[0]).join(' • ')]));
+const ws=XLSX.utils.aoa_to_sheet(rows),wb=XLSX.utils.book_new();ws['!cols']=[30,12,24,14,10,12,12,12,36,14,12,50].map(w=>({wch:w}));ws['!bars']=[10];XLSX.utils.book_append_sheet(wb,ws,'نتائج الفلتر');xlOut(wb,'نتائج-الباحثين.xlsx',{title:'نتائج بحث وفلترة الباحثين'});toast('تم تصدير '+SF.L.length+' باحث')}
+function res(){const x=sfRun();
+return `<div class="tb sxbar"><input class=sch id=sfq placeholder="🧠 اكتب بلغتك: دكتوراه نشط بلا مشرف • ماجستير ينتهي قيدهم خلال 3 شهور…" value="${esc(SF.t)}" oninput="SF.t=this.value;rl()"><div class=sxanc><button class="btn w sxfb" onclick="sfOpen(event)">${x.btn}</button><div id=sfu class=sxpop ${SF.open?'':'hidden'}>${x.pop}</div></div><select id=sfs title="الترتيب" onchange="SF.sort=this.value;rl()">${[['pri','🔥 الأولوية'],['end','⏳ انتهاء القيد'],['new','🆕 الأحدث'],['name','أ الاسم'],['comp','📋 الأنقص']].map(y=>`<option value="${y[0]}" ${SF.sort==y[0]?'selected':''}>${y[1]}</option>`).join('')}</select><select class=vsel title="شكل العرض" aria-label="شكل العرض" onchange="setLook('rl',this.value);rl()">${RLS.map(t=>`<option value="${t[0]}" ${LK.rl==t[0]?'selected':''}>${t[1]}</option>`).join('')}</select><button class=btn onclick="edit()" title="باحث جديد" aria-label="باحث جديد">${ic('plus')}جديد</button><input id=xf type=file accept=".xlsx,.xls,.csv" hidden onchange="im(this.files[0])"></div><div class="rcnt sxcn" id=rcn>${x.cnt}</div><div class=gr id=rl>${x.cards}</div>`}
+function rl(){const x=sfRun(),p=$('#sfu'),st=p.scrollTop;p.innerHTML=x.pop;p.scrollTop=st;$('.sxfb').innerHTML=x.btn;$('#rcn').innerHTML=x.cnt;$('#rl').innerHTML=x.cards}
 const mdg=r=>{const n=R.filter(x=>pid(x)==pid(r)).length;return n>1?`<span class=tg title="عدد الدرجات المسجّلة لنفس الباحث">${n} درجات</span>`:''};
 const ndb=r=>{const i=DG.indexOf(r.degree);return i<0||i>=DG.length-1?'':`<button class="btn w" onclick="newDeg('${r.id}')" title="تسجيل درجة ${DG[i+1]} لنفس الباحث">${ic('plus')}<span>درجة جديدة</span></button>`};
 const SX=t=>t=='نشط'?['s0','']:t=='منح'?['s3','']:t=='موقوف'||t=='استكمال ملاحظات'?['s1','z']:['s2','x'];
@@ -865,9 +1135,9 @@ function edClose(){if(ED.d&&!confirm('توجد تغييرات غير محفوظ�
 function edit(id,draft){const r=draft||R.find(x=>x.id==id)||{status:'نشط',degree:'ماجستير',supervisors:[],committee:[]};ED={r,d:0};
 M(`<div class="mc ed"><div class=eb><button type=button class="btn xb" onclick="edClose()" title="إغلاق" aria-label="إغلاق">${ic('x')}</button><div class=ebt><h3>${id?'تعديل: '+esc(r.name||''):draft?'تسجيل درجة '+esc(r.degree)+' جديدة':'باحث جديد'}</h3><p>${id?'تعديل بيانات الباحث':draft?'نُسخت البيانات الشخصية — أكمل بيانات الدرجة الجديدة ثم احفظ':'إضافة باحث جديد إلى المنظومة'}</p></div><div class=acts><button type=button class="btn sv" onclick="sv('${id||''}')">${ic('save')}<span>حفظ</span></button></div></div>
 <div class=ew><div class=ems>
-${esec('res','البيانات الشخصية','الاسم والوظيفة وبيانات التواصل',efg(['name','job','nationality','natId','foreignId','phone','birthPlace']))}
+${esec('res','البيانات الشخصية','الاسم والوظيفة وبيانات التواصل',efg(['name','job','nationality','gender','natId','foreignId','phone','birthPlace']))}
 ${(r.id||draft)?esec('gr','المسار الأكاديمي','كل درجات الباحث (بنفس الرقم القومي / الوطني) بالترتيب',pathHtml(r),r.id?`<button type=button class="btn w" onclick="newDeg('${r.id}')">${ic('plus')}درجة جديدة</button>`:''):''}
-${esec('reg','البيانات الأكاديمية','القسم والتخصص والدرجة وحالة القيد',efg(['dept','specialty','degree','status'],'c2'))}
+${esec('reg','البيانات الأكاديمية','القسم والتخصص والدرجة وحالة القيد',efg(['dept','specialty','degree','status','rtype'],'c2'))}
 ${esec('due','التواريخ المهمة','القيد والتسجيل والمقررات والمناقشة',efg(['enrollDate','enrollEnd','regDate','coursesDate','committeeDate','defenseDate'])).replace('<section class=es>','<section class=es id=est1>')}
 ${esec('tit','الرسالة والملاحظات','عنوان الرسالة بالعربية والإنجليزية',efg(['titleAr','titleEn','notes'])).replace('<section class=es>','<section class=es id=est2>')}
 ${esec('sup','المشرفون','أدخل الرقم القومي فقط. ينشئ النظام حساب المشرف وكلمة مروره تلقائياً عند إضافته لأول مرة، ثم يستخدم الحساب نفسه مع جميع الباحثين. حتى 4 مشرفين.',`<div id=ls>${r.supervisors.map(o=>lrow('s',o)).join('')}</div>`,`<button type=button class="btn w" onclick="$('#ls').insertAdjacentHTML('beforeend',lrow('s'));edUp('${id||''}')">${ic('plus')}مشرف</button>`).replace('<section class=es>','<section class=es data-th>')}
@@ -955,15 +1225,15 @@ const nz=t=>String(t||'').replace(/[\u064B-\u0652\u0640]/g,'').replace(/[أإآ]
 const dsort=l=>l.slice().sort((a,b)=>DSO=='new'?b.k-a.k:a.k-b.k),dhit=x=>!DQ||nz(x).includes(nz(DQ));
 function dparts(){const T=now();T.setHours(0,0,0,0);const all=dues(),A=dsort(all.filter(a=>(ALL||a.k<=+S.alertDays)&&dhit(a.n+' '+a.t+' '+fd(a.d)+' '+a.d)));
 const M=dsort(E.filter(e=>e.done!='1').map(e=>{const r=R.find(x=>x.id==e.rid);return {e,n:r?r.name:'',k:e.due?Math.round((D(e.due)-T)/864e5):1e9}}).filter(m=>dhit(m.n+' '+m.e.type+' '+fd(m.e.due)+' '+m.e.due)));
-return [alist(A,DQ),(DQ?A.length+' نتيجة من أصل '+all.filter(a=>ALL||a.k<=+S.alertDays).length+' موعد':A.length+' موعد'),M.map(m=>`<div class=lr style="margin-top:8px"><span style="flex:1">${m.n?esc(m.n)+' — ':''}${esc(m.e.type)} — ${fd(m.e.due)}</span><button class="btn w" onclick="ed('${m.e.id}')">تم</button></div>`).join('')||(DQ?'<div class=em style="margin-top:8px">لا توجد تذكيرات مطابقة</div>':'')]}
+DUEL=A;return [alist(A,DQ,1),(DQ?A.length+' نتيجة من أصل '+all.filter(a=>ALL||a.k<=+S.alertDays).length+' موعد':A.length+' موعد'),M.map(m=>`<div class=lr style="margin-top:8px"><span style="flex:1">${m.n?esc(m.n)+' — ':''}${esc(m.e.type)} — ${fd(m.e.due)}</span><button class="btn w" onclick="ed('${m.e.id}')">تم</button></div>`).join('')||(DQ?'<div class=em style="margin-top:8px">لا توجد تذكيرات مطابقة</div>':'')]}
 function dlist(){const p=dparts();$('#dl').innerHTML=p[0];$('#dc').textContent=p[1];$('#el').innerHTML=p[2]}
-function due(){const p=dparts();
-return `<div class=cd><h3>المواعيد والتنبيهات</h3><div class=tb><input class=sch placeholder="بحث بالاسم أو نوع الموعد أو التاريخ" value="${esc(DQ)}" oninput="DQ=this.value;dlist()"><select onchange="DSO=this.value;dlist()" aria-label="ترتيب المواعيد"><option value=old ${DSO=='old'?'selected':''}>ترتيب: من الأقدم إلى الأحدث</option><option value=new ${DSO=='new'?'selected':''}>ترتيب: من الأحدث إلى الأقدم</option></select><label><input type=checkbox ${ALL?'checked':''} style="width:auto" onchange="ALL=this.checked;go('due')"> عرض كل المواعيد (وليس القريبة فقط)</label></div><div class=rcnt id=dc>${p[1]}</div><div id=dl>${p[0]}</div></div>
+function dueDues(){const p=dparts();
+return `<div class=cd><h3>المواعيد والتنبيهات</h3>${dstats()}<div class=tb><input class=sch placeholder="بحث بالاسم أو نوع الموعد أو التاريخ" value="${esc(DQ)}" oninput="DQ=this.value;dlist()"><select onchange="DSO=this.value;dlist()" aria-label="ترتيب المواعيد"><option value=old ${DSO=='old'?'selected':''}>ترتيب: من الأقدم إلى الأحدث</option><option value=new ${DSO=='new'?'selected':''}>ترتيب: من الأحدث إلى الأقدم</option></select><label><input type=checkbox ${ALL?'checked':''} style="width:auto" onchange="ALL=this.checked;go('due')"> عرض كل المواعيد (وليس القريبة فقط)</label><button class="btn g" onclick="remBulk()">${ic('wa')}تذكير جماعي (واتساب)</button></div><div class=rcnt id=dc>${p[1]}</div><div id=dl>${p[0]}</div></div>
 <div class=cd><h3>تذكير يدوي</h3><div class=fg><div><label>الباحث</label><select id=e_r>${R.map(r=>`<option value="${r.id}">${esc(r.name)}</option>`).join('')}</select></div><div><label>العنوان</label><input id=e_t placeholder="مثال: عرض خطة البحث في السمينار"></div><div><label>التاريخ</label>${dpk('e_d')}</div></div><br><button class=btn onclick="ae()">إضافة</button>
 <div id=el>${p[2]}</div></div>`}
 async function ae(){if(!$('#e_d').value||!$('#e_t').value)return toast('أكمل البيانات');await api('save',{t:'events',row:{rid:$('#e_r').value,type:$('#e_t').value,due:$('#e_d').value,done:'0'}});await load();toast('تمت الإضافة')}
 async function ed(id){const e=E.find(x=>x.id==id);e.done='1';await api('save',{t:'events',row:e});await load()}
-function set(){const K=[['faculty','اسم الكلية'],['univ','اسم الجامعة'],['alertDays','التنبيه قبل الموعد بـ (أيام)'],['dg','اسم مدير عام الدراسات العليا'],['vd','اسم وكيل الكلية للدراسات العليا'],['dean','اسم عميد الكلية'],['vp','اسم نائب رئيس الجامعة للدراسات العليا'],['pres','اسم رئيس الجامعة (القرار)'],['regDecision','رقم القرار الوزاري للائحة الداخلية'],['adminEmail','بريد الإدارة (الملخص اليومي غير متاح بعد النقل إلى Firebase)']];
+function set(){const K=[['faculty','اسم الكلية'],['univ','اسم الجامعة'],['alertDays','التنبيه قبل الموعد بـ (أيام)'],['dg','اسم مدير عام الدراسات العليا'],['vd','اسم وكيل الكلية للدراسات العليا'],['vdPhone','رقم واتساب وكيل الكلية (د. هناء) — للإنذارات والتذكيرات'],['dean','اسم عميد الكلية'],['vp','اسم نائب رئيس الجامعة للدراسات العليا'],['pres','اسم رئيس الجامعة (القرار)'],['regDecision','رقم القرار الوزاري للائحة الداخلية'],['adminEmail','بريد الإدارة (الملخص اليومي غير متاح بعد النقل إلى Firebase)']];
 return `<div class=cd><h3>الإعدادات</h3><div class=fg>${K.map(k=>fld(k[0],k[1],'',0,S[k[0]]||'','s_')).join('')}</div><br><button class=btn onclick="ss()">حفظ</button></div>
 <div class=cd><h3>تغيير كلمة المرور</h3><div class=fg><div><label>كلمة المرور الحالية</label><input type=password id=p_o autocomplete=current-password></div><div><label>كلمة المرور الجديدة (10 أحرف على الأقل)</label><input type=password id=p_n autocomplete=new-password></div><div><label>تأكيد كلمة المرور الجديدة</label><input type=password id=p_c autocomplete=new-password></div></div><br><button class=btn onclick="cpw()">${ic('save')}تغيير كلمة المرور</button></div>
 ${pmHtml()}${autoHtml()}${bkHtml()}
@@ -975,7 +1245,7 @@ if(n.length<10)return toast('كلمة المرور الجديدة يجب ألا 
 if(n!==c)return toast('تأكيد كلمة المرور غير مطابق');
 if(n===o)return toast('اختر كلمة مرور مختلفة عن الحالية');
 try{await api('chpw',{cp:o,np:n});['#p_o','#p_n','#p_c'].forEach(i=>$(i).value='');toast('تم تغيير كلمة المرور ✅')}catch(e){toast(e.message)}}
-async function ss(){const d={};['faculty','univ','alertDays','dg','vd','dean','vp','pres','regDecision','adminEmail'].forEach(k=>{const v=$('#s_'+k).value.trim();if(v||k!='password')d[k]=v});await api('set',{d});await load();toast('تم الحفظ ✅')}
+async function ss(){const d={};['faculty','univ','alertDays','dg','vd','vdPhone','dean','vp','pres','regDecision','adminEmail'].forEach(k=>{const v=$('#s_'+k).value.trim();if(v||k!='password')d[k]=v});await api('set',{d});await load();toast('تم الحفظ ✅')}
 /* ===== استيراد / تصدير Excel بعناوين ثابتة ===== */
 const en=t=>String(t).replace(/[٠-٩]/g,c=>'٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/[۰-۹]/g,c=>c.charCodeAt(0)-1776),hn=t=>nz(en(t)).replace(/[()\/\-_:؛،.]/g,' ').replace(/\s+/g,' ').trim();
 const HA={'الاسم':'name','اسم الطالب':'name','اسم الطالبه':'name','الموبايل':'phone','التليفون':'phone','الهاتف':'phone','رقم الهاتف':'phone','رقم التليفون':'phone','القومي':'natId','الرقم الوطني':'foreignId','رقم وطني':'foreignId','رقم الجواز':'foreignId','رقم جواز السفر':'foreignId','جواز السفر':'foreignId','رقم قومي':'natId','تاريخ التسجيل':'regDate','تاريخ اعتماد التشكيل':'committeeDate','عنوان الرساله':'titleAr','عنوان الرسالة بالعربيه':'titleAr','التخصص العام':'specialty'};
@@ -987,10 +1257,10 @@ const ws=XLSX.utils.aoa_to_sheet(rows);ws['!cols']=[{wch:30},{wch:26},{wch:52},{
 function xbook(list){const H=FD.map(f=>f[1]),aoa=[H].concat(list.map(r=>FD.map(f=>String(r[f[0]]||''))));
 const ws=XLSX.utils.aoa_to_sheet(aoa);for(let R0=0;R0<aoa.length;R0++)for(let C=0;C<H.length;C++){const c=ws[XLSX.utils.encode_cell({r:R0,c:C})]||(ws[XLSX.utils.encode_cell({r:R0,c:C})]={t:'s',v:''});c.t='s';c.z='@'}
 if(!list.length)for(let R0=1;R0<=300;R0++)for(let C=0;C<H.length;C++)ws[XLSX.utils.encode_cell({r:R0,c:C})]={t:'s',v:'',z:'@'};
-ws['!ref']=XLSX.utils.encode_range({s:{r:0,c:0},e:{r:Math.max(aoa.length-1,list.length?0:300),c:H.length-1}});ws['!cols']=FD.map(f=>({wch:f[2]=='t'?40:f[0]=='name'?28:18}));ws['!freeze']={xSplit:0,ySplit:1};
+ws['!ref']=XLSX.utils.encode_range({s:{r:0,c:0},e:{r:Math.max(aoa.length-1,list.length?0:300),c:H.length-1}});ws['!cols']=FD.map(f=>({wch:f[2]=='t'?40:f[0]=='name'?28:18}));ws['!freeze']={xSplit:0,ySplit:1};ws['!tpl']=1;{const dv={},hc={},nt={},P=['name','job','nationality','gender','natId','foreignId','phone','birthPlace'],A=['dept','specialty','degree','status','rtype'];FD.forEach((f,i)=>{if(f[2]=='s')dv[i]=f[3];hc[i]=P.includes(f[0])?'FF0E4748':A.includes(f[0])?'FF18696A':'FF8A6A22'});const N={name:'مطلوب: اسم الباحث كاملاً',degree:'اختر من القائمة: '+DG.join(' | '),status:'اختر من القائمة (الافتراضي: نشط)',natId:'14 رقماً — للمصريين فقط (يحدد النوع تلقائياً في البيان الإحصائي)',foreignId:'للأجانب: رقم وطني أو جواز سفر',phone:'11 رقماً يبدأ بـ 0',gender:'ذكر / أنثى — يلزم للأجانب فقط',enrollDate:'يوم/شهر/سنة مثل 15/09/2024',enrollEnd:'يوم/شهر/سنة',regDate:'يوم/شهر/سنة',coursesDate:'يوم/شهر/سنة',committeeDate:'يوم/شهر/سنة',defenseDate:'يوم/شهر/سنة'};FD.forEach((f,i)=>{if(N[f[0]])nt[i]=N[f[0]]});ws['!dv']=dv;ws['!hcol']=hc;ws['!notes']=nt}
 const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'الباحثون');XLSX.utils.book_append_sheet(wb,xhelp(),'تعليمات');wb.Workbook={Views:[{RTL:true}]};return wb}
-function xp(){XLSX.writeFile(xbook(R),'researchers.xlsx')}
-function tpl(){XLSX.writeFile(xbook([]),'قالب_استيراد_الباحثين.xlsx');toast('تم تحميل القالب — املأه ثم استورده')}
+function xp(){xlOut(xbook(R),'researchers.xlsx',{banner:false});toast('جارٍ تجهيز الملف…')}
+function tpl(){xlOut(xbook([]),'قالب_استيراد_الباحثين.xlsx',{banner:false});toast('جارٍ تجهيز القالب — املأه ثم استورده')}
 function pd(v){if(v==null||v==='')return['',0];
 if(v instanceof Date&&!isNaN(v)){const d=new Date(v.getTime()+432e5);return[d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate()),0]}
 if(typeof v=='number'&&v>20000&&v<90000){const d=new Date(Date.UTC(1899,11,30)+Math.round(v)*864e5);return[d.getUTCFullYear()+'-'+p2(d.getUTCMonth()+1)+'-'+p2(d.getUTCDate()),0]}
@@ -1137,14 +1407,14 @@ function resetLook(){LK.th='emerald';LK.sk='soft';LK.rl='classic';LK.ds='classic
 applyLook();
 /* ===== مولّد النماذج ===== */
 const M=h=>{$('#md').innerHTML=h;$('#md').className='on'},X=()=>$('#md').className='';
-function dform(id,t='reg'){const r=R.find(x=>x.id==id),d=DT[t],q=window.CX&&window.CX.k==id+'|'+t?window.CX.x:{},f=nid(r,d.f||[]),miss=f.filter(k=>!r[k]),pc=f.length?Math.round((f.length-miss.length)/f.length*100):100,noSup=!r.supervisors.length&&d.b&&d.b.some(b=>/sp/.test(b)),ap=d.m?AP:[AP[0],AP[2]];
+function dform(id,t='reg'){const r=R.find(x=>x.id==id),d=DT[t],q=window.CX&&window.CX.k==id+'|'+t?window.CX.x:{},f=nid(r,d.f||[]),miss=f.filter(k=>!r[k]),pc=f.length?Math.round((f.length-miss.length)/f.length*100):100,noSup=!r.supervisors.length&&d.b&&d.b.some(b=>/sp/.test(b)),ap=d.l==2?AP.slice(0,3):d.l?[]:d.m?AP:[AP[0],AP[2]];
 M(`<div class="mc fm"><div class=fh><span class=av>${esc([...String(r.name||'?')][0])}</span><div><h3>إصدار نموذج</h3><p>${esc(r.name)} • ${esc(r.degree)}${r.dept?' • '+esc(r.dept):''}</p></div><button class="btn w ib" onclick="X()" aria-label="إغلاق">${ic('x')}</button></div>
 <div class=sec><h4>تصميم النموذج</h4><select onchange="setLook('ds',this.value);dform('${id}','${t}')">${DSL.map(q=>`<option value="${q[0]}" ${LK.ds==q[0]?'selected':''}>${q[1]} — ${q[2]}</option>`).join('')}</select></div>
 <div class=sec><h4>نوع النموذج</h4><div class=tp>${Object.keys(DT).map(k=>`<button class="tc ${k==t?'on':''}" onclick="dform('${id}','${k}')">${ic(k)}<span>${DT[k].n}</span></button>`).join('')}</div></div>
 ${f.length?`<div class=cm><div class=cmh><b>اكتمال بيانات الباحث لهذا النموذج</b><span>${pc}%</span></div><div class=pbar><i style="width:${pc}%"></i></div>${miss.length?`<div class=cs>${miss.map(k=>`<span class="ch z">${FL[k]}</span>`).join('')}</div><button class="btn w" onclick="edit('${id}')">${ic('edit')}استكمال بيانات الباحث</button>`:`<p class=ok>${ic('check')}كل البيانات المطلوبة موجودة</p>`}</div>`:''}
 ${noSup?'<div class=wn>لا يوجد مشرفون مسجلون لهذا الباحث — أضفهم من شاشة التعديل.</div>':''}
-${d.ex.length?`<div class=sec><h4>بيانات هذا النموذج</h4><div class=fg>${d.ex.map(k=>fld(k,XL[k],XT[k]||'',0,q[k]!=null?q[k]:(k=='rno'?S.regDecision||'':''),'x_')).join('')}</div></div>`:''}
-<div class=sec><h4>تواريخ الموافقات</h4><div class=fg>${ap.map(a=>fld(a[0],a[1],a[2],0,q[a[0]]||'','x_')).join('')}</div></div>
+${d.ex.length?`<div class=sec><h4>بيانات هذا النموذج</h4><div class=fg>${d.ex.map(k=>fld(k,XL[k],XT[k]||'',0,q[k]!=null?q[k]:(k=='lta'?r.titleAr||'':k=='lte'?r.titleEn||'':k=='rno'?S.regDecision||'':''),'x_')).join('')}</div></div>`:''}
+${ap.length?`<div class=sec><h4>تواريخ الموافقات</h4><div class=fg>${ap.map(a=>fld(a[0],a[1],a[2],0,q[a[0]]||'','x_')).join('')}</div></div>`:''}
 <div class=fa><button class=btn onclick="pv('${id}','${t}')">${ic('doc')}معاينة وطباعة</button><button class="btn w" onclick="X()">إلغاء</button></div></div>`)}
 function pv(id,t){if($('.mc .dpk[data-s=bad]'))return toast('تأكد من صحة التواريخ المُدخلة');const r=R.find(x=>x.id==id),x={};[...DT[t].ex,...AP.map(a=>a[0])].forEach(k=>{const e=$('#x_'+k);if(e)x[k]=e.value.trim()});const h=mk(t,r,x),z=Math.min(1,(innerWidth-130)/794);
 M(`<div class="mc pvw"><div class=pt><div class=pth><h3>${DT[t].n}</h3><p>${esc(r.name)}</p></div><div class=pta><button class=btn onclick="$('#pf').contentWindow.print()">${ic('print')}طباعة / PDF</button><button class="btn g" onclick="wd('${t}')">${ic('doc')}تحميل Word</button><button class="btn w" onclick="lg('${id}','${t}')">${ic('save')}حفظ في السجل</button><button class="btn w" onclick="dform('${id}','${t}')">${ic('edit')}تعديل البيانات</button><button class="btn w ib" onclick="X()" aria-label="إغلاق">${ic('x')}</button></div></div><p class=hint>${ic('edit')}اضغط على أي نص داخل الورقة لتعديله قبل الطباعة.</p><div class=stage><div class=sheet style="zoom:${z}"><iframe id=pf srcdoc="${esc(h)}" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+'px'"></iframe></div></div></div>`);window.CX={x,k:id+'|'+t}}
@@ -1173,10 +1443,18 @@ th{background:#e8f0ee;color:#0e4748;width:1%;white-space:nowrap;font-weight:bold
 .rc2{padding-right:24px;line-height:1.95;text-align:justify}.rc2 li{margin:2px 0}
 .dcr{text-align:center;margin:18px 0 10px;font-size:19pt;font-weight:bold;color:#0e4748}.dcr span{padding:2px 22px;border-top:1.2pt solid #b8923f;border-bottom:1.2pt solid #b8923f}
 .art{margin:6px 0;line-height:1.95;text-align:justify}.sgl{margin-top:26px;text-align:left;font-weight:bold;font-size:14pt;line-height:1.7}
+.lb{font-size:15pt;line-height:2.1;text-align:justify;margin:2px 0}.ad2{font-weight:bold;text-decoration:underline;font-size:15.5pt;margin:8px 0 2px}.en2{direction:ltr;text-align:center;font-weight:bold;font-family:'Times New Roman',serif;font-size:13.5pt;line-height:1.6;margin:4px 0 10px}.lz{text-align:center;text-decoration:underline;font-weight:bold;font-size:17pt;margin:16px 0 2px}.lsg td{width:50%!important}
 ${DSS}</style>`;
 const head0=`<table class=lh><tr><td class=lg><img src="${LOGO}" width=84></td><td class=lt><b>${v(S.univ)}</b>كلية ${v(S.faculty)}<br>إدارة الدراسات العليا</td><td class=ld>التاريخ: ${F(iso(now()))}</td></tr></table><div class=rl2></div>`;
 const head=DH(LK.ds,head0,v(S.univ),v(S.faculty),F(iso(now())));
 if(t=='dec'){const L=(a,b)=>`<li>${a}</li>`;return `<html dir=rtl><head><meta charset=utf-8>${css}</head><body contenteditable class="ds-${LK.ds}">${head}<div class=tt>قرار رئيس الجامعة</div><div class=sub>رقم ( ${v(x.dno)} ) بتاريخ ${F(x.dd)}</div><p><b>رئيس الجامعة:</b></p><ul class=rc2><li>بعد الاطلاع على القانون رقم (49) لسنة 1972 بشأن تنظيم الجامعات والقوانين المعدلة له.</li><li>وعلى قرار رئيس الجمهورية رقم (809) لسنة 1975 باللائحة التنفيذية لقانون تنظيم الجامعات والقرارات المعدلة له.</li><li>وعلى القرار الوزاري رقم (141) بتاريخ 29/1/1977م بشأن تفويض رؤساء الجامعات باعتماد منح الدرجات العلمية.</li><li>وعلى القرار الوزاري رقم ( ${v(x.rno)} ) بتاريخ ${F(x.rd)} بإصدار اللائحة الداخلية لكلية ${v(S.faculty)}.</li><li>وعلى موافقة مجلس قسم ${v(r.dept)} رقم ( ${v(x.dcn)} ) بتاريخ ${F(x.ad)}.</li><li>وعلى موافقة مجلس الكلية رقم ( ${v(x.fcn)} ) بتاريخ ${F(x.af)} على منح الطالب/ة ${v(r.name)} درجة ${v(r.degree)} في ${v(r.specialty)} من كلية ${v(S.faculty)} قسم ${v(r.dept)} ${x.round?'دور '+v(x.round):''} ${x.grade?'بتقدير '+v(x.grade):''}.</li><li>وعلى موافقة الأستاذ الدكتور/ نائب رئيس الجامعة لشئون الدراسات العليا والبحوث.</li><li>وعلى موافقة الأستاذ الدكتور/ رئيس الجامعة بالتفويض بتاريخ ${F(x.pd)}.</li></ul><div class=dcr><span>قـــرر</span></div><p class=art><b>مادة (1):</b> منح الطالب/ة ${v(r.name)} درجة ${v(r.degree)} في ${v(r.specialty)} من كلية ${v(S.faculty)} قسم ${v(r.dept)} ${x.round?'دور '+v(x.round):''} ${x.grade?'بتقدير '+v(x.grade):''}.</p><p class=art><b>مادة (2):</b> على الجهات المختصة العلم والتنفيذ كل فيما يخصه.</p><div class=sgl>رئيس الجامعة<br><br>${v(S.pres)}</div></body></html>`}
+if(d.l){const ar=x.lta!=null&&x.lta!==''?x.lta:r.titleAr,en=x.lte!=null&&x.lte!==''?x.lte:r.titleEn,dt=[[x.ad,'مجلس قسم '+(r.dept||'')+' وافق على تسجيل الرسالة بتاريخ'],[x.ag,'ولجنة الدراسات العليا بالكلية بتاريخ'],[x.af,'ومجلس الكلية بتاريخ']].filter(z=>z[0]);
+const sgn=`<table class="sg lsg"><tr>${[['مدير عام الدراسات العليا',S.dg],['عميد الكلية',S.dean]].map(z=>`<td><div class=rl>${z[0]}</div><div class=nm>${v(z[1])||'&nbsp;'}</div></td>`).join('')}</tr></table>`,
+ to='<p class=ad2>سعادة الأستاذ الدكتور / مدير المكتبة الرقمية بالجامعة</p><p class=lb>تحية طيبة وبعد،،،</p>',ent=en?`<p class=en2>${v(en)}</p>`:'',
+ who=`<b>${v(r.name)}</b>`,deg=v(r.degree)+(r.specialty?' في '+v(r.specialty):'');
+const body=d.l==1?`${to}<p class=lb>رجاء الإفادة عن نقطة بحث بالعنوان التالي: <b>«${v(ar)}»</b></p>${ent}<p class=lb>حيث تقدّم الباحث / ${who} لتسجيل هذه النقطة لرسالة ${deg} بكلية ${v(S.faculty)} – ${v(S.univ)}.</p><div class=lz>لـــــــــذا</div><p class=lb>نرجو من سعادتكم إفادتنا عمّا إذا كان هذا الموضوع مسجّلًا بكلية أخرى بإحدى الجامعات المصرية من عدمه.</p><p class=lb>ولسيادتكم جزيل الشكر والتقدير،،،</p>`
+:`${to}<p class=lb>رجاء التفضل باستلام الخطة البحثية الخاصة بالباحث / ${who} بعنوان:</p><p class=lb><b>«${v(ar)}»</b></p>${ent}<p class=lb>وذلك لرفعها على قاعدة بيانات المكتبة الرقمية وإفادة الكلية بذلك.</p>${dt.length?`<p class=lb>مع العلم أن ${dt.map(z=>z[1]+' '+F(z[0])).join('<br>')}</p>`:''}<p class=lb>وتفضلوا سيادتكم بقبول وافر التقدير والاحترام،،،</p>`;
+return `<html dir=rtl><head><meta charset=utf-8>${css}</head><body contenteditable class="ds-${LK.ds}">${head}${body}${sgn}</body></html>`}
 const val=k=>/Date|End$/.test(k)?F(r[k]):v(r[k]),pairs=[];const df=nid(r,d.f);for(let i=0;i<df.length;i+=2)pairs.push(df.slice(i,i+2));
 const info=`<table>${pairs.map(p=>`<tr>${p.map(k=>`<th>${FL[k]}</th><td>${val(k)}</td>`).join('')}${p.length<2?'<th></th><td></td>':''}</tr>`).join('')}</table>`;
 const tb=(c,l,fn)=>`<table><tr><th style="width:5%">م</th>${c.map(h=>`<th style="width:auto">${h}</th>`).join('')}</tr>${(l.length?l:[{},{}]).map((o,i)=>`<tr><td>${i+1}</td>${fn(o)}</tr>`).join('')}</table>`;
@@ -1289,13 +1567,13 @@ function brief(){const it=[],A=alerts(),lateD=A.filter(a=>a.k<0).length,P=RQ.fil
  return `<div class=cd><h3>خلاصة اليوم</h3>${it.length?it.map(x=>`<div class="bf ${x[0]}"><span>${esc(x[1])}</span><button class="btn w" onclick="${x[2]}">${x[3]}</button></div>`).join(''):`<div class=em>${ic('check')}كل شيء على ما يرام — لا يوجد ما يحتاج إجراءً الآن</div>`}<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn w" onclick="mrep()">${ic('down')}تقرير شهري Excel</button><button class="btn w" onclick="qk()">${ic('search')}بحث سريع <span class=qkk>Ctrl K</span></button></div></div>`}
 /* ---------- التقرير الشهري (Excel) ---------- */
 function mrep(){if(typeof XLSX=='undefined')return toast('مكتبة Excel لم تُحمَّل — تحقق من الاتصال');const T=now(),ad=+S.alertDays,wb=XLSX.utils.book_new(),
- add=(n,a,w)=>{const ws=XLSX.utils.aoa_to_sheet(a);ws['!cols']=(w||[]).map(x=>({wch:x}));XLSX.utils.book_append_sheet(wb,ws,n)},dg=DG.map(g=>[g,R.filter(r=>r.degree==g).length]);
- add('ملخص',[['تقرير منظومة الدراسات العليا',fd(iso(T))],[],['إجمالي الباحثين',R.length],...ST.map(t=>['حالة: '+t,R.filter(r=>r.status==t).length]),[],...dg.map(x=>['درجة: '+x[0],x[1]]),[],['مواعيد متأخرة',dues().filter(a=>a.k<0).length],['مواعيد خلال '+ad+' يوم',dues().filter(a=>a.k>=0&&a.k<=ad).length],['طلبات بانتظار الرد',RQ.filter(q=>q.status=='pending').length],['تقارير دورية متأخرة',repLateN()]],[34,18]);
+ add=(n,a,w,f)=>{const ws=XLSX.utils.aoa_to_sheet(a);ws['!cols']=(w||[]).map(x=>({wch:x}));Object.assign(ws,f||{});XLSX.utils.book_append_sheet(wb,ws,n)},dg=DG.map(g=>[g,R.filter(r=>r.degree==g).length]);
+ add('ملخص',[['نظرة عامة'],['إجمالي الباحثين',R.length],['حالات الباحثين'],...ST.map(t=>[t,R.filter(r=>r.status==t).length]),['الدرجات العلمية'],...dg.map(x=>[x[0],x[1]]),['المتابعة'],['مواعيد متأخرة',dues().filter(a=>a.k<0).length],['مواعيد خلال '+ad+' يوم',dues().filter(a=>a.k>=0&&a.k<=ad).length],['طلبات بانتظار الرد',RQ.filter(q=>q.status=='pending').length],['تقارير دورية متأخرة',repLateN()]],[38,20],{'!kv':1});
  add('المواعيد',[['الباحث','الموعد','التاريخ','الحالة']].concat(dues().filter(a=>a.k<=ad).map(a=>[a.n,a.t,fd(a.d),lbl(a.k)])),[30,46,14,16]);
  add('التقارير الدورية',[['الباحث','الدرجة','المشرفون','آخر تقرير','نسبة الإنجاز','التوصية','الموعد القادم','الحالة']].concat(repList().map(({r,i})=>{const d=i.lr?i.lr.data:{};return[r.name,r.degree,(r.supervisors||[]).map(s=>s.n).join('، '),i.lr?fd(i.lr.date):'لم يُسجَّل',i.lr?PC(d.pct)+'%':'',d.rec||'',fd(i.due),i.k<0?'متأخر '+(-i.k)+' يوم':i.k<=ad?'قريب':'سليم']})),[28,12,36,14,12,34,14,14]);
- add('المشرفون',[['المشرف','الوظيفة','الباحثون','آخر دخول','آخر نشاط','تقارير متأخرة','الحساب']].concat(supRows().map(x=>[x.s.name,x.s.job||'',x.m.length,x.s.lastLogin?x.s.lastLogin.slice(0,10):'لم يدخل',x.la?fd(x.la):'',x.lt.length,x.off?'موقوف':'نشط'])),[30,28,10,14,14,12,10]);
+ add('المشرفون',[['المشرف','الوظيفة','الباحثون','آخر دخول','آخر نشاط','تقارير متأخرة','الحساب']].concat(supRows().map(x=>[x.s.name,x.s.job||'',x.m.length,x.s.lastLogin?x.s.lastLogin.slice(0,10):'لم يدخل',x.la?fd(x.la):'',x.lt.length,x.off?'موقوف':'نشط'])),[30,28,10,14,14,12,10],{'!bars':[2]});
  add('الطلبات',[['النوع','الباحث','المشرف','التاريخ','الحالة','تاريخ القرار','ملاحظة الإدارة']].concat(RQ.map(q=>{const r=R.find(x=>x.id==q.rid);return[(RQT[q.type]||{}).t||q.type,r?r.name:'',rqSup(q.sid).name,fd(q.date),(RQS[q.status]||[''])[0],fd(q.decided),q.adminNote||'']})),[18,28,28,12,14,12,40]);
- wb.Workbook={Views:[{RTL:true}]};XLSX.writeFile(wb,'تقرير_الدراسات_العليا_'+iso(T)+'.xlsx');toast('تم تحميل التقرير الشهري ✅')}
+ xlOut(wb,'تقرير_الدراسات_العليا_'+iso(T)+'.xlsx',{title:'التقرير الشهري لمنظومة الدراسات العليا'});toast('جارٍ تجهيز التقرير الشهري…')}
 /* ---------- الأمان وسجل العمليات ---------- */
 function autoHtml(){return `<div class=cd><h3>سجل العمليات</h3><p style="line-height:2;margin:0 0 10px;color:var(--m);font-size:13.5px">كل عملية إدارية (إضافة/تعديل/حذف باحث، قرارات الطلبات، كلمات مرور المشرفين، الإعدادات) تُسجَّل باسم حساب الإدارة الذي نفّذها ولا يمكن تعديلها.</p><button class="btn w" onclick="auditLoad()">${ic('doc')}عرض سجل العمليات (آخر 150)</button><div id=aul style="margin-top:12px"></div></div>`}
 const bkMsg=t=>{const e=$('#bkm');if(e)e.textContent=t};
@@ -1329,4 +1607,501 @@ function qkKey(e){const b=[...document.querySelectorAll('#qkr .qkb')];if(e.key==
  if(e.key=='Enter'&&b[QKI]){e.preventDefault();b[QKI].click()}}
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()=='k'&&!document.getElementById('lg')){e.preventDefault();qk()}});
 FBLOAD().then(()=>FB.resume()).then(ok=>{if(ok)login(true)}).catch(()=>{});
-</script></body></html>
+</script><script>
+/* ===== GSX — محرك النماذج والرسائل (إنذارات + تذكيرات + واتساب) مشترك بين الإدارة والمشرفين ===== */
+(function(){
+'use strict';
+const q=s=>document.querySelector(s),E=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fdt=s=>s?String(s).slice(0,10).split('-').reverse().join('/'):'';
+const icn=n=>typeof window.ic==='function'?window.ic(n):'';
+const G=window.GSX={host:null,_t:null};
+
+/* ---------- المتغيّرات المعروفة ---------- */
+const TOK={
+ g:[['الباحث','اسم الباحث'],['الدرجة','الدرجة العلمية'],['القسم','القسم'],['التخصص','التخصص'],['المشرف','اسم المشرف'],['المشرفون','كل مشرفي الباحث'],['وكيل_الكلية','وكيل الكلية'],['الكلية','اسم الكلية'],['الجامعة','اسم الجامعة'],['اليوم','تاريخ اليوم']],
+ w:[['رقم_الإنذار','رقم الإنذار (5/2026)'],['تاريخ_الإنذار','تاريخ الإنذار'],['سبب_الإنذار','سبب الإنذار'],['ترتيب_الإنذار','الإنذار الثاني…'],['مصدر_الإنذار','من وجّه الإنذار']],
+ r:[['قائمة_المواعيد','كل المواعيد'],['الموعد','أول موعد'],['تاريخ_الموعد','تاريخه'],['المتبقي','المدة المتبقية'],['عدد_المواعيد','العدد']]};
+const KN=new Set([].concat(TOK.g,TOK.w,TOK.r).map(x=>x[0]));
+G.TOK=TOK;
+const nm=n=>String(n).trim().replace(/\s+/g,'_');
+
+/* ---------- النماذج الافتراضية ---------- */
+const DEF=[
+{id:'d_wr',k:'warn',to:'r',t:'إنذار للباحث — رسمي',b:'السلام عليكم ورحمة الله وبركاته\nالباحث/ة: {الباحث}\nالدرجة: {الدرجة} — القسم: {القسم}\n\n⚠️ إنذار رقم ({رقم_الإنذار}) بتاريخ {تاريخ_الإنذار}\n({ترتيب_الإنذار})\n\nالسبب: {سبب_الإنذار}\n\nيُرجى سرعة التواصل مع المشرف وتدارك الموقف في أقرب وقت، وإلا سيُتخذ الإجراء اللائحي المناسب.\n\n{الكلية} — {الجامعة}'},
+{id:'d_wr2',k:'warn',to:'r',t:'إنذار للباحث — بمهلة محددة',b:'السلام عليكم ورحمة الله وبركاته\nالباحث/ة: {الباحث}\n\n⚠️ إنذار رقم ({رقم_الإنذار}) بتاريخ {تاريخ_الإنذار}\nالسبب: {سبب_الإنذار}\n\nأمامك مهلة {المهلة_بالأيام} يوماً من تاريخ هذا الإنذار لاستكمال المطلوب.\n\n{الكلية} — {الجامعة}'},
+{id:'d_wv',k:'warn',to:'v',t:'إخطار وكيل الكلية بإنذار',b:'سيادة {وكيل_الكلية}\nوكيل الكلية للدراسات العليا\nتحية طيبة وبعد،\n\nنفيد سيادتكم بأن {مصدر_الإنذار} وجّه إنذاراً للباحث/ة: {الباحث} ({الدرجة} — {القسم}):\n• رقم الإنذار: {رقم_الإنذار}\n• التاريخ: {تاريخ_الإنذار} ({ترتيب_الإنذار})\n• السبب: {سبب_الإنذار}\n\nوتفضلوا بقبول فائق الاحترام.'},
+{id:'d_rr',k:'remind',to:'r',t:'تذكير للباحث بالمواعيد',b:'السلام عليكم ورحمة الله وبركاته\nالباحث/ة: {الباحث}\n\n🔔 تذكير من إدارة الدراسات العليا — كلية {الكلية}:\n{قائمة_المواعيد}\n\nبرجاء المبادرة بالإجراءات اللازمة قبل انتهاء الموعد. شاكرين تعاونكم.'},
+{id:'d_rs',k:'remind',to:'s',t:'تذكير للمشرف بمواعيد باحثيه',b:'السلام عليكم ورحمة الله وبركاته\nسيادة {المشرف}\n\n🔔 تذكير من إدارة الدراسات العليا — كلية {الكلية}:\nمواعيد الباحثين التالين قاربت على الانتهاء:\n{قائمة_المواعيد}\n\nبرجاء متابعة الباحثين ومساعدتهم على استيفاء المطلوب في الوقت المناسب. شاكرين تعاونكم.'},
+{id:'d_rv',k:'remind',to:'v',t:'ملخص المواعيد لوكيل الكلية',b:'سيادة {وكيل_الكلية}\nتحية طيبة وبعد،\n\n🔔 ملخص المواعيد القريبة والمتأخرة للباحثين ({عدد_المواعيد} موعد):\n{قائمة_المواعيد}\n\nوتفضلوا بقبول فائق الاحترام.'},
+{id:'d_x1',k:'reason',to:'r',t:'عدم الالتزام بالمقابلات الإشرافية',b:'عدم الالتزام بالمقابلات الإشرافية'},
+{id:'d_x2',k:'reason',to:'r',t:'التأخر في تسليم المهام',b:'التأخر في تسليم المهام المطلوبة'},
+{id:'d_x3',k:'reason',to:'r',t:'عدم تقديم التقرير الدوري',b:'عدم تقديم ما يلزم لإعداد التقرير الدوري'},
+{id:'d_x4',k:'reason',to:'r',t:'الانقطاع عن المتابعة',b:'الانقطاع عن المتابعة والتواصل مع المشرف'}];
+G.defaults=()=>DEF.map(x=>({...x}));
+G.setTpls=a=>{G._t=Array.isArray(a)&&a.length?a.map(x=>({id:x.id,k:x.k||'warn',to:x.to||'r',t:x.t||'',b:x.b||''})):null};
+G.all=()=>G._t||G.defaults();
+G.list=(k,to)=>G.all().filter(t=>t.k===k&&(!to||t.to===to));
+G.byId=id=>G.all().find(t=>t.id===id);
+
+/* ---------- المحرّك ---------- */
+G.render=(b,c)=>String(b||'').replace(/\{([^{}\n]{1,40})\}/g,(m,n)=>{n=nm(n);if(!(n in c))return m;const v=c[n];return v==null?'':v});
+G.fields=b=>{const o=[];String(b||'').replace(/\{([^{}\n]{1,40})\}/g,(m,n)=>{n=nm(n);if(!KN.has(n)&&!o.includes(n))o.push(n);return m});return o};
+G.ord=n=>'الإنذار '+(['','الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع','العاشر'][n]||('رقم '+n));
+G.lbl=k=>k<0?'متأخر '+(-k)+' يوم':k==0?'اليوم':'بعد '+k+' يوم';
+G.wa=(phone,text)=>{let n=String(phone||'').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/\D/g,'');if(n.startsWith('00'))n=n.slice(2);
+ if(/^0\d{10}$/.test(n))n='2'+n;else if(/^1\d{9}$/.test(n))n='20'+n;
+ const t=text?'?text='+encodeURIComponent(text):'';return n.length>=9?'https://wa.me/'+n+t:'https://wa.me/'+t};
+G.ctx=o=>{const r=o.r||{},w=o.w||{},ss=(o.sups||[]).map(s=>s.n||s).filter(Boolean),dl=(o.dues||[]).slice().sort((a,b)=>a.k-b.k),f=dl[0]||{};
+ const c={الباحث:r.name||'',الدرجة:r.degree||'',القسم:r.dept||'',التخصص:r.specialty||'',المشرف:o.sup||ss.join(' و '),المشرفون:ss.join(' ، '),وكيل_الكلية:o.vd||'',الكلية:o.faculty||'',الجامعة:o.univ||'',اليوم:fdt(G.host&&G.host.today?G.host.today():''),
+  رقم_الإنذار:w.no?w.no+'/'+w.yr:'(يُحدَّد عند الإصدار)',تاريخ_الإنذار:fdt(w.date),سبب_الإنذار:w.reason||'',ترتيب_الإنذار:w.ord?G.ord(w.ord):'',مصدر_الإنذار:w.src||o.sup||'إدارة الدراسات العليا',
+  قائمة_المواعيد:dl.map(a=>'• '+(o.names?a.n+' — ':'')+a.t.replace(/\s*\(.*$/,'')+' — '+fdt(a.d)+' ('+G.lbl(a.k)+')').join('\n'),الموعد:f.t?f.t.replace(/\s*\(.*$/,''):'',تاريخ_الموعد:fdt(f.d),المتبقي:f.d?G.lbl(f.k):'',عدد_المواعيد:dl.length};
+ const x=o.x||{};for(const k in x)if(x[k]!==''&&x[k]!=null)c[nm(k)]=x[k];return c};
+G.sample=()=>G.ctx({r:{name:'محمد أحمد علي',degree:'ماجستير',dept:'العلوم النفسية',specialty:'صحة نفسية'},sups:['أ.د/ سامية محمود'],sup:'أ.د/ سامية محمود',vd:'أ.د/ هناء فؤاد',faculty:'التربية للطفولة المبكرة',univ:'جامعة بني سويف',w:{no:5,yr:2026,date:'2026-11-14',reason:'عدم الالتزام بالمقابلات الإشرافية',ord:2},names:true,dues:[{n:'محمد أحمد علي',t:'انتهاء القيد',d:'2026-12-01',k:17},{n:'محمد أحمد علي',t:'تقرير الإشراف الدوري',d:'2026-11-10',k:-4}]});
+
+/* ---------- معالج الإرسال بالتتابع (واتساب) ---------- */
+G.queue=function(o){const H=G.host,items=o.items.map(x=>({...x,sent:false}));let cur=0;
+ const nxt=()=>{const i=items.findIndex((x,j)=>!x.sent&&j!==cur);return i<0?items.findIndex(x=>!x.sent):i};
+ const draw=()=>{const box=q('#gxq');if(!box)return;const it=items[cur],left=items.filter(x=>!x.sent).length;
+  if(!left){box.innerHTML=`<div class=gx-done><b>✅ تم تجهيز وإرسال كل الرسائل (${items.length})</b><button class="btn" onclick="GSX.host.hide()">إغلاق</button></div>`;o.onDone&&o.onDone();return}
+  box.innerHTML=`<div class=gx-steps>${items.map((x,i)=>`<button type=button data-i="${i}" class="gx-st ${i==cur?'on':''} ${x.sent?'ok':''}"><i>${x.sent?'✓':i+1}</i><span>${E(x.role)}</span></button>`).join('')}</div>
+<div class=gx-to><div><b>${E(it.name||'—')}</b><span class=gx-role>${E(it.role)}</span></div><small>${it.phone?'<bdi>'+E(it.phone)+'</bdi>':'⚠ لا يوجد رقم محفوظ — سيفتح واتساب لتختار جهة الاتصال بنفسك'}</small></div>
+<textarea id=gxqt rows=11 spellcheck=false>${E(it.text)}</textarea>
+<div class=gx-act><a class=btn id=gxqs target=_blank rel=noopener href="${E(G.wa(it.phone,it.text))}">${icn('wa')}${it.sent?'إعادة الإرسال':'إرسال عبر واتساب'}</a><button type=button class="btn w" id=gxqc>نسخ النص</button>${items.length>1?'<button type=button class="btn w" id=gxqn>التالي ◂</button>':''}</div>
+<p class=gx-hint>يمكنك تعديل النص قبل الإرسال. بعد الضغط على «إرسال» يفتح واتساب والرسالة جاهزة — اضغط إرسال هناك ثم ارجع هنا، وسننتقل تلقائياً للرسالة التالية (${left} متبقية).</p>`;
+  const t=q('#gxqt'),a=q('#gxqs');t.oninput=()=>{it.text=t.value;a.href=G.wa(it.phone,it.text)};
+  a.onclick=()=>{it.sent=true;o.onSent&&o.onSent(it);setTimeout(()=>{const n=nxt();if(n>=0)cur=n;draw()},500)};
+  q('#gxqc').onclick=function(){const b=this;(navigator.clipboard?navigator.clipboard.writeText(t.value):Promise.reject()).then(()=>{b.textContent='تم النسخ ✓'},()=>{t.select();document.execCommand&&document.execCommand('copy');b.textContent='تم النسخ ✓'});setTimeout(()=>{b.textContent='نسخ النص'},1500)};
+  const n=q('#gxqn');n&&(n.onclick=()=>{cur=(cur+1)%items.length;draw()});
+  box.querySelectorAll('.gx-st').forEach(b=>b.onclick=()=>{cur=+b.dataset.i;draw()})};
+ H.show(o.title||'إرسال عبر واتساب',o.sub||'',`<div id=gxq class=gx></div>`,'');draw()};
+
+/* ---------- بطاقة إنذار ---------- */
+G.wcard=(w,o)=>{o=o||{};const s=w.sent||{},ch=(k,t)=>s[k]?`<span class="chip">${t} ✓ ${E(String(s[k]).slice(5,16))}</span>`:`<span class="chip p">${t}: لم يُرسل</span>`;
+ return `<div class=gx-wc><div class=gx-wh><b>إنذار رقم ${w.no}/${w.yr}</b><span class="chip z">${E(G.ord(w.ord))}</span><span class=gx-d>${fdt(w.date)}</span></div>${o.head?`<div class=gx-wm>${o.head}</div>`:''}<p>${E(w.reason)}</p><div class=gx-ws>${ch('r','الباحث')}${ch('v','وكيل الكلية')}</div>${o.actions?`<div class=gx-wa>${o.actions}</div>`:''}</div>`};
+
+/* ---------- نافذة الإنذار (إصدار جديد أو إعادة إرسال) ---------- */
+G.warn=function(o){const H=G.host,r=o.r||{},rs=o.mode==='resend',W0=o.w||{},T=H.today();let XV={};try{XV=JSON.parse(W0.x||'{}')||{}}catch(e){}
+ const rows=[{k:'r',role:'الباحث',name:r.name,phone:r.phone},{k:'v',role:'وكيل الكلية',name:o.vd||'وكيل الكلية',phone:o.vdPhone}];
+ rows.forEach(x=>{x.l=G.list('warn',x.k)});
+ const reasons=G.list('reason');
+ const sel=()=>rows.map(x=>({...x,on:!!(q('#gxc_'+x.k)&&q('#gxc_'+x.k).checked),tpl:G.byId((q('#gxs_'+x.k)||{}).value)})).filter(x=>x.on&&x.tpl);
+ const W=()=>rs?W0:{no:0,yr:0,date:(q('#gxw_d')||{}).value||T,reason:((q('#gxw_r')||{}).value||'').trim(),ord:(o.prior||[]).length+1};
+ const cx=()=>G.ctx({r,sups:o.sups,sup:o.sup,vd:o.vd,faculty:o.faculty,univ:o.univ,w:{...W(),src:rs?(o.src||o.sup):o.sup},x:XV});
+ const flds=()=>{const s=[];sel().forEach(x=>G.fields(x.tpl.b).forEach(n=>{if(!s.includes(n))s.push(n)}));return s};
+ const drawX=()=>{const f=flds(),b=q('#gxw_x');if(!b)return;b.innerHTML=f.length?`<div class=gx-f><label>حقول إضافية يطلبها النموذج</label>${f.map(n=>`<input data-x="${E(n)}" placeholder="${E(n.replace(/_/g,' '))}" value="${E(XV[n]||'')}">`).join('')}</div>`:'';
+  b.querySelectorAll('input').forEach(i=>i.oninput=()=>{XV[i.dataset.x]=i.value.trim();pv()})};
+ const pv=()=>{const c=cx(),b=q('#gxw_pv');if(!b)return;const l=sel();b.innerHTML=l.length?l.map(x=>`<div class=gx-pv><b>معاينة — ${E(x.role)}</b><pre>${E(G.render(x.tpl.b,c))}</pre></div>`).join(''):'<div class=em>اختر مستلماً واحداً على الأقل</div>'};
+ const body=`<div class=gx>${rs?`<div class=gx-num>إنذار رقم <b>${W0.no}/${W0.yr}</b> بتاريخ ${fdt(W0.date)} — ${E(G.ord(W0.ord))}<p>${E(W0.reason)}</p></div>`:`<div class=gx-row><div><label>تاريخ الإنذار</label><input type=date id=gxw_d value="${T}"></div><div><label>رقم الإنذار</label><input value="يُولَّد تلقائياً عند الإصدار" disabled></div></div>
+<label>سبب الإنذار</label>${reasons.length?`<div class=gx-chips>${reasons.map(x=>`<button type=button data-b="${E(x.b)}">${E(x.t)}</button>`).join('')}</div>`:''}<textarea id=gxw_r rows=3 placeholder="اكتب سبب الإنذار بوضوح…"></textarea>${(o.prior||[]).length?`<p class=gx-hint>سبق توجيه ${(o.prior||[]).length} إنذار لهذا الباحث — هذا سيكون <b>${E(G.ord((o.prior||[]).length+1))}</b>.</p>`:''}`}
+<label style="margin-top:14px">إرسال عبر واتساب إلى</label>
+${rows.map(x=>`<div class=gx-rc><label class=gx-ck><input type=checkbox id=gxc_${x.k} ${x.l.length?'checked':'disabled'}><span>${x.role}: <b>${E(x.name||'—')}</b>${x.phone?'':' <small class=gx-w>(لا يوجد رقم — ستختار جهة الاتصال)</small>'}</span></label>${x.l.length?`<select id=gxs_${x.k}>${x.l.map(t=>`<option value="${E(t.id)}">${E(t.t)}</option>`).join('')}</select>`:'<small>لا يوجد نموذج — أضف من «النماذج»</small>'}</div>`).join('')}
+<div id=gxw_x></div><div id=gxw_pv></div></div>`;
+ H.show(rs?'إعادة إرسال إنذار':'توجيه إنذار',E(r.name||''),body,`<button class=btn id=gxw_go>${icn('wa')}${rs?'متابعة الإرسال':'إصدار الإنذار وإرساله'}</button><button class="btn w" onclick="GSX.host.hide()">إلغاء</button>`);
+ const root=q('.gx');if(!root)return;
+ root.addEventListener('input',pv);root.addEventListener('change',e=>{if(/^gx[cs]_/.test(e.target.id||'')){drawX();pv()}});
+ root.querySelectorAll('.gx-chips button').forEach(b=>b.onclick=()=>{const t=q('#gxw_r');t.value=t.value.trim()?t.value.trim().replace(/[؛.]$/,'')+'؛ '+b.dataset.b:b.dataset.b;pv();t.focus()});
+ drawX();pv();
+ q('#gxw_go').onclick=async function(){const btn=this,l=sel(),w=W();
+  if(!rs){if(!w.reason)return H.toast('اكتب سبب الإنذار');if(!/^\d{4}-\d{2}-\d{2}$/.test(w.date))return H.toast('تاريخ غير صالح')}
+  if(!l.length)return H.toast('اختر مستلماً واحداً على الأقل');
+  const miss=flds().find(n=>!XV[n]);if(miss)return H.toast('أكمل الحقل: '+miss.replace(/_/g,' '));
+  let F=W0;if(!rs){btn.classList.add('ld');try{F=await o.save({reason:w.reason,date:w.date,x:XV})}catch(e){btn.classList.remove('ld');return H.toast(e.message||'تعذّر الإصدار')}btn.classList.remove('ld');F.src=o.sup;o.saved&&o.saved(F)}
+  const c=G.ctx({r,sups:o.sups,sup:o.sup,vd:o.vd,faculty:o.faculty,univ:o.univ,w:{...F,src:rs?(o.src||o.sup):o.sup},x:XV});
+  G.queue({title:'إرسال الإنذار',sub:'إنذار رقم '+F.no+'/'+F.yr+' — '+E(r.name||''),items:l.map(x=>({key:x.k,role:x.role,name:x.name,phone:x.phone,text:G.render(x.tpl.b,c)})),onSent:it=>o.sent&&o.sent(F,it.key)})}};
+})();
+
+</script>
+<script>
+/* ===== المواعيد والتنبيهات: تذكيرات واتساب + الإنذارات + مدير النماذج ===== */
+var TPLS=[],REM={},DUEL=[],WL=null,DTAB='dues',WQ='';
+GSX.host={today:()=>iso(now()),hide:()=>X(),toast:m=>toast(m),
+ show(title,sub,body,foot){M(`<div class="mc gx-mc"><div class=fh><span class=av>${ic('wa')}</span><div><h3>${title}</h3><p>${sub||''}</p></div><button class="btn w ib" onclick="X()" aria-label="إغلاق">${ic('x')}</button></div><div class=gx-b>${body}</div>${foot?`<div class=gx-ft>${foot}</div>`:''}</div>`)}};
+const lastRem=rid=>{const o=REM[rid]||{};return['r','s','v'].map(k=>o[k]).filter(Boolean).sort().pop()||''};
+const sinceD=d=>{const x=D(String(d).slice(0,10)),T=now();T.setHours(0,0,0,0);return x?Math.round((T-x)/864e5):9999};
+function remChip(rid){const d=lastRem(rid);return d?`<small class=gx-rm>آخر تذكير ${rel(d)}</small>`:''}
+function dstats(){const A=dues().filter(a=>a.k<=+S.alertDays),late=A.filter(a=>a.k<0).length,w=A.filter(a=>a.k>=0&&a.k<=7).length,nr=new Set(A.filter(a=>!lastRem(a.rid)||sinceD(lastRem(a.rid))>=7).map(a=>a.rid)).size;
+ return `<div class=gx-stats><span class="gx-s r"><b>${late}</b>متأخر</span><span class="gx-s o"><b>${w}</b>خلال 7 أيام</span><span class="gx-s"><b>${nr}</b>باحث يحتاج تذكيراً</span></div>`}
+function dtab(t){DTAB=t;go('due');if(t=='warns')warnsLoad()}
+function due(){const t=[['dues','المواعيد','due'],['warns','الإنذارات','warn'],['tpl','النماذج','doc']];
+ return `<div class=gx-seg>${t.map(x=>`<button class="${DTAB==x[0]?'on':''}" onclick="dtab('${x[0]}')">${ic(x[2])}${x[1]}</button>`).join('')}</div>`+(DTAB=='warns'?warnsView():DTAB=='tpl'?tplView():dueDues())}
+
+/* ---------- تذكيرات واتساب ---------- */
+function remOne(i){const a=DUEL[i];if(a)remPlanner([a],'تذكير: '+a.n,0)}
+function remBulk(){remPlanner(DUEL,'تذكير جماعي — '+DUEL.length+' موعد',3)}
+function remPlanner(list,title,skip){if(!list.length)return toast('لا توجد مواعيد في القائمة');
+ const sel=k=>{const l=GSX.list('remind',k);return l.length?`<select id=rp_t${k}>${l.map(t=>`<option value="${esc(t.id)}">${esc(t.t)}</option>`).join('')}</select>`:'<small>لا يوجد نموذج — أضف من «النماذج»</small>'};
+ const row=(k,n,sub)=>`<div class=gx-rc><label class=gx-ck><input type=checkbox id=rp_${k} ${GSX.list('remind',k).length?'checked':'disabled'}><span>${n}<small style="display:block;color:var(--m)">${sub}</small></span></label>${sel(k)}</div>`;
+ const rids=new Set(list.map(a=>a.rid));
+ GSX.host.show(title,rids.size+' باحث',`<div class=gx>${row('r','الباحثون','رسالة لكل باحث بمواعيده')}${row('s','المشرفون','رسالة لكل مشرف بمواعيد باحثيه')}${row('v','وكيل الكلية (د. هناء)','رسالة ملخّصة واحدة')}
+<div class=gx-f style="margin-top:14px"><label>تخطّي من تم تذكيره مؤخراً</label><select id=rp_sk>${[[0,'لا تتخطَّ أحداً'],[2,'خلال آخر يومين'],[3,'خلال آخر 3 أيام'],[7,'خلال آخر 7 أيام']].map(x=>`<option value=${x[0]} ${x[0]==skip?'selected':''}>${x[1]}</option>`).join('')}</select></div>
+<div id=rp_c class=gx-hint></div></div>`,`<button class=btn id=rp_go>${ic('wa')}ابدأ الإرسال</button><button class="btn w" onclick="X()">إلغاء</button>`);
+ const opt=()=>({r:!!$('#rp_r')&&$('#rp_r').checked,s:!!$('#rp_s')&&$('#rp_s').checked,v:!!$('#rp_v')&&$('#rp_v').checked,tr:($('#rp_tr')||{}).value,ts:($('#rp_ts')||{}).value,tv:($('#rp_tv')||{}).value,skip:+$('#rp_sk').value});
+ const upd=()=>{const b=remBuild(list,opt()),c={r:0,s:0,v:0};b.items.forEach(x=>c[x.k]++);$('#rp_c').innerHTML=b.items.length?`سيتم تجهيز <b>${b.items.length}</b> رسالة: ${c.r} للباحثين، ${c.s} للمشرفين، ${c.v} لوكيل الكلية${b.skipped?` — تم تخطّي ${b.skipped} باحث ذُكِّر مؤخراً`:''}.`:'لا توجد رسائل بهذه الاختيارات.'};
+ document.querySelectorAll('.gx select,.gx input').forEach(e=>e.onchange=upd);upd();
+ $('#rp_go').onclick=()=>{const b=remBuild(list,opt());if(!b.items.length)return toast('لا توجد رسائل لإرسالها');
+  GSX.queue({title:'تذكيرات واتساب',sub:b.items.length+' رسالة',items:b.items,
+   onSent:it=>{const t=GSX.host.today();(it.rids||[]).forEach(id=>{(REM[id]=REM[id]||{})[it.k]=t});apiq('rem_mark',{rids:it.rids,k:it.k}).catch(()=>{})},
+   onDone:()=>{if(V=='due'&&DTAB=='dues')setTimeout(()=>go('due'),300)}})}}
+function remBuild(list,o){const items=[],byR={};list.forEach(a=>{(byR[a.rid]=byR[a.rid]||[]).push(a)});
+ const skip=o.skip?new Set(Object.keys(byR).filter(id=>{const d=lastRem(id);return d&&sinceD(d)<o.skip})):new Set(),rids=Object.keys(byR).filter(id=>!skip.has(id));
+ const base={faculty:S.faculty,univ:S.univ,vd:S.vd},T=k=>GSX.byId(o['t'+k]);
+ if(o.r&&T('r'))rids.forEach(id=>{const r=R.find(x=>x.id==id);if(!r)return;items.push({k:'r',role:'الباحث',name:r.name,phone:r.phone,rids:[id],text:GSX.render(T('r').b,GSX.ctx({...base,r,sups:r.supervisors,dues:byR[id],names:false}))})});
+ if(o.s&&T('s')){const m={};rids.forEach(id=>{const r=R.find(x=>x.id==id);(r&&r.supervisors||[]).forEach(s=>{const key=String(s.natId||'').replace(/\D/g,'')||nz(s.n);(m[key]=m[key]||{s,rids:[]}).rids.push(id)})});
+  Object.values(m).forEach(g=>{const nid=String(g.s.natId||'').replace(/\D/g,''),rec=SUPS.find(x=>nid&&String(x.natId||'').replace(/\D/g,'')==nid)||SUPS.find(x=>nz(x.name)==nz(g.s.n)),ds=[].concat(...g.rids.map(id=>byR[id]));
+   items.push({k:'s',role:'المشرف',name:g.s.n,phone:rec&&rec.phone,rids:g.rids,text:GSX.render(T('s').b,GSX.ctx({...base,r:null,sup:g.s.n,dues:ds,names:true}))})})}
+ if(o.v&&T('v')){const ds=[].concat(...rids.map(id=>byR[id]));if(ds.length)items.push({k:'v',role:'وكيل الكلية',name:S.vd,phone:S.vdPhone,rids,text:GSX.render(T('v').b,GSX.ctx({...base,r:null,dues:ds,names:true}))})}
+ return{items,skipped:skip.size}}
+
+/* ---------- الإنذارات ---------- */
+async function warnsLoad(f){if(WL&&!f)return;try{const j=await apiq('warn_list');WL=j.warnings||[]}catch(e){WL=[];toast(e.message)}if(V=='due'&&DTAB=='warns')go('due')}
+function warnsList(){const q=nz(WQ.trim()),l=(WL||[]).filter(w=>{const r=R.find(x=>x.id==w.rid);return!q||nz((r?r.name:'')+' '+w.reason+' '+w.no+'/'+w.yr).includes(q)});
+ const e=$('#wl');if(e)e.innerHTML=warnCards(l);const c=$('#wc');if(c)c.textContent=l.length+' إنذار'}
+function warnCards(l){return l.length?l.map(w=>{const r=R.find(x=>x.id==w.rid),sp=SUPS.find(s=>s.id==w.sid);
+ return GSX.wcard(w,{head:`<b>${esc(r?r.name:'باحث محذوف')}</b> — وجّهه: ${esc(w.sid=='admin'?'الإدارة':sp?sp.name:'مشرف')}`,actions:`<button class="btn g" onclick="warnResend('${esc(w.rid)}','${esc(w.id)}')">${ic('wa')}إرسال / إعادة إرسال</button><button class="btn r ib" onclick="warnRm('${esc(w.rid)}','${esc(w.id)}')" aria-label="حذف">${ic('trash')}</button>`})}).join(''):`<div class=em>${ic('check')}لا توجد إنذارات</div>`}
+function warnsView(){if(WL===null)return `<div class=cd><h3>الإنذارات</h3><div class=em>جارٍ التحميل…</div></div>`;
+ return `<div class=cd><h3>الإنذارات الموجّهة للباحثين</h3><div class=tb><input class=sch placeholder="بحث باسم الباحث أو رقم الإنذار أو السبب" value="${esc(WQ)}" oninput="WQ=this.value;warnsList()"><button class=btn onclick="warnNew()">${ic('plus')}إنذار جديد</button><button class="btn w" onclick="warnsLoad(1)">تحديث</button></div><div class=rcnt id=wc>${WL.length} إنذار</div><div id=wl>${warnCards(WL.filter(()=>1))}</div></div>`}
+function warnNew(){GSX.host.show('إنذار جديد','اختر الباحث',`<div class=gx><label>الباحث</label><input id=wn_r list=wn_l placeholder="اكتب اسم الباحث…" autocomplete=off><datalist id=wn_l>${R.filter(r=>r.status=='نشط').map(r=>`<option value="${esc(r.name+(r.degree?' — '+r.degree:''))}">`).join('')}</datalist></div>`,`<button class=btn onclick="warnPick()">متابعة</button><button class="btn w" onclick="X()">إلغاء</button>`);setTimeout(()=>$('#wn_r')&&$('#wn_r').focus(),150)}
+async function warnPick(){const v=$('#wn_r').value.trim(),r=R.find(x=>x.name+(x.degree?' — '+x.degree:'')==v)||R.find(x=>x.name==v);if(!r)return toast('اختر الباحث من القائمة المقترحة');
+ try{const j=await apiq('warn_of',{rid:r.id});warnComposer(r,j.warnings||[])}catch(e){toast(e.message)}}
+function warnComposer(r,prior,w){const sp=w&&w.sid!='admin'?SUPS.find(s=>s.id==w.sid):null,all=(r.supervisors||[]).map(s=>s.n).join(' و ');
+ GSX.warn({mode:w?'resend':'new',r,w,prior,sups:r.supervisors||[],sup:all,src:w?(w.sid=='admin'?'إدارة الدراسات العليا':sp?sp.name:all):'',faculty:S.faculty,univ:S.univ,vd:S.vd,vdPhone:S.vdPhone,
+  save:async d=>(await apiq('warn_save',{rid:r.id,...d})).w,
+  saved:W=>{if(WL)WL.unshift(W);if(V=='due'&&DTAB=='warns')go('due')},
+  sent:(W,k)=>{apiq('warn_sent',{rid:r.id,id:W.id,k}).catch(()=>{});(W.sent=W.sent||{})[k]=GSX.host.today()}})}
+function warnResend(rid,id){const w=(WL||[]).find(x=>x.id==id),r=R.find(x=>x.id==rid);if(!w||!r)return toast('الباحث غير موجود');warnComposer(r,[],w)}
+async function warnRm(rid,id){if(!confirm('حذف هذا الإنذار نهائياً؟ (رقمه لن يُعاد استخدامه)'))return;try{await apiq('warn_del',{rid,id});WL=(WL||[]).filter(x=>x.id!=id);go('due');toast('تم الحذف')}catch(e){toast(e.message)}}
+
+/* ---------- مدير النماذج ---------- */
+const TPK=[['warn','إنذارات','تُرسل عند توجيه إنذار (للباحث ولوكيل الكلية)'],['remind','تذكيرات','تُرسل من «المواعيد» (للباحث والمشرف ووكيل الكلية)'],['reason','أسباب جاهزة','تظهر كأزرار سريعة عند كتابة سبب الإنذار']],TO={r:'للباحث',s:'للمشرف',v:'لوكيل الكلية'};
+function tplCard(t){return `<div class=gx-tc><div class=gx-tt><b>${esc(t.t||'بدون عنوان')}</b>${t.k!='reason'?`<span class=tg>${TO[t.to]||''}</span>`:''}<p>${esc(t.b)}</p></div><div class=gx-ta><button class="btn w sm" onclick="tplEdit('${esc(t.id)}')">${ic('edit')}تعديل</button><button class="btn w sm" onclick="tplDup('${esc(t.id)}')">نسخ</button><button class="btn r sm ib" onclick="tplDel('${esc(t.id)}')" aria-label="حذف">${ic('trash')}</button></div></div>`}
+function tplView(){const all=GSX.all();
+ return `<div class=cd><h3>النماذج</h3><p class=gx-p>رسائل جاهزة قابلة للتعديل بالكامل. اكتب أي متغيّر بين أقواس مثل <b>{الباحث}</b>، وأي اسم جديد تضعه بين أقواس (مثل <b>{المهلة_بالأيام}</b>) يتحوّل تلقائياً إلى <b>حقل يُطلب ملؤه</b> وقت الإرسال — فتصنع نموذجاً جديداً بلا أي برمجة.</p>
+<div class=tb><button class=btn onclick="tplEdit()">${ic('plus')}نموذج جديد</button><button class="btn w" onclick="tplExport()">${ic('down')}تصدير</button><button class="btn w" onclick="$('#tpl_f').click()">${ic('up')}استيراد</button><button class="btn w" onclick="tplReset()">استعادة الافتراضي</button><input type=file id=tpl_f accept=".json,application/json" hidden onchange="tplImport(this)"></div></div>`
+ +TPK.map(g=>{const l=all.filter(t=>t.k==g[0]);return `<div class=cd><h3>${g[1]} <small style="font:500 13px var(--f);color:var(--m)">(${l.length})</small></h3><p class=gx-p>${g[2]}</p>${l.map(tplCard).join('')||'<div class=em>لا توجد نماذج</div>'}</div>`}).join('')}
+async function tplPersist(list,msg){try{const j=await apiq('tpl_save',{items:list});TPLS=j.items||[];GSX.setTpls(TPLS);X();if(V=='due')go('due');toast(msg||'تم الحفظ ✅')}catch(e){toast(e.message)}}
+const tplNid=()=>'t'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+function tplEdit(id){const cur=id?GSX.byId(id):null,t=cur||{id:'',k:'remind',to:'r',t:'',b:''};
+ const chips=()=>{const k=$('#te_k').value;const g=k=='warn'?TOK_.g.concat(TOK_.w):k=='remind'?TOK_.g.concat(TOK_.r):[];return g.map(x=>`<button type=button data-n="${x[0]}" title="${esc(x[1])}">{${x[0].replace(/_/g,' ')}}</button>`).join('')};
+ GSX.host.show(id?'تعديل نموذج':'نموذج جديد','',`<div class=gx><div class=gx-row><div><label>عنوان النموذج</label><input id=te_t value="${esc(t.t)}" placeholder="مثال: تذكير بتسليم الفصل الأول"></div><div><label>النوع</label><select id=te_k>${TPK.map(g=>`<option value=${g[0]} ${t.k==g[0]?'selected':''}>${g[1]}</option>`).join('')}</select></div></div>
+<div class=gx-row id=te_tor><div><label>المستلم</label><select id=te_to>${Object.keys(TO).map(k=>`<option value=${k} ${t.to==k?'selected':''}>${TO[k]}</option>`).join('')}</select></div><div></div></div>
+<label>نص الرسالة <small style="font-weight:400">— اضغط على متغيّر لإدراجه</small></label><div class=gx-chips id=te_ch></div><textarea id=te_b rows=9 spellcheck=false>${esc(t.b)}</textarea><div id=te_f class=gx-hint style="display:none"></div><div class=gx-pv><b>معاينة بقيم تجريبية</b><pre id=te_pv></pre></div></div>`,
+ `<button class=btn id=te_sv>${ic('save')}حفظ النموذج</button><button class="btn w" onclick="X()">إلغاء</button>`);
+ const pv=()=>{const k=$('#te_k').value;$('#te_tor').style.display=k=='reason'?'none':'';const b=$('#te_b').value,f=GSX.fields(b);$('#te_pv').textContent=GSX.render(b,GSX.sample());const h=$('#te_f');h.style.display=f.length?'':'none';h.innerHTML=f.length?'حقول مخصصة سيُطلب ملؤها عند الإرسال: '+f.map(n=>`<b>${esc(n.replace(/_/g,' '))}</b>`).join('، '):''};
+ const drawChips=()=>{$('#te_ch').innerHTML=chips();$('#te_ch').querySelectorAll('button').forEach(b=>b.onclick=()=>{const a=$('#te_b'),s=a.selectionStart,e=a.selectionEnd,x='{'+b.dataset.n+'}';a.value=a.value.slice(0,s)+x+a.value.slice(e);a.focus();a.selectionStart=a.selectionEnd=s+x.length;pv()})};
+ $('#te_k').onchange=()=>{drawChips();pv()};$('#te_b').oninput=pv;drawChips();pv();
+ $('#te_sv').onclick=()=>{const n={id:t.id||tplNid(),k:$('#te_k').value,to:$('#te_k').value=='reason'?'r':$('#te_to').value,t:$('#te_t').value.trim(),b:$('#te_b').value.trim()};
+  if(!n.t)return toast('اكتب عنوان النموذج');if(!n.b)return toast('اكتب نص الرسالة');
+  const l=GSX.all().map(x=>x.id==n.id?n:x);if(!id)l.push(n);tplPersist(l)}}
+function tplDup(id){const t=GSX.byId(id);if(!t)return;const l=GSX.all();l.push({...t,id:tplNid(),t:t.t+' (نسخة)'});tplPersist(l,'تم النسخ ✅')}
+function tplDel(id){const t=GSX.byId(id);if(!t||!confirm('حذف النموذج «'+t.t+'»؟'))return;tplPersist(GSX.all().filter(x=>x.id!=id),'تم الحذف')}
+function tplReset(){if(!confirm('استعادة النماذج الافتراضية؟ ستُحذف أي تعديلات أو نماذج أضفتها.'))return;tplPersist(GSX.defaults(),'تمت الاستعادة ✅')}
+function tplExport(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({app:'gs-templates',items:GSX.all()},null,1)],{type:'application/json'}));a.download='templates-'+GSX.host.today()+'.json';a.click()}
+function tplImport(inp){const f=inp.files[0];inp.value='';if(!f)return;f.text().then(s=>{let o;try{o=JSON.parse(s)}catch(e){return toast('ملف غير صالح')}const a=Array.isArray(o)?o:o&&o.items;if(!Array.isArray(a)||!a.length)return toast('لا توجد نماذج في الملف');
+ const ok=a.filter(x=>x&&x.b&&x.t&&['warn','remind','reason'].includes(x.k)).map(x=>({id:tplNid(),k:x.k,to:['r','s','v'].includes(x.to)?x.to:'r',t:String(x.t),b:String(x.b)}));
+ if(!ok.length)return toast('لا توجد نماذج صالحة في الملف');tplPersist(GSX.all().concat(ok),'تم استيراد '+ok.length+' نموذج ✅')})}
+var TOK_=GSX.TOK;
+
+</script>
+<script>
+/* ===== طلبات الباحثين • النماذج المرنة • الإحصائيات ===== */
+let FORMS=[],RR=[],RRF={s:'pending',f:'',q:''},RRT='in',RRN={},STQ='',STS2={k:'n',d:-1},FED=null;
+const TOO2={vd:'وكيل الكلية للدراسات العليا',dean:'عميد الكلية',dept:'رئيس القسم',adm:'إدارة الدراسات العليا',lib:'مدير المكتبة الرقمية بالجامعة'};
+const FTY={text:'نص قصير',textarea:'نص طويل',date:'تاريخ',number:'رقم',select:'قائمة اختيار',chk:'إقرار (موافق)'};
+const ACTL={'':'بدون إجراء تلقائي',status:'تغيير حالة الباحث',months:'مد القيد (من قائمة مدد بالشهور)',range:'إسقاط مدة (من تاريخ إلى تاريخ)',set:'تعيين تاريخ في ملف الباحث'};
+Object.assign(IC,{libq:'<circle cx="11" cy="11" r="6"/><path d="M21 21l-5-5"/>',libp:'<path d="M5 4h10v16H5zM8 8h4M8 12h4M18 8h2v12h-2"/>',stats:'<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',rr:'<path d="M4 5h16v11H8l-4 4zM8 9h8M8 12h5"/>',wa:IC.wa||'<path d="M4 20l1.3-4A8 8 0 1 1 8 18.7zM9 9c0 3 3 6 6 6l1-1.5-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z"/>',key:IC.key||'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3"/>',pause:IC.pause||'<path d="M9 5v14M15 5v14"/>'});
+const rrPend=()=>RR.filter(q=>q.status=='pending').length;
+const rrP=q=>{let o={v:{},p:[]};try{const x=JSON.parse(q.data);if(x&&x.v)o=x}catch(e){}return o};
+const rrAge=q=>{const d=D(q.created);if(!d)return 0;const T=now();T.setHours(0,0,0,0);return Math.round((T-d)/864e5)};
+const rrFm=id=>FORMS.find(f=>f.id==id);
+const rtOf=r=>r.rtype=='داخلي'||r.rtype=='خارجي'?r.rtype:(/معيد|مدرس مساعد/.test(r.job||'')?'داخلي':'غير محدد');
+function rrSync(nr){if(!nr)return;const old=new Set(RR.map(x=>x.id)),fr=nr.filter(x=>x.status=='pending'&&!old.has(x.id)),sig=l=>l.map(q=>q.id+q.status+(q.adminNote||'')).join(),chg=sig(nr)!=sig(RR);RR=nr;
+ if(fr.length){const r=R.find(x=>x.id==fr[0].rid);toast('طلب جديد من باحث: '+fr[0].title+(r?' — '+r.name:''));if('Notification' in window&&Notification.permission=='granted')new Notification('طلب جديد من باحث',{body:fr[0].title+(r?' — '+r.name:'')})}
+ bcUp();rqNav();const ty=document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#rrl,.mc');if(chg&&!ty){if(V=='rr'&&RRT=='in')go('rr');else if(V=='home')go('home')}}
+/* ---------- صندوق طلبات الباحثين ---------- */
+function rrCtx(r){if(!r)return'';const t=now();t.setHours(0,0,0,0);const e=D(r.enrollEnd),k=e?Math.round((e-t)/864e5):null;return[r.degree,r.dept,'الحالة: '+(r.status||'—'),rtOf(r)!='غير محدد'?rtOf(r):'',e?'انتهاء القيد: '+fd(r.enrollEnd)+(k<0?' (منتهٍ منذ '+-k+' يوم)':' (متبقي '+k+' يوم)'):''].filter(Boolean).join(' • ')}
+function rrActTxt(q,r){const f=rrFm(q.form),a=f&&f.act;if(!a||!r)return'';const v=rrP(q).v;
+ if(a.t=='status')return'عند الموافقة تصبح حالة الباحث «'+a.v+'»';
+ if(a.t=='months'){const m=(a.m||{})[v[a.f]];return m&&r.enrollEnd?'عند الموافقة يُمَد القيد '+m+' شهرًا → '+fd(iso(addM(D(r.enrollEnd),m))):''}
+ if(a.t=='range'){const x=D(v[a.a]),y=D(v[a.b]);if(!x||!y)return'';const n=Math.round((y-x)/864e5)+1;return n>0&&r.enrollEnd?'عند الموافقة تُسقَط '+n+' يومًا ويُمَد انتهاء القيد إلى '+fd(iso(new Date(D(r.enrollEnd).getTime()+n*864e5))):''}
+ if(a.t=='set'&&v[a.f])return'عند الموافقة يُسجَّل التاريخ '+fd(v[a.f])+' في ملف الباحث';return''}
+function rrWarn(q,r){const w=[];if(!r)return['ملف الباحث غير موجود (ربما حُذف)'];if(/مشطوب|منح/.test(r.status||''))w.push('حالة الباحث الحالية «'+r.status+'»');
+ const f=rrFm(q.form);if(f&&f.ov){const e=D(r.enrollEnd);if(e&&e>now())w.push('مدة قيد الباحث ما زالت سارية — الطلب مخصص عادةً لمن تجاوز المواعيد')}
+ if(f){const x=rrP(q).v||{},sq=t=>nz(t).replace(/\s+/g,' ').trim();(f.f||[]).forEach(z=>{if(!z.pf||!x[z.k])return;const cur=r[z.pf];if(!cur)w.push('«'+PFL[z.pf]+'» غير مسجَّل في ملف الباحث — راجع الطلب قبل اعتماده');else if(z.t=='date'?cur!=x[z.k]:sq(cur)!=sq(x[z.k]))w.push('«'+z.l+'» في الطلب يختلف عن المسجَّل في ملف الباحث — تأكد من صحته')});
+  if(f.sim)rrSim(q,r,f).forEach(s=>w.push('عنوان مشابه بنسبة '+Math.round(s.s*100)+'% لرسالة الباحث «'+s.o.name+'» ('+(s.o.degree||'')+') داخل المنظومة — راجعه قبل الاستعلام'))}
+ if(RR.some(x=>x.id!=q.id&&x.rid==q.rid&&x.form==q.form&&x.status=='pending'&&q.status=='pending'))w.push('يوجد طلب مماثل معلّق لنفس الباحث');return w}
+const STW=new Set(['دراسه','فاعليه','برنامج','لدي','علي','في','من','الي','باستخدام','اثر','تاثير','مقترح','بعض','عند','بين','اطفال','طفل']);
+const ttk=t=>new Set(nz(t).replace(/[^\u0621-\u064Aa-z0-9 ]/g,' ').split(/\s+/).filter(z=>z.length>2&&!STW.has(z)));
+function rrSim(q,r,f){const a=(f.f||[]).find(z=>z.pf=='titleAr'),t=(a&&rrP(q).v[a.k])||r.titleAr;if(!t)return[];const A=ttk(t);if(A.size<3)return[];
+ return R.filter(o=>o.id!=r.id&&o.titleAr).map(o=>{const B=ttk(o.titleAr);let n=0;A.forEach(z=>{if(B.has(z))n++});return{o,n,s:n/((A.size+B.size-n)||1)}}).filter(z=>z.n>=3&&z.s>=.5).sort((x,y)=>y.s-x.s).slice(0,2)}
+function rrCard(q){const r=R.find(x=>x.id==q.rid),p=rrP(q),st=RQS[q.status]||RQS.pending,cls=q.status=='approved'?'a':q.status=='rejected'?'r':'p',id=esc(q.id),f=rrFm(q.form),age=rrAge(q),act=q.status=='pending'?rrActTxt(q,r):'',wr=q.status=='pending'?rrWarn(q,r):[];
+ const det=(p.p||[]).map(x=>`<div><b>${esc(x[0])}:</b> ${/^\d{4}-\d{2}-\d{2}$/.test(x[1])?fd(x[1]):esc(x[1]).replace(/\n/g,'<br>')}</div>`).join('')||'<div>—</div>',note=RRN[q.id]!=null?RRN[q.id]:(q.adminNote||'');
+ const dec=[['approved','موافقة','btn'],['rejected','رفض','btn r'],['pending','إعادة للمراجعة','btn w']].filter(b=>b[0]!=q.status).map(b=>`<button class="${b[2]}" onclick="rrDecide('${id}','${b[0]}')">${b[1]}</button>`).join('');
+ const wph=r&&wa2(r.phone),to=q.to=='dean'||q.to=='lib'?'https://wa.me/':wa2(S.vdPhone)||'https://wa.me/',msg=(r?r.name:'')+' — '+q.title+'\n'+(p.p||[]).map(x=>x[0]+': '+x[1]).join('\n');
+ return `<article class="rqc ${cls}"><div class=rqh><span class=ico>${ic('rr')}</span><div><b>${esc(q.title)}</b><br><small>${fd(q.created)} — ${q.status=='pending'?'<span style="color:'+(age>7?'var(--r)':'inherit')+'">'+rqAgeT(age)+'</span>':'تم الرد'+(q.decided?' '+fd(q.decided):'')}</small></div><span class=sp></span><span class="ch z" title="الجهة الموجّه إليها">إلى: ${esc(TOO2[q.to]||q.to||'—')}</span><span class="ch ${st[1]}">${st[0]}</span></div>
+<div class=rqm><span>الباحث: <b>${r?`<a href="#" onclick="event.preventDefault();edit('${esc(r.id)}')">${esc(r.name)}</a>`:'—'}</b></span>${r&&r.phone?`<span><a href="tel:${esc(r.phone)}"><bdi>${esc(r.phone)}</bdi></a></span>`:''}</div>
+<div class=rqd>${det}</div>${r?`<div class=rqx>${esc(rrCtx(r))}</div>`:''}${act?`<div class=rqx style="background:var(--okbg);color:var(--ok)">⚡ ${esc(act)}</div>`:''}${q.fx?`<div class=rqx style="background:var(--okbg);color:var(--ok)">✔ تم تطبيق: ${esc(q.fx)}</div>`:''}${wr.map(w=>`<div class=rqw>⚠ ${esc(w)}</div>`).join('')}
+<div class=rqa><label for="rn_${id}">ردّ الإدارة على الباحث (يظهر له في بوابته)</label><textarea id="rn_${id}" rows=2 maxlength=500 placeholder="اكتب القرار أو الملاحظة... (سبب الرفض إلزامي)" oninput="RRN['${id}']=this.value">${esc(note)}</textarea>
+${q.status=='pending'&&f&&f.act&&r?`<label style="display:flex;gap:8px;align-items:center;margin-top:8px;color:var(--t)"><input type=checkbox id="ap_${id}" checked style="width:auto;height:auto">تطبيق الإجراء التلقائي على ملف الباحث عند الموافقة</label>`:''}</div>
+<div class=rqb>${dec}${q.status!='pending'?`<button class="btn w" onclick="rrDecide('${id}','${q.status}')">${ic('save')}حفظ الملاحظة</button>`:''}<button class="btn w" onclick="rrPrint('${id}')">${ic('print')}طباعة خطاب</button><a class="btn g" target=_blank rel=noopener href="${to}?text=${encodeURIComponent('إلى '+(TOO2[q.to]||'')+'\nطلب من باحث:\n'+msg)}">${ic('wa')}إرسال للجهة</a>${wph?`<a class="btn g" target=_blank rel=noopener href="${wph}?text=${encodeURIComponent('بخصوص طلبكم «'+q.title+'»:\n'+(q.status=='approved'?'تمت الموافقة. ':q.status=='rejected'?'تعذّر قبول الطلب. ':'')+(q.adminNote||''))}">${ic('wa')}الباحث</a>`:''}<button class="btn r" onclick="rrDel('${id}')" title="حذف" aria-label="حذف">${ic('trash')}</button></div></article>`}
+function rrList(){const f=RRF,qq=nz(f.q.trim());const l=RR.filter(q=>(!f.s||q.status==f.s)&&(!f.f||q.form==f.f)&&(!qq||nz([q.title,(R.find(x=>x.id==q.rid)||{}).name,q.adminNote,rrP(q).p.map(x=>x[1]).join(' ')].join(' ')).includes(qq)));
+ l.sort((a,b)=>{const pa=a.status=='pending',pb=b.status=='pending';if(pa!=pb)return pa?-1:1;return pa?String(a.created).localeCompare(String(b.created)):String(b.decided||b.created).localeCompare(String(a.decided||a.created))});
+ return l.map(rrCard).join('')||`<div class=em>${ic('check')}${RR.length?'لا توجد طلبات مطابقة':'لم يصل أي طلب من الباحثين بعد'}</div>`}
+function rrrl(){const e=$('#rrl');if(e)e.innerHTML=rrList()}
+function rrv(){const c={pending:0,approved:0,rejected:0};RR.forEach(q=>{if(c[q.status]!=null)c[q.status]++});const late=RR.filter(q=>q.status=='pending'&&rrAge(q)>7).length;
+ const tabs=`<div class="tb rqf"><button class="btn w ${RRT=='in'?'on':''}" onclick="RRT='in';go('rr')">${ic('rr')}صندوق الطلبات</button><button class="btn w ${RRT=='fm'?'on':''}" onclick="RRT='fm';go('rr')">${ic('doc')}النماذج (${FORMS.length})</button></div>`;
+ if(RRT=='fm')return tabs+fmView();
+ return tabs+`<div class=st><div class=t0><b>${c.pending}</b><span>بانتظار الرد</span></div><div class=t1><b>${late}</b><span>متأخرة (أكثر من 7 أيام)</span></div><div class=t2><b>${c.approved}</b><span>تمت الموافقة</span></div><div class=t3><b>${c.rejected}</b><span>مرفوضة</span></div></div>
+<div class="tb rqf">${[['pending','بانتظار الرد',c.pending],['approved','موافق عليها',c.approved],['rejected','مرفوضة',c.rejected],['','الكل',RR.length]].map(b=>`<button class="btn w ${RRF.s==b[0]?'on':''}" onclick="RRF.s='${b[0]}';go('rr')">${b[1]} (${b[2]})</button>`).join('')}
+<select onchange="RRF.f=this.value;go('rr')"><option value="">كل النماذج</option>${FORMS.map(f=>`<option value="${esc(f.id)}" ${RRF.f==f.id?'selected':''}>${esc(f.n)}</option>`).join('')}</select><input class=sch placeholder="بحث بالباحث أو نص الطلب" value="${esc(RRF.q)}" oninput="RRF.q=this.value;rrrl()"></div><div id=rrl>${rrList()}</div>`}
+async function rrDecide(id,status){const q=RR.find(x=>x.id==id);if(!q)return;const t=$('#rn_'+id),note=(t?t.value:(RRN[id]!=null?RRN[id]:(q.adminNote||''))).trim();if(status=='rejected'&&!note)return toast('اكتب سبب الرفض ليصل للباحث');
+ const ap=$('#ap_'+id),apply=status=='approved'&&q.status!='approved'&&ap&&ap.checked,txt=apply?rrActTxt(q,R.find(x=>x.id==q.rid)):'';
+ if(status!=q.status&&!confirm((status=='pending'?'إعادة الطلب إلى «قيد المراجعة»؟':(status=='approved'?'الموافقة على':'رفض')+' هذا الطلب؟')+(txt?'\n\n'+txt:'')))return;
+ try{const j=await api('rr_decide',{id,status,adminNote:note,apply});Object.assign(q,j.row||{});delete RRN[id];if(apply&&q.fx)await load();else{bcUp();rqNav();go('rr')}toast(status=='approved'?'تمت الموافقة'+(q.fx?' وتطبيق الإجراء على ملف الباحث ✅':' ✅'):'تم إرسال الرد للباحث ✅')}catch(e){toast(e.message)}}
+async function rrDel(id){if(!confirm('حذف هذا الطلب نهائيًا؟'))return;try{await api('rr_del',{id});RR=RR.filter(q=>q.id!=id);bcUp();rqNav();go('rr');toast('تم حذف الطلب')}catch(e){toast(e.message)}}
+/* ===== الخطابات الجاهزة (قوالب ذكية بمتغيرات) ===== */
+const LV=['الباحث','الوظيفة','الدرجة','القسم','التخصص','الكلية','الجامعة','العنوان_عربي','العنوان_انجليزي','تاريخ_القيد','تاريخ_التسجيل','تاريخ_اللجنة','التاريخ','المرسل_إليه'];
+const PFL={titleAr:'العنوان بالعربية',titleEn:'العنوان بالإنجليزية',regDate:'تاريخ تسجيل الرسالة',committeeDate:'تاريخ اعتماد اللجنة',enrollDate:'تاريخ القيد',defenseDate:'موعد المناقشة'};
+const SGL={dean:'عميد الكلية',vd:'وكيل الكلية للدراسات العليا والبحوث',none:'بدون توقيع ثانٍ'};
+const isoNow=()=>{const t=now(),p=n=>String(n).padStart(2,'0');return t.getFullYear()+'-'+p(t.getMonth()+1)+'-'+p(t.getDate())};
+const dd=x=>x&&/^\d{4}-\d{2}-\d{2}$/.test(x)?fd(x):'';
+const rrAddr=to=>to=='dean'?'السيد الأستاذ الدكتور / '+(S.dean||'عميد الكلية'):to=='vd'?'السيد الأستاذ الدكتور / '+(S.vd||'وكيل الكلية للدراسات العليا والبحوث'):to=='lib'?'سعادة الأستاذ الدكتور / مدير المكتبة الرقمية بالجامعة':'السيد / '+(TOO2[to]||'');
+function rrVars(q,r,fp){const v={'الباحث':r.name,'الوظيفة':r.job,'الدرجة':r.degree,'القسم':r.dept,'التخصص':r.specialty,'الكلية':S.faculty,'الجامعة':S.univ,'العنوان_عربي':r.titleAr,'العنوان_انجليزي':r.titleEn,'تاريخ_القيد':dd(r.enrollDate),'تاريخ_التسجيل':dd(r.regDate),'تاريخ_اللجنة':dd(r.committeeDate),'التاريخ':fd(isoNow()),'المرسل_إليه':rrAddr(q.to)};
+ (fp||[]).forEach(x=>{if(x&&x[0]&&x[1]!=null&&String(x[1]).trim()!=='')v[String(x[0]).trim()]=dd(x[1])||String(x[1])});return v}
+/* سطر فيه متغيّر فارغ يُحذف تلقائيًا، و[ ... ] جزء اختياري يُحذف إن كان به متغيّر فارغ، و**نص** غامق، و#عنوان وسطي، والسطر اللاتيني يُنسَّق تلقائيًا */
+function rrTpl(t,v){const out=[],sub=s=>{let m=0;const o=s.replace(/\{([^{}]+)\}/g,(_,k)=>{const x=v[k.trim()];if(x==null||String(x).trim()===''){m++;return''}return esc(String(x))});return[o,m]};
+ String(t||'').split('\n').forEach(raw=>{let l=esc(raw.trim());if(!l){out.push('<div class=sp></div>');return}
+  l=l.replace(/\[([^\[\]]*)\]/g,(_,s)=>{const z=sub(s);return z[1]?'':z[0]});const z=sub(l);if(z[1])return;l=z[0].replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').trim();if(!l)return;
+  const pl=l.replace(/<[^>]+>/g,'');
+  if(l[0]=='#')out.push('<h3>'+l.slice(1).trim()+'</h3>');else if(!/[؀-ۿ]/.test(pl)&&/[A-Za-z]/.test(pl))out.push('<p class=en dir=ltr>'+l+'</p>');else out.push('<p>'+l+'</p>')});
+ return out.join('')}
+const rrHead=()=>`<div class=lh><div style="display:flex;gap:14px;align-items:center"><img src="${LOGO}" width=74 alt=""><div><b>${esc(S.univ||'جامعة بني سويف')}</b><br>كلية ${esc(S.faculty||'')}<br>إدارة الدراسات العليا</div></div><div class=c>التاريخ: ${fd(isoNow())}</div></div>`;
+const rrSigB=(t,n)=>`<div>${esc(t)}<div style="height:46px"></div>${n?esc(n):'..............................'}</div>`;
+function rrLetter(f,q,r,fp){const sg=f.sg=='vd'?rrSigB(SGL.vd,S.vd):f.sg=='none'?'':rrSigB(SGL.dean,S.dean);
+ return rrHead()+rrTpl(f.lt,rrVars(q,r,fp))+`<div class=sg>${rrSigB('إدارة الدراسات العليا',S.dg)}${sg}</div>`}
+function rrDoc(title,body,pr){const w=open('','_blank');if(!w)return toast('اسمح بالنوافذ المنبثقة للطباعة');
+ w.document.write(`<!doctype html><html lang=ar dir=rtl><meta charset=utf-8><title>${esc(title)}</title><style>@page{size:A4;margin:14mm 18mm}*{box-sizing:border-box}body{font:18px/2 'IBM Plex Sans Arabic',Tahoma,'Traditional Arabic',sans-serif;max-width:760px;margin:24px auto;padding:0 22px;color:#111}
+.lh{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px double #222;padding-bottom:10px;margin-bottom:26px}.lh div{line-height:1.7;font-size:16px}.lh .c{font-size:14px;color:#444}
+h2{text-align:center;margin:8px 0}h3{text-align:center;text-decoration:underline;font-size:21px;margin:14px 0 6px}p{margin:4px 0;text-align:justify}p.en{text-align:center;font-weight:700;font-size:16px;font-family:Georgia,'Times New Roman',serif;line-height:1.6;margin:6px 0 12px}.sp{height:12px}b{font-weight:800}
+table{width:100%;border-collapse:collapse;margin:14px 0}td{border:1px solid #999;padding:6px 10px;vertical-align:top}td:first-child{width:34%;background:#f4f4f4;font-weight:700}
+.sg{display:flex;justify-content:space-between;margin-top:56px;text-align:center;font-weight:700}.sg>div{min-width:220px}@media print{body{margin:0;padding:0;max-width:none}}</style>${body}${pr?'<script>onload=()=>print()<\/script>':''}`);w.document.close()}
+function rrPrint(id){const q=RR.find(x=>x.id==id),r=R.find(x=>x.id==q.rid)||{},p=rrP(q),f=rrFm(q.form);
+ if(f&&String(f.lt||'').trim())return rrDoc(q.title,rrLetter(f,q,r,p.p),1);
+ const to=rrAddr(q.to);
+ rrDoc(q.title,rrHead()+`<h2>${esc(q.title)}</h2><p>${esc(to)}<br>تحية طيبة وبعد،،</p>
+<p>يتقدم الباحث / <b>${esc(r.name||'')}</b> — ${esc(r.degree||'')} — قسم ${esc(r.dept||'')} — تاريخ القيد ${fd(r.enrollDate)||'—'} — بطلب ${esc(q.title)}، وبياناته كما يلي:</p>
+<table>${(p.p||[]).map(x=>`<tr><td>${esc(x[0])}</td><td>${/^\d{4}-\d{2}-\d{2}$/.test(x[1])?fd(x[1]):esc(x[1]).replace(/\n/g,'<br>')}</td></tr>`).join('')}</table>
+<p>برجاء التكرم بالنظر والتفضل بالموافقة،،، وتفضلوا بقبول فائق الاحترام.</p><p>تاريخ تقديم الطلب: ${fd(q.created)}</p><div class=sg><span>توقيع الباحث: ........................</span><span>مدير إدارة الدراسات العليا: ........................</span></div>`,1)}
+/* معاينة قالب الخطاب من محرر النموذج بأسماء الحقول كقيم تجريبية */
+function fmPrev(){fmRead();const f=FED.f;if(!String(f.lt||'').trim())return toast('اكتب نص الخطاب أولًا');
+ const r=R.find(x=>x.titleAr&&x.titleEn)||R.find(x=>x.titleAr)||R[0]||{name:'اسم الباحث',degree:'ماجستير',dept:'القسم'};
+ const fp=(f.f||[]).filter(q=>q.l).map(q=>[q.l,q.t=='date'?isoNow():'‹'+q.l+'›']);rrDoc('معاينة: '+f.n,rrLetter(f,{to:f.to},r,fp),0)}
+function fmIns(v){const t=$('#flt');if(!t)return;const s=t.selectionStart||0,e=t.selectionEnd||0,x='{'+v+'}';t.value=t.value.slice(0,s)+x+t.value.slice(e);t.focus();t.selectionStart=t.selectionEnd=s+x.length}
+function rrHome(){const P=RR.filter(q=>q.status=='pending').sort((a,b)=>String(a.created).localeCompare(String(b.created)));if(!P.length)return'';
+ return `<div class=cd><h3>طلبات الباحثين بانتظار ردك (${P.length})</h3>${P.slice(0,5).map(q=>{const r=R.find(x=>x.id==q.rid),a=rrAge(q);return `<div class="al ${a>7?'r':a>2?'o':'y'}" onclick="RRF.s='pending';RRT='in';go('rr')"><div><b>${esc(q.title)} — ${esc(r?r.name:'—')}</b><small>إلى: ${esc(TOO2[q.to]||'')}</small></div><span>${rqAgeT(a)}</span></div>`}).join('')}<div style="text-align:center;margin-top:8px"><button class="btn w" onclick="RRF.s='pending';RRT='in';go('rr')">فتح صندوق طلبات الباحثين</button></div></div>`}
+/* ---------- مصمم النماذج المرنة ---------- */
+function fmView(){return `<div class=tb><button class=btn onclick="fmEdit()">${ic('plus')}نموذج جديد</button><button class="btn w" onclick="fmExport()">${ic('down')}تصدير النماذج</button><button class="btn w" onclick="$('#fmi').click()">${ic('up')}استيراد</button><input id=fmi type=file accept=".json" hidden onchange="fmImport(this.files[0])"><button class="btn w" onclick="fmRestore()">استعادة الافتراضي</button></div>
+<p style="color:var(--m);font-size:13px;margin:0 0 12px">كل نموذج يظهر للباحث في بوابته فور حفظه. يمكنك إضافة أي حقول، وتحديد الجهة الموجّه إليها (الوكيل/العميد/…)، وربط الموافقة بإجراء تلقائي على ملف الباحث.</p>
+<div class=gr>${FORMS.map(f=>`<article class="rc ${f.on==0?'s2':'s0'}"><div class=rt><span class=av>${esc(f.i||'📝')}</span><div class=ri><h4>${esc(f.n)}</h4><p>إلى: ${esc(TOO2[f.to]||f.to||'—')} • ${(f.f||[]).length} حقل${f.act?' • ⚡ '+esc(ACTL[f.act.t]):''}${String(f.lt||'').trim()?' • ✉ خطاب جاهز':''}</p></div><span class="ch ${f.on==0?'x':''}">${f.on==0?'مخفي':'ظاهر'}</span></div>
+<div class=ac><button class=btn onclick="fmEdit('${esc(f.id)}')">${ic('edit')}تعديل</button><button class="btn w" onclick="fmToggle('${esc(f.id)}')">${f.on==0?'إظهار':'إخفاء'}</button><button class="btn w" onclick="fmDup('${esc(f.id)}')">نسخ</button><button class="btn w ib" onclick="fmMove('${esc(f.id)}',-1)" title="أعلى" aria-label="أعلى">▲</button><button class="btn w ib" onclick="fmMove('${esc(f.id)}',1)" title="أسفل" aria-label="أسفل">▼</button><button class="btn r ib" onclick="fmDel('${esc(f.id)}')" aria-label="حذف">${ic('trash')}</button></div></article>`).join('')||`<div class=em>لا توجد نماذج</div>`}</div>`}
+async function fmPut(id,f){await api('form_save',{id,f});await load();RRT='fm';go('rr')}
+function fmEdit(id,cp){const f=cp||(id?JSON.parse(JSON.stringify(rrFm(id))):{i:'📝',n:'',to:'vd',d:'',att:'',on:1,f:[],act:null});FED={id:cp?'':id||'',f};fmDraw()}
+function fmDraw(){const f=FED.f,ds=(f.f||[]).filter(q=>q.t=='date'),a=f.act||{t:''};
+ M(`<div class="mc"><h3>${FED.id?'تعديل نموذج':'نموذج جديد'}</h3><div class=fg><div><label>اسم النموذج</label><input id=fn value="${esc(f.n)}"></div><div><label>أيقونة (إيموجي)</label><input id=fi value="${esc(f.i||'')}" maxlength=4></div>
+<div><label>الجهة الموجّه إليها</label><select id=ft>${Object.keys(TOO2).map(k=>`<option value="${k}" ${f.to==k?'selected':''}>${TOO2[k]}</option>`).join('')}</select></div><div><label>يظهر لـ</label><select id=fdg><option value="">كل الدرجات</option><option value="th" ${f.deg=='th'?'selected':''}>ماجستير ودكتوراه فقط</option></select></div>
+<div style="grid-column:1/-1"><label>وصف مختصر يظهر للباحث</label><input id=fd value="${esc(f.d||'')}"></div><div style="grid-column:1/-1"><label>تنبيه للباحث (مثال: يُرفق أصل المستند للإدارة)</label><input id=fa value="${esc(f.att||'')}"></div>
+<div style="grid-column:1/-1"><label style="display:flex;gap:8px;align-items:center;color:var(--t)"><input type=checkbox id=fo ${f.ov?'checked':''} style="width:auto;height:auto">طلب مخصص لمن انتهت مدته (يُنبَّه الباحث والإدارة إن كانت مدته سارية)</label></div></div>
+<h4>الحقول</h4><div id=ffl>${(f.f||[]).map((q,i)=>`<div class=fb><div class=fg style="grid-template-columns:2fr 1fr auto"><input data-i=${i} data-p=l placeholder="عنوان الحقل" value="${esc(q.l)}"><select data-i=${i} data-p=t>${Object.keys(FTY).map(k=>`<option value="${k}" ${q.t==k?'selected':''}>${FTY[k]}</option>`).join('')}</select><label style="display:flex;gap:6px;align-items:center;margin:0;color:var(--t)"><input type=checkbox data-i=${i} data-p=r ${q.r?'checked':''} style="width:auto;height:auto">مطلوب</label></div>
+${q.t=='select'?`<input data-i=${i} data-p=o placeholder="الخيارات مفصولة بـ | مثال: مرضي|اجتماعي|أخرى" value="${esc(q.o||'')}" style="margin-top:6px">`:''}
+${q.t=='text'||q.t=='textarea'||q.t=='date'?`<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;align-items:center"><small style="color:var(--m)">تعبئة تلقائية من ملف الباحث</small><select data-i=${i} data-p=pf style="width:auto"><option value="">بدون</option>${Object.keys(PFL).filter(k=>(q.t=='date')==/Date$/.test(k)).map(k=>`<option value="${k}" ${q.pf==k?'selected':''}>${PFL[k]}</option>`).join('')}</select></div>`:''}
+<div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;align-items:center"><small style="color:var(--m)">يظهر فقط إذا</small><select data-i=${i} data-p=shk style="width:auto"><option value="">دائمًا</option>${f.f.filter((_,j)=>j<i&&f.f[j].t=='select').map(x=>`<option value="${x.k}" ${q.sh&&q.sh[0]==x.k?'selected':''}>${esc(x.l)}</option>`).join('')}</select>${q.sh?`<small>=</small><input data-i=${i} data-p=shv value="${esc(q.sh[1]||'')}" style="width:140px" placeholder="القيمة">`:''}<span class=sp style="flex:1"></span><button type=button class="btn w ib" onclick="fmFld(${i},-1)">▲</button><button type=button class="btn w ib" onclick="fmFld(${i},1)">▼</button><button type=button class="btn r ib" onclick="fmFld(${i},0)">${ic('trash')}</button></div></div>`).join('')}</div>
+<button type=button class="btn w" onclick="fmAdd()">${ic('plus')}حقل</button>
+<h4>الخطاب الجاهز للطباعة <small style="font-weight:400;color:var(--m)">(اختياري — إن تُرك فارغًا يُطبع الخطاب العام بجدول)</small></h4>
+<div class=vcs>${LV.map(v=>`<button type=button class=vch onclick="fmIns('${v}')">${v.replace(/_/g,' ')}</button>`).join('')}${(f.f||[]).filter(q=>q.l&&q.l.trim()).map(q=>`<button type=button class="vch f" data-v="${esc(q.l.trim())}" onclick="fmIns(this.dataset.v)">${esc(q.l.trim())}</button>`).join('')}</div>
+<textarea id=flt rows=9 style="width:100%;font-family:inherit;line-height:1.8" placeholder="اكتب نص الخطاب… اضغط أي متغيّر أعلاه لإدراجه">${esc(f.lt||'')}</textarea>
+<small style="color:var(--m);display:block;margin:4px 0 8px">ذكاء القالب: السطر الذي به متغيّر فارغ يُحذف وحده • <b>[ جزء اختياري {متغيّر} ]</b> يُحذف إن كان متغيّره فارغًا • <b>**نص**</b> غامق • <b>#عنوان</b> يتوسّط السطر • السطر الإنجليزي يُضبط تلقائيًا من اليسار.</small>
+<div class=fg><div><label>التوقيع الثاني (بجانب الدراسات العليا)</label><select id=fsg>${Object.keys(SGL).map(k=>`<option value="${k}" ${(f.sg||'dean')==k?'selected':''}>${SGL[k]}</option>`).join('')}</select></div>
+<div style="display:flex;align-items:end"><label style="display:flex;gap:8px;align-items:center;color:var(--t);margin:0"><input type=checkbox id=fsm ${f.sim?'checked':''} style="width:auto;height:auto">تنبيه الإدارة إن تشابه العنوان مع رسالة أخرى بالمنظومة</label></div></div>
+<button type=button class="btn w" onclick="fmPrev()" style="margin-top:8px">${ic('print')}معاينة الخطاب</button>
+<h4>الإجراء التلقائي عند الموافقة</h4><div class=fg><div><label>الإجراء</label><select id=fx>${Object.keys(ACTL).map(k=>`<option value="${k}" ${a.t==k?'selected':''}>${ACTL[k]}</option>`).join('')}</select></div>
+${a.t=='status'?`<div><label>الحالة الجديدة</label><select id=fxv>${ST.map(x=>`<option ${a.v==x?'selected':''}>${x}</option>`).join('')}</select></div>`:''}
+${a.t=='months'?`<div><label>حقل القائمة</label><select id=fxf>${f.f.filter(q=>q.t=='select').map(q=>`<option value="${q.k}" ${a.f==q.k?'selected':''}>${esc(q.l)}</option>`).join('')}</select></div><div style="grid-column:1/-1"><label>عدد الشهور لكل خيار (خيار=شهور، سطر لكل خيار)</label><textarea id=fxm rows=3>${esc(Object.entries(a.m||{}).map(x=>x.join('=')).join('\n'))}</textarea></div>`:''}
+${a.t=='range'?`<div><label>من (تاريخ)</label><select id=fxa>${ds.map(q=>`<option value="${q.k}" ${a.a==q.k?'selected':''}>${esc(q.l)}</option>`).join('')}</select></div><div><label>إلى (تاريخ)</label><select id=fxb>${ds.map(q=>`<option value="${q.k}" ${a.b==q.k?'selected':''}>${esc(q.l)}</option>`).join('')}</select></div>`:''}
+${a.t=='set'?`<div><label>حقل التاريخ</label><select id=fxf>${ds.map(q=>`<option value="${q.k}" ${a.f==q.k?'selected':''}>${esc(q.l)}</option>`).join('')}</select></div><div><label>يُسجَّل في</label><select id=fxp>${[['defenseDate','موعد المناقشة'],['committeeDate','اعتماد اللجنة'],['regDate','تسجيل الرسالة'],['coursesDate','اجتياز المقررات']].map(x=>`<option value="${x[0]}" ${a.p==x[0]?'selected':''}>${x[1]}</option>`).join('')}</select></div>`:''}</div>
+<div class=acts style="margin-top:18px;display:flex;gap:8px"><button class=btn onclick="fmSave()">${ic('save')}حفظ النموذج</button><button class="btn w" onclick="X()">إلغاء</button></div></div>`);
+ const m=$('#md');m.querySelector('#fx').onchange=()=>{fmRead();FED.f.act=$('#fx').value?{t:$('#fx').value}:null;fmDraw()};
+ m.querySelectorAll('[data-p=t],[data-p=shk]').forEach(e=>e.onchange=()=>{fmRead();fmDraw()})}
+function fmRead(){const f=FED.f;f.n=$('#fn').value;f.i=$('#fi').value;f.to=$('#ft').value;f.deg=$('#fdg').value;f.d=$('#fd').value;f.att=$('#fa').value;f.ov=$('#fo').checked?1:0;if($('#flt')){f.lt=$('#flt').value;f.sg=$('#fsg').value;f.sim=$('#fsm').checked?1:0}
+ document.querySelectorAll('#ffl [data-i]').forEach(e=>{const q=f.f[+e.dataset.i],p=e.dataset.p;if(p=='r')q.r=e.checked?1:0;else if(p=='shk')q.sh=e.value?[e.value,(q.sh&&q.sh[0]==e.value?q.sh[1]:'')]:null;else if(p=='shv'){if(q.sh)q.sh[1]=e.value}else q[p]=e.value});
+ const a=f.act;if(a){const g=id=>{const e=$('#'+id);return e?e.value:undefined};if(a.t=='status'&&g('fxv'))a.v=g('fxv');
+  if(a.t=='months'){a.f=g('fxf')||'';if($('#fxm')){a.m={};$('#fxm').value.split('\n').forEach(l=>{const p=l.split('=');const n=+p[1];if(p[0].trim()&&n>0)a.m[p[0].trim()]=n})}}
+  if(a.t=='range'){a.a=g('fxa');a.b=g('fxb')}if(a.t=='set'){a.f=g('fxf');a.p=g('fxp')}}}
+function fmAdd(){fmRead();const f=FED.f,n=Math.max(0,...f.f.map(q=>+String(q.k).slice(1)||0))+1;f.f.push({k:'q'+n,l:'',t:'text',r:0});fmDraw()}
+function fmFld(i,d){fmRead();const a=FED.f.f;if(d==0){if(!confirm('حذف هذا الحقل؟'))return;a.splice(i,1)}else{const j=i+d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]]}fmDraw()}
+async function fmSave(){fmRead();const f=FED.f;if(!f.n.trim())return toast('اكتب اسم النموذج');if(!f.f.length)return toast('أضف حقلًا واحدًا على الأقل');if(f.f.some(q=>!String(q.l).trim()))return toast('أكمل عناوين كل الحقول');
+ if(f.f.some(q=>q.t=='select'&&String(q.o||'').split('|').filter(x=>x.trim()).length<2))return toast('حقول القوائم تحتاج خيارين على الأقل (مفصولة بـ |)');
+ if(f.act&&!f.act.t)f.act=null;if(f.act&&f.act.t=='range'&&(!f.act.a||!f.act.b||f.act.a==f.act.b))return toast('الإسقاط يحتاج حقلي تاريخ مختلفين (من/إلى)');if(f.act&&f.act.t=='months'&&!Object.keys(f.act.m||{}).length)return toast('اكتب عدد الشهور لكل خيار');
+ if(!String(f.lt||'').trim()){delete f.lt;delete f.sg}if(!f.sim)delete f.sim;f.f.forEach(q=>{if(!q.pf||(q.t=='date')!=/Date$/.test(q.pf))delete q.pf;q.l=q.l.trim();if(q.t=='select')q.o=q.o.split('|').map(x=>x.trim()).filter(Boolean).join('|');if(q.sh&&!q.sh[1])q.sh=null});if(!f.o)f.o=FORMS.length+1;
+ try{await fmPut(FED.id,f);X();toast('تم حفظ النموذج ✅')}catch(e){toast(e.message)}}
+async function fmToggle(id){const f=JSON.parse(JSON.stringify(rrFm(id)));f.on=f.on==0?1:0;try{await fmPut(id,f)}catch(e){toast(e.message)}}
+function fmDup(id){const f=JSON.parse(JSON.stringify(rrFm(id)));f.n+=' (نسخة)';fmEdit('',f)}
+async function fmMove(id,d){const i=FORMS.findIndex(f=>f.id==id),j=i+d;if(j<0||j>=FORMS.length)return;try{const a=FORMS[i],b=FORMS[j];await api('form_save',{id:a.id,f:{...a,o:j+1}});await api('form_save',{id:b.id,f:{...b,o:i+1}});await load();RRT='fm';go('rr')}catch(e){toast(e.message)}}
+async function fmDel(id){if(!confirm('حذف هذا النموذج؟ الطلبات السابقة المقدمة به تبقى محفوظة.'))return;try{await api('form_del',{id});await load();RRT='fm';go('rr');toast('تم حذف النموذج')}catch(e){toast(e.message)}}
+async function fmRestore(){if(!confirm('استعادة النماذج الافتراضية؟ سيُستبدل أي نموذج افتراضي عدّلته (نماذجك الجديدة تبقى).'))return;try{await api('forms_restore');await load();RRT='fm';go('rr');toast('تمت الاستعادة ✅')}catch(e){toast(e.message)}}
+function fmExport(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(FORMS,null,1)],{type:'application/json'}));a.download='forms.json';a.click()}
+async function fmImport(file){if(!file)return;try{const l=JSON.parse(await file.text());if(!Array.isArray(l))throw 0;let n=0;for(const f of l){if(f&&f.n&&Array.isArray(f.f)){await api('form_save',{id:f.id,f});n++}}await load();RRT='fm';go('rr');toast('تم استيراد '+n+' نموذج ✅')}catch(e){toast('ملف غير صالح')}}
+/* ---------- الإحصائيات ---------- */
+const cnt=(l,f)=>{const m={};l.forEach(x=>{const k=f(x)||'غير محدد';m[k]=(m[k]||0)+1});return Object.entries(m).sort((a,b)=>b[1]-a[1])};
+const sbar=(a,b,c)=>{const t=Math.max(1,a+b+c);return `<div class=sb title="داخلي ${a} • خارجي ${b} • غير محدد ${c}"><i class=c1 style="width:${a/t*100}%"></i><i class=c2 style="width:${b/t*100}%"></i><i class=c3 style="width:${c/t*100}%"></i></div>`};
+const hbars=(l,mx)=>{mx=mx||Math.max(1,...l.map(x=>x[1]));return l.map(x=>`<div class=br><span title="${esc(x[0])}">${esc(x[0])}</span><i style="width:${x[1]/mx*80}%"></i><b>${x[1]}</b></div>`).join('')||'<div class=em>لا بيانات</div>'};
+function stSup(){return SUPS.map(s=>{const m=supOf(s),by=t=>m.filter(r=>rtOf(r)==t).length;return{s,m,n:m.length,in:by('داخلي'),ex:by('خارجي'),un:by('غير محدد'),act:m.filter(r=>r.status=='نشط').length,ms:m.filter(r=>/ماجستير/.test(r.degree)).length,ph:m.filter(r=>/دكتوراه/.test(r.degree)).length,late:m.filter(r=>needRep(r)&&repInfo(r).k<0).length}})}
+function stv0(){const T=now();T.setHours(0,0,0,0);const tin=R.filter(r=>rtOf(r)=='داخلي').length,tex=R.filter(r=>rtOf(r)=='خارجي').length,tun=R.length-tin-tex,unc=R.filter(r=>r.rtype!='داخلي'&&r.rtype!='خارجي').length,sp=stSup(),q=nz(STQ.trim());
+ let rows=sp.filter(x=>!q||nz(x.s.name).includes(q));const k=STS2.k;rows.sort((a,b)=>STS2.d*(k=='name'?a.s.name.localeCompare(b.s.name,'ar'):(a[k]-b[k])));
+ const dp=cnt(R,r=>r.dept).map(([n])=>{const l=R.filter(r=>(r.dept||'غير محدد')==n);return[n,l.length,l.filter(r=>rtOf(r)=='داخلي').length,l.filter(r=>rtOf(r)=='خارجي').length,l.filter(r=>rtOf(r)=='غير محدد').length,l.filter(r=>/ماجستير/.test(r.degree)).length,l.filter(r=>/دكتوراه/.test(r.degree)).length,l.filter(r=>/دبلوم/.test(r.degree)).length]}),mxd=Math.max(1,...dp.map(x=>x[1]));
+ const yr=cnt(R,r=>(r.enrollDate||'').slice(0,4)||'—').sort((a,b)=>a[0]<b[0]?-1:1),mo=[];for(let i=0;i<6;i++){const d=new Date(T.getFullYear(),T.getMonth()+i,1),k=d.getFullYear()+'-'+p2(d.getMonth()+1);mo.push([d.toLocaleDateString('ar-EG',{month:'long',year:'numeric'}),R.filter(r=>r.status=='نشط'&&(r.enrollEnd||'').slice(0,7)==k).length])}
+ const exp=R.filter(r=>r.status=='نشط'&&D(r.enrollEnd)&&D(r.enrollEnd)<T),nosup=R.filter(r=>!(r.supervisors||[]).length&&r.status=='نشط'),avg=sp.length?R.length/sp.length:0,hv=sp.filter(x=>x.n>=Math.max(8,avg*1.8)).sort((a,b)=>b.n-a.n);
+ const ins=[exp.length?`⏳ <b>${exp.length}</b> باحث نشط انتهت مدة قيدهم — قد يحتاجون «إسقاط مدة» أو مدًّا: ${exp.slice(0,5).map(r=>esc(r.name)).join('، ')}${exp.length>5?'…':''}`:'',nosup.length?`👤 <b>${nosup.length}</b> باحث نشط بلا مشرف مسجّل`:'',hv.length?`⚖️ أعلى الأحمال: ${hv.slice(0,3).map(x=>esc(x.s.name)+' ('+x.n+')').join('، ')} — المتوسط ${avg.toFixed(1)} باحث/مشرف`:'',R.length&&tex?`🌐 الباحثون الخارجيون ${Math.round(tex/R.length*100)}% من الإجمالي`:'',unc?`🏷️ <b>${unc}</b> باحث بلا تصنيف داخلي/خارجي صريح`:''].filter(Boolean);
+ const rq=cnt(RR,q=>q.title),dn=RR.filter(q=>q.decided&&q.created),av=dn.length?dn.reduce((s,q)=>s+Math.max(0,Math.round((D(q.decided)-D(q.created))/864e5)),0)/dn.length:0;
+ const th=(k,l)=>`<button class="btn w sm ${STS2.k==k?'on':''}" onclick="STS2.d=STS2.k=='${k}'?-STS2.d:-1;STS2.k='${k}';go('stats')">${l}${STS2.k==k?(STS2.d<0?' ▼':' ▲'):''}</button>`;
+ return `<div class=st>${[['إجمالي الباحثين',R.length],['داخليون (معيدون)',tin],['خارجيون',tex],['غير محدد',tun],['المشرفون',sp.length]].map((s,i)=>`<div class="t${i%4}"><b>${s[1]}</b><span>${s[0]}</span></div>`).join('')}</div>
+<div class=tb><button class="btn w" onclick="stXls()">${ic('down')}تصدير الإحصائيات Excel</button>${unc?`<button class="btn g" onclick="stClassify()">🏷️ تصنيف تلقائي (${unc})</button>`:''}</div>
+${ins.length?`<div class=cd><h3>ملاحظات ذكية</h3>${ins.map(x=>`<div class=al><div>${x}</div></div>`).join('')}</div>`:''}
+<div class=cd><h3>المشرفون — عدد الباحثين لكل مشرف</h3><div class=lgd><span><i class=c1></i>داخلي (معيد)</span><span><i class=c2></i>خارجي</span><span><i class=c3></i>غير محدد</span></div>
+<div class=tb><input class=sch placeholder="ابحث باسم مشرف" value="${esc(STQ)}" oninput="STQ=this.value;STR()">${th('name','الاسم')}${th('n','الإجمالي')}${th('in','داخلي')}${th('ex','خارجي')}${th('late','متأخر')}</div><div id=stl>${stRows(rows)}</div></div>
+<div class=cd><h3>الباحثون حسب القسم</h3><div class=lgd><span><i class=c1></i>داخلي</span><span><i class=c2></i>خارجي</span><span><i class=c3></i>غير محدد</span></div>${dp.map(x=>`<div class=br><span title="${esc(x[0])}">${esc(x[0])}</span><div style="flex:1;width:${x[1]/mxd*100}%">${sbar(x[2],x[3],x[4])}</div><b>${x[1]}</b></div><small style="color:var(--m);display:block;margin:-6px 122px 6px 0">ماجستير ${x[5]} • دكتوراه ${x[6]} • دبلوم ${x[7]}</small>`).join('')}</div>
+<div class=sg2><div class=cd><h3>حسب الدرجة</h3>${hbars(cnt(R,r=>r.degree))}</div><div class=cd><h3>حسب الحالة</h3>${hbars(cnt(R,r=>r.status))}</div><div class=cd><h3>سنة القيد</h3>${hbars(yr)}</div><div class=cd><h3>انتهاء القيد — 6 أشهر قادمة (نشط)</h3>${hbars(mo)}</div></div>
+${RR.length?`<div class=cd><h3>طلبات الباحثين</h3><p style="margin:0 0 8px;color:var(--m);font-size:13px">إجمالي ${RR.length} • متوسط زمن الرد ${av.toFixed(1)} يوم</p>${hbars(rq)}</div>`:''}`}
+function stRows(rows){return rows.map(x=>`<details class=sd><summary><b>${esc(x.s.name)}</b><span class=sdm>${esc(x.s.job||'')}</span><div style="flex:1;min-width:120px;max-width:260px">${sbar(x.in,x.ex,x.un)}</div><span class=sdn>${x.n}</span><span class=sdc>داخلي ${x.in} • خارجي ${x.ex}${x.late?` • <u style="color:var(--r)">متأخر ${x.late}</u>`:''}</span></summary><div class=sdb>${x.m.map(r=>`<a href="#" onclick="event.preventDefault();edit('${esc(r.id)}')" class=sdr><span>${esc(r.name)}</span><span class="tg ${rtOf(r)=='داخلي'?'dg':''}">${rtOf(r)}</span><span class=tg>${esc(r.degree)}</span><span class=tg>${esc(r.dept||'')}</span><span class="ch ${SX(r.status)[1]}">${esc(r.status)}</span></a>`).join('')||'<small>لا باحثين</small>'}</div></details>`).join('')||'<div class=em>لا مشرفون مطابقون</div>'}
+function STR(){const e=$('#stl');if(!e)return;const q=nz(STQ.trim()),k=STS2.k;e.innerHTML=stRows(stSup().filter(x=>!q||nz(x.s.name).includes(q)).sort((a,b)=>STS2.d*(k=='name'?a.s.name.localeCompare(b.s.name,'ar'):(a[k]-b[k]))))}
+function stXls(){const sp=stSup(),wb=XLSX.utils.book_new(),dp=cnt(R,r=>r.dept).map(([n])=>{const l=R.filter(r=>(r.dept||'غير محدد')==n);return{'القسم':n,'الإجمالي':l.length,'داخلي':l.filter(r=>rtOf(r)=='داخلي').length,'خارجي':l.filter(r=>rtOf(r)=='خارجي').length,'غير محدد':l.filter(r=>rtOf(r)=='غير محدد').length,'ماجستير':l.filter(r=>/ماجستير/.test(r.degree)).length,'دكتوراه':l.filter(r=>/دكتوراه/.test(r.degree)).length}});
+ XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(sp.map(x=>({'المشرف':x.s.name,'الوظيفة':x.s.job,'عدد الباحثين':x.n,'داخلي':x.in,'خارجي':x.ex,'غير محدد':x.un,'نشط':x.act,'ماجستير':x.ms,'دكتوراه':x.ph,'تقارير متأخرة':x.late})).sort((a,b)=>b['عدد الباحثين']-a['عدد الباحثين'])),'المشرفون');
+ XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(dp),'الأقسام');{const a=wb.Sheets['المشرفون'],b=wb.Sheets['الأقسام'];a['!cols']=[30,28,12,10,10,10,10,10,10,14].map(w=>({wch:w}));a['!bars']=[2];b['!cols']=[32,12,10,10,10,10,10].map(w=>({wch:w}));b['!bars']=[1]}xlOut(wb,'إحصائيات_الدراسات_العليا.xlsx',{title:'إحصائيات الدراسات العليا'})}
+async function stClassify(){const l=R.filter(r=>r.rtype!='داخلي'&&r.rtype!='خارجي'),map={};l.forEach(r=>map[r.id]=/معيد|مدرس مساعد/.test(r.job||'')?'داخلي':'خارجي');
+ const a=Object.values(map).filter(x=>x=='داخلي').length;if(!confirm('سيُصنَّف '+a+' باحث «داخلي» (وظيفتهم معيد/مدرس مساعد) و'+(l.length-a)+' «خارجي» (الباقون).\nيمكنك تعديل أي باحث لاحقًا من ملفه. متابعة؟'))return;
+ try{await api('rtype_bulk',{map});await load();toast('تم تصنيف الباحثين ✅')}catch(e){toast(e.message)}}
+
+/* ===== البيان الإحصائي الرسمي لأعداد طلاب الدراسات العليا (v8) ===== */
+function acY(d){d=d||now();return d.getMonth()>=8?d.getFullYear():d.getFullYear()-1}
+let STT='ov',STY=acY(),STSP=1,STM='dp',STB=null;
+const STK=['dp','mt','ms','pt','ps'],STF={dp:['dp'],m:['mt','ms'],d:['pt','ps']},STFN={dp:'الدبلوم',m:'الماجستير',d:'الدكتوراه'};
+const STL=()=>({dp:{t:'مرحلة الدبلوم',a:'المقيدون'},mt:{t:'تمهيدي الماجستير',a:'المقيدون'},ms:{t:'درجة الماجستير',a:'المسجلون'},pt:{t:'تمهيدي الدكتوراه',a:'المقيدون'},ps:{t:'درجة الدكتوراه',a:'المسجلون'}});
+const FEMN=new Set('منى هدى ندى نهى سلمى ليلى دعاء رحاب ايمان اسماء الاء رحمه نور امل هبه شيماء سماح ولاء رشا داليا دينا مروه مي ميار نجلاء هناء سوزان سهير سحر عفاف فاطمه مريم زينب سعاد حنان ريهام نادين يارا جيهان ريم رنا ساره ايه هاجر عزه بسمه نجوي مها منال وفاء نرمين رضوي شروق ابتسام ابتهال اسراء امينه جميله خديجه سميره عائشه علياء غاده فرح لمياء نسمه هاله يسري انجي تسنيم جهاد حبيبه رانيا سلوي شهد صفاء ضحي عبير فيروز كريمه لبني نوال نيره هند وسام ياسمين يمني اماني'.split(' ').map(nz)),MALX=new Set('حمزه اسامه معاويه طلحه عكاشه قتيبه عبيده زكريا'.split(' ').map(nz));
+function gGuess(r){const raw=String(r.name||'').trim().split(/\s+/)[0],f=nz(raw);if(!f)return'';if(MALX.has(f))return'ذكر';return FEMN.has(f)||/ة$/.test(raw)?'أنثى':'ذكر'}
+const natDig=r=>String(r.natId||'').replace(/\D/g,'');
+function gNat(r){const n=natDig(r);return n.length==14?(+n[12]%2?'ذكر':'أنثى'):''}
+function gnd(r){const g=(r.gender||'').trim();return g=='ذكر'||g=='أنثى'?g:gNat(r)}
+function natOf(r){const n=(r.nationality||'').trim();if(n)return/مصر/.test(n)?'مصري':'وافد';if(natDig(r).length==14)return'مصري';return r.foreignId?'وافد':''}
+function stCls(r,Y,sp,bad){const o=[],dg=r.degree||'',st=r.status||'',isD=/دبلوم/.test(dg),isM=/ماجستير/.test(dg),isP=/دكتوراه/.test(dg);
+ if(st=='مشطوب'||!(isD||isM||isP))return o;
+ const ys=new Date(Y,8,1),ye=new Date(Y+1,7,31),ps=new Date(Y-1,8,1),pe=new Date(Y,7,31),inr=(d,a,b)=>d&&d>=a&&d<=b;
+ const en=D(r.enrollDate),rg=D(r.regDate),cs=D(r.coursesDate),aw=D(r.defenseDate)||D(r.committeeDate),sk=isD?'dp':isM?'ms':'ps',tk=isM?'mt':'pt',gr=st=='منح';
+ if(gr&&!aw&&bad)bad.nod.push(r);
+ if(gr&&inr(aw,ps,pe))o.push({k:sk,c:'g'});
+ if(!isD&&inr(cs||rg,ps,pe))o.push({k:tk,c:'g'});
+ const on=gr?!!(aw&&aw>=ys):(st=='نشط'||st=='استكمال ملاحظات'||(sp&&st=='موقوف'));
+ if(on&&!(en&&en>ye)){const reg=!isD&&rg&&rg<=ye,k=isD?'dp':reg?sk:tk,ref=reg?rg:en;if(!ref&&bad)bad.ref.push(r);o.push({k,c:ref&&ref>=ys?'c':'p'})}
+ return o}
+function stBuild(Y,sp){const B={Y,rows:Object.fromEntries(STK.map(k=>[k,new Map()])),ord:{},bad:{nog:[],nat:[],conf:[],nod:[],ref:[]}};
+ R.forEach(r=>{const eg=(r.gender||'').trim(),gn=gNat(r);if((eg=='ذكر'||eg=='أنثى')&&gn&&eg!=gn)B.bad.conf.push(r);
+  const g=gnd(r),nt=natOf(r),cl=stCls(r,Y,sp,B.bad);if(!cl.length)return;
+  if(!g){B.bad.nog.push(r);return}if(!nt)B.bad.nat.push(r);
+  const i=(g=='ذكر'?0:2)+(nt=='وافد'?1:0),d=(r.dept||'').trim()||'غير محدد',s=(r.specialty||'').trim()||'غير محدد',key=d+'|'+s;
+  cl.forEach(({k,c})=>{const m=B.rows[k];let o=m.get(key);if(!o){o={d,s,c:{p:[[],[],[],[]],c:[[],[],[],[]],g:[[],[],[],[]]}};m.set(key,o)}o.c[c][i].push(r)})});
+ B.sum=k=>{const t={p:[0,0,0,0],c:[0,0,0,0],g:[0,0,0,0]};B.rows[k].forEach(o=>['p','c','g'].forEach(c=>o.c[c].forEach((a,i)=>t[c][i]+=a.length)));return t};
+ B.keys=ks=>{const m=new Map();ks.forEach(k=>B.rows[k].forEach((o,key)=>m.set(key,[o.d,o.s])));return[...m.entries()].sort((a,b)=>a[1][0].localeCompare(b[1][0],'ar')||a[1][1].localeCompare(b[1][1],'ar'))};
+ return B}
+function stTbl(B,fk,pr){const Y=B.Y,L=STL(),ks=STF[fk],ord=B.ord[fk]=B.keys(ks),n12=ks.length*12;
+ const hd=`<thead><tr><th rowspan=4 class=sd0>القسم</th><th rowspan=4 class=sd0>التخصص</th>${ks.map(k=>`<th colspan=12>${L[k].t}</th>`).join('')}</tr><tr>${ks.map(k=>`<th colspan=4>${L[k].a} من الأعوام السابقة</th><th colspan=4>${L[k].a} العام الجامعي ${Y}/${Y+1}</th><th colspan=4>الحاصلون العام الجامعي ${Y-1}/${Y}</th>`).join('')}</tr><tr>${ks.map(()=>'<th colspan=2>ذكر</th><th colspan=2>أنثى</th>'.repeat(3)).join('')}</tr><tr>${ks.map(()=>'<th>مصري</th><th>وافد</th>'.repeat(6)).join('')}</tr></thead>`;
+ const cnt={},seen={};ord.forEach(e=>cnt[e[1][0]]=(cnt[e[1][0]]||0)+1);
+ const cell=(k,key,j,c,i)=>{const o=B.rows[k].get(key),n=o?o.c[c][i].length:0;return`<td class="${n?'nz':'z'}"${n&&!pr?` onclick="stDrill('${fk}',${j},'${k}','${c}',${i})"`:''}>${n||'–'}</td>`};
+ let body=ord.map((e,j)=>{const d=e[1][0],s=e[1][1],h=`<tr>${seen[d]?'':`<td class=dn rowspan=${cnt[d]}>${esc(d)}</td>`}<td class=sn>${esc(s)}</td>${ks.map(k=>['p','c','g'].map(c=>[0,1,2,3].map(i=>cell(k,e[0],j,c,i)).join('')).join('')).join('')}</tr>`;seen[d]=1;return h}).join('');
+ if(!ord.length)body=`<tr><td colspan=${n12+2} style="padding:18px;color:var(--m)">لا توجد بيانات لهذه المرحلة في العام الجامعي المحدد</td></tr>`;
+ else body+=`<tr class=tr><td colspan=2>الاجمالي</td>${ks.map(k=>{const t=B.sum(k);return['p','c','g'].map(c=>t[c].map(n=>`<td>${n||'–'}</td>`).join('')).join('')}).join('')}</tr>`;
+ return`<table class=stt>${hd}<tbody>${body}</tbody></table>`}
+function stDrill(fk,j,k,c,i){const key=STB.ord[fk][j][0],o=STB.rows[k].get(key),l=o.c[c][i],L=STL()[k];
+ M(`<div class="mc"><div class=pt><div class=pth><h3>${esc(o.d)} — ${esc(o.s)}</h3><p>${L.t} • ${c=='g'?'الحاصلون':c=='c'?'العام الجامعي الحالي':'الأعوام السابقة'} • ${i<2?'ذكر':'أنثى'} ${i%2?'وافد':'مصري'} (${l.length})</p></div><button class="btn w ib" onclick="X()" aria-label="إغلاق">${ic('x')}</button></div>${l.map(r=>`<a href="#" class=sdr onclick="event.preventDefault();X();edit('${esc(r.id)}')"><span>${esc(r.name)}</span><span class=tg>${esc(r.degree)}</span><span class="ch ${SX(r.status)[1]}">${esc(r.status)}</span></a>`).join('')}</div>`)}
+function stmtView(){const B=STB=stBuild(STY,STSP),Y=STY,c0=acY(),yrs=[];for(let y=c0+1;y>=c0-8;y--)yrs.push(y);
+ const tot=ks=>{const a=[0,0,0];ks.forEach(k=>{const t=B.sum(k);['p','c','g'].forEach((c,x)=>a[x]+=t[c].reduce((s,n)=>s+n,0))});return a};
+ const all=[0,0,0,0];STK.forEach(k=>{const t=B.sum(k);['p','c'].forEach(c=>t[c].forEach((n,i)=>all[i]+=n))});
+ const en=all.reduce((a,b)=>a+b,0),fem=all[2]+all[3],frn=all[1]+all[3],gr=tot(STK.filter(k=>k=='dp'||k=='ms'||k=='ps'))[2],bd=B.bad,dpt={};
+ STK.forEach(k=>B.rows[k].forEach(o=>['p','c'].forEach(c=>o.c[c].forEach(a=>dpt[o.d]=(dpt[o.d]||0)+a.length))));const top=Object.entries(dpt).sort((a,b)=>b[1]-a[1])[0];
+ const li=(a,n)=>a.slice(0,n).map(r=>`<a href="#" onclick="event.preventDefault();edit('${esc(r.id)}')">${esc(r.name)}</a>`).join('، ')+(a.length>n?'…':'');
+ const ins=[
+  bd.nog.length?`⚠️ <b>${bd.nog.length}</b> باحث بلا «نوع» (ذكر/أنثى) ولا رقم قومي صالح — <u>مستبعدون من الأعداد</u> حتى تحدد نوعهم: ${li(bd.nog,4)}<div class=gx-wa><button class="btn g" onclick="stGuess()">🪄 اقتراح ذكي من الاسم (${bd.nog.filter(r=>gGuess(r)).length})</button>${bd.nog.slice(0,6).map(r=>`<span class=tg>${esc(r.name.split(' ').slice(0,2).join(' '))} <a href="#" onclick="event.preventDefault();stSetG({'${esc(r.id)}':'ذكر'})">ذكر</a> | <a href="#" onclick="event.preventDefault();stSetG({'${esc(r.id)}':'أنثى'})">أنثى</a></span>`).join('')}</div>`:'',
+  bd.conf.length?`🔎 <b>${bd.conf.length}</b> باحث نوعهم المسجَّل يخالف الرقم القومي (الرقم 13): ${li(bd.conf,4)}`:'',
+  bd.nat.length?`🌐 <b>${bd.nat.length}</b> باحث بلا جنسية واضحة — احتُسبوا «مصري» افتراضيًا: ${li(bd.nat,4)}`:'',
+  bd.nod.length?`📅 <b>${bd.nod.length}</b> باحث حالته «منح» بلا تاريخ مناقشة — لا يمكن إدراجهم في «الحاصلون»: ${li(bd.nod,4)}`:'',
+  bd.ref.length?`🕓 <b>${bd.ref.length}</b> باحث بلا تاريخ قيد/تسجيل — احتُسبوا من «الأعوام السابقة»: ${li(bd.ref,4)}`:'',
+  en?`📊 الإناث <b>${Math.round(fem/en*100)}%</b> من المقيدين • الوافدون <b>${Math.round(frn/en*100)}%</b>${top?` • الأكثر استقبالًا: <b>${esc(top[0])}</b> (${top[1]})`:''}`:''].filter(Boolean);
+ const f=STM,seg=['dp','m','d'].map(x=>`<button class="${f==x?'on':''}" onclick="STM='${x}';go('stats')">${STFN[x]}</button>`).join('');
+ return`<div class=cd><h3>البيان الإحصائي لأعداد طلاب الدراسات العليا</h3><div class=tb><select onchange="STY=+this.value;go('stats')" aria-label="العام الجامعي">${yrs.map(y=>`<option value=${y} ${y==Y?'selected':''}>العام الجامعي ${y}/${y+1}</option>`).join('')}</select><label><input type=checkbox style="width:auto" ${STSP?'checked':''} onchange="STSP=this.checked?1:0;go('stats')"> احتساب الموقوفين ضمن المقيدين</label><button class=btn onclick="stPrint()">${ic('print')}طباعة البيان (3 صفحات A4)</button><button class="btn g" onclick="stXlsx()">${ic('down')}تصدير Excel</button></div>
+<div class=gx-stats><span class=gx-s><b>${en}</b>إجمالي المقيدين</span><span class=gx-s><b>${tot(['dp'])[1]}</b>مستجدو الدبلوم</span><span class=gx-s><b>${tot(['mt','ms'])[1]}</b>ماجستير (عام حالي)</span><span class=gx-s><b>${tot(['pt','ps'])[1]}</b>دكتوراه (عام حالي)</span><span class=gx-s><b>${gr}</b>حاصلون ${Y-1}/${Y}</span></div>
+${ins.length?ins.map(x=>`<div class=al style="cursor:default"><div>${x}</div></div>`).join(''):'<div class=em>✔ البيانات مكتملة — لا ملاحظات</div>'}
+<details class=sxd style="margin:10px 0"><summary>كيف يُحسب البيان؟</summary><div class=rqd>• العام الجامعي يبدأ 1 سبتمبر وينتهي 31 أغسطس • <b>المقيدون</b>: حالة نشط/استكمال ملاحظات (والموقوف اختياريًا) • <b>الدبلوم والتمهيدي</b>: يُقسَّمون بتاريخ القيد (قبل العام = أعوام سابقة، داخله = العام الحالي) • <b>درجة الماجستير/الدكتوراه</b>: من سُجّلت رسالته (تاريخ التسجيل) ويُقسَّم بتاريخ التسجيل • <b>الحاصلون</b>: حالة «منح» وتاريخ المناقشة داخل العام السابق، وفي التمهيدي من اجتاز المقررات أو سجّل الرسالة في العام السابق • النوع من الرقم القومي (الخانة 13) أو الحقل اليدوي • الوافد = جنسية غير مصرية • المشطوبون مستبعدون • الحالة الحالية لقطة لحظية، فالأعوام القديمة تقريبية. اضغط أي رقم لعرض أسماء الباحثين.</div></details>
+<div class=gx-seg>${seg}</div><div class=stw>${stTbl(B,f,0)}</div></div>`}
+async function stSetG(map){try{await api('gender_bulk',{map});await load();toast('تم تحديد النوع ✅')}catch(e){toast(e.message)}}
+function stGuess(){const m={};STB.bad.nog.forEach(r=>{const g=gGuess(r);if(g)m[r.id]=g});const n=Object.keys(m).length;if(!n||!confirm('سيُحدَّد نوع '+n+' باحث اعتمادًا على الاسم الأول (اقتراح قد يخطئ في الأسماء غير الشائعة — راجع الأسماء بعد الحفظ من ملف كل باحث). متابعة؟'))return;stSetG(m)}
+function stPrint(){const B=STB||stBuild(STY,STSP),Y=B.Y;if(B.bad.nog.length&&!confirm('يوجد '+B.bad.nog.length+' باحث بلا نوع مستبعدون من الأعداد. طباعة البيان رغم ذلك؟'))return;
+ const w=open('','_blank');if(!w)return toast('اسمح بالنوافذ المنبثقة للطباعة');const sg=(t,n)=>`<div><b>${t}</b><div style="height:34px"></div>${n?esc(n):'................'}</div>`;
+ const pg=['dp','m','d'].map(f=>`<section><div class=lg><img src="${LOGO}" width=60><div>الإدارة العامة للدراسات العليا والبحوث</div></div><div class=tt2><b>بيان إحصائي بأعداد طلاب الدراسات العليا — ${STFN[f]}</b><span>كلية / ${esc(S.faculty||'')}</span><span>العام الجامعي ${Y}/${Y+1}</span></div>${stTbl(B,f,1)}<div class=sgs>${sg('المختص','')}${sg('مدير الدراسات العليا',S.dg)}${sg('وكيل الكلية للدراسات العليا',S.vd)}${sg('عميد الكلية',S.dean)}</div></section>`).join('');
+ w.document.write(`<!doctype html><html lang=ar dir=rtl><meta charset=utf-8><title>البيان الإحصائي ${Y}/${Y+1}</title><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel=stylesheet><style>@page{size:A4 landscape;margin:8mm}*{box-sizing:border-box}body{margin:0;font:700 10pt/1.4 Amiri,'Traditional Arabic',Arial,sans-serif;color:#000}section{page-break-after:always;padding:2mm}section:last-child{page-break-after:auto}.lg{display:inline-block;text-align:center;font-size:10pt}.tt2{display:flex;justify-content:space-between;margin:6px 0 8px;font-size:12pt}table{width:100%;border-collapse:collapse;table-layout:fixed}th,td{border:1px solid #000;text-align:center;padding:3px 1px;font-size:8.5pt}th{background:#f2f2f2}.sd0{width:11%;font-size:11pt}tr.tr td{border-top:2.5px solid #000;background:#f2f2f2}.z{color:#999}.sgs{display:flex;justify-content:space-between;margin-top:14px;font-size:11pt;text-align:center}</style>${pg}`);w.document.close();setTimeout(()=>w.print(),700)}
+function stXlsx(){const B=STB||stBuild(STY,STSP),Y=B.Y,L=STL(),wb=XLSX.utils.book_new();
+ ['dp','m','d'].forEach(f=>{const ks=STF[f],ord=B.keys(ks),W=2+ks.length*12,mg=[{s:{r:0,c:0},e:{r:3,c:0}},{s:{r:0,c:1},e:{r:3,c:1}}],r0=['القسم','التخصص'],r1=['',''],r2=['',''],r3=['',''];
+  ks.forEach((k,x)=>{const c0=2+x*12;r0.push(L[k].t,...Array(11).fill(''));mg.push({s:{r:0,c:c0},e:{r:0,c:c0+11}});['p','c','g'].forEach((c,y)=>{const a=c0+y*4;r1.push((c=='g'?'الحاصلون':L[k].a+(c=='p'?' من':''))+(c=='p'?' الأعوام السابقة':c=='c'?` العام الجامعي ${Y}/${Y+1}`:` العام الجامعي ${Y-1}/${Y}`),'','','');mg.push({s:{r:1,c:a},e:{r:1,c:a+3}});r2.push('ذكر','','أنثى','');mg.push({s:{r:2,c:a},e:{r:2,c:a+1}},{s:{r:2,c:a+2},e:{r:2,c:a+3}});r3.push('مصري','وافد','مصري','وافد')})});
+  const rows=ord.map(e=>[e[1][0],e[1][1],...ks.flatMap(k=>['p','c','g'].flatMap(c=>[0,1,2,3].map(i=>{const o=B.rows[k].get(e[0]);return o?o.c[c][i].length:0})))]);
+  rows.push(['الاجمالي','',...ks.flatMap(k=>{const t=B.sum(k);return['p','c','g'].flatMap(c=>t[c])})]);
+  const ws=XLSX.utils.aoa_to_sheet([r0,r1,r2,r3,...rows]);ws['!merges']=mg;ws['!hdr']=4;ws['!zd']=1;ws['!c0b']=1;ws['!cols']=[{wch:26},{wch:26},...Array(W-2).fill({wch:8})];XLSX.utils.book_append_sheet(wb,ws,STFN[f])});
+ const au=[['الباحث','الدرجة','القسم','التخصص','النوع','الجنسية','الحالة','الإدراج في البيان']];R.forEach(r=>{const cl=stCls(r,Y,STSP),g=gnd(r),L2=STL();au.push([r.name,r.degree,r.dept,r.specialty,g||'غير محدد',natOf(r)||'غير محدد',r.status,cl.map(x=>L2[x.k].t+' / '+(x.c=='p'?'أعوام سابقة':x.c=='c'?'العام الحالي':'حاصلون')).join(' + ')||'غير مدرج'])});
+ XLSX.utils.book_append_sheet(wb,(()=>{const aw=XLSX.utils.aoa_to_sheet(au);aw['!cols']=[28,12,24,24,10,10,12,52].map(w=>({wch:w}));return aw})(),'سجل المراجعة');xlOut(wb,`البيان_الإحصائي_${Y}-${Y+1}.xlsx`,{title:`البيان الإحصائي لأعداد طلاب الدراسات العليا — ${Y}/${Y+1}`})}
+function stv(){return`<div class=gx-seg><button class="${STT=='ov'?'on':''}" onclick="STT='ov';go('stats')">${ic('stats')}نظرة عامة</button><button class="${STT=='st'?'on':''}" onclick="STT='st';go('stats')">${ic('doc')}البيان الإحصائي الرسمي</button></div>`+(STT=='st'?stmtView():stv0())}
+
+/* ===== محرك التصدير المنسَّق (ExcelJS) — يحوّل أي مصنَّف SheetJS إلى ملف مصمَّم ===== */
+function xlLoad(){return window.ExcelJS?Promise.resolve():new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js';s.onload=ok;s.onerror=()=>no(new Error('exceljs'));document.head.appendChild(s)})}
+async function xlOut(wb,name,o={}){try{await xlLoad();const buf=await xlBuild(wb,o),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([buf],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4e3)}catch(e){console.warn(e);XLSX.writeFile(wb,name);toast('تعذّر التنسيق المتقدم (تحقق من الاتصال) — نُزّل الملف بتنسيق عادي')}}
+async function xlBuild(wb,o){
+ const E=new ExcelJS.Workbook();E.creator='منظومة الدراسات العليا';E.created=new Date();
+ const C={t:'FF0E4748',t2:'FF18696A',g:'FFB8923F',gl:'FFF6EBCF',s:'FFF1F6F5',ln:'FFD3DFDC',tx:'FF14282A',r:'FFC4443A',rl:'FFFBE6E4',gr:'FF1F8A5B',grl:'FFE1F3EA',a:'FF9A6B12',al:'FFFCEFD5',b:'FF1F5F99',bl:'FFE3EEF8'};
+ const F='Arial',fill=c=>({type:'pattern',pattern:'solid',fgColor:{argb:c}}),bd=(c=C.ln,st='thin')=>({top:{style:st,color:{argb:c}},bottom:{style:st,color:{argb:c}},left:{style:st,color:{argb:c}},right:{style:st,color:{argb:c}}});
+ const sem=v=>{v=String(v);if(/^(نشط|سليم|موافق|تمت الموافقة|مقبول|معتمد)/.test(v))return[C.gr,C.grl];if(/^(موقوف|استكمال|قريب|بانتظار|معلق|معلّق)/.test(v))return[C.a,C.al];if(/^(مشطوب|متأخر|مرفوض|رفض|ملغ)/.test(v))return[C.r,C.rl];if(/^منح/.test(v))return[C.b,C.bl]};
+ const ban=o.banner!==false,logo=ban&&typeof LOGO=='string'&&LOGO?E.addImage({base64:LOGO,extension:'jpeg'}):null,off=ban?3:0,today=fd(iso(now()));
+ wb.SheetNames.forEach((n,si)=>{
+  const s=wb.Sheets[n],aoa=XLSX.utils.sheet_to_json(s,{header:1,defval:'',raw:true}),kv=!!s['!kv'],hdr=kv?0:(s['!hdr']??1),cw=(s['!cols']||[]).map(c=>c&&c.wch||14);
+  let W=Math.max(cw.length,...aoa.map(r=>r.length),1);while(cw.length<W)cw.push(14);
+  const ws=E.addWorksheet(n,{views:[{rightToLeft:true,showGridLines:!ban,state:hdr?'frozen':'normal',ySplit:hdr?off+hdr:0}],properties:{tabColor:{argb:[C.t,C.g,C.t2,C.b][si%4]}}});
+  ws.properties.defaultRowHeight=20;cw.forEach((w,i)=>ws.getColumn(i+1).width=Math.max(8,w));
+  if(ban){const t1=ws.getRow(1),t2=ws.getRow(2),t3=ws.getRow(3);t1.height=34;t2.height=20;t3.height=7;
+   for(let c=1;c<=W;c++){ws.getCell(1,c).fill=fill(C.t);ws.getCell(2,c).fill=fill(C.t2);ws.getCell(3,c).fill=fill(C.g)}
+   ws.getCell(1,1).value=o.title||'منظومة الدراسات العليا';ws.getCell(1,1).font={name:F,size:17,bold:true,color:{argb:'FFFFFFFF'}};ws.getCell(1,1).alignment={horizontal:'center',vertical:'middle'};
+   ws.getCell(2,1).value=[n,S.univ,S.faculty?'كلية '+S.faculty:'',today].filter(Boolean).join('   •   ');ws.getCell(2,1).font={name:F,size:10.5,color:{argb:'FFE9F3F1'}};ws.getCell(2,1).alignment={horizontal:'center',vertical:'middle'};
+   if(W>1){ws.mergeCells(1,1,1,W);ws.mergeCells(2,1,2,W)}
+   if(logo!=null)ws.addImage(logo,{tl:{col:0.1,row:0.12},ext:{width:60,height:60},editAs:'oneCell'})}
+  const merges=(s['!merges']||[]).map(m=>({r1:m.s.r,c1:m.s.c,r2:m.e.r,c2:m.e.c}));
+  aoa.forEach((row,r)=>{const er=off+r+1,R=ws.getRow(er),nz2=row.filter(x=>x!=='').length,isH=r<hdr,isT=/^ال[اإ]جمالي/.test(String(row[0]||'')),single=!isH&&nz2==1&&row[0]!==''&&W>1&&!merges.some(m=>m.r1==r),empty=nz2==0&&!(s['!tpl']);
+   if(empty&&!isH){R.height=8;return}
+   if(single){const sec=kv||String(row[0])=='ملاحظات مهمة';ws.getCell(er,1).value=row[0];for(let c=1;c<=W;c++){const k=ws.getCell(er,c);k.fill=fill(sec?C.gl:C.s);k.border=sec?{bottom:{style:'medium',color:{argb:C.g}}}:{};k.font={name:F,size:sec?12:10.5,bold:sec,color:{argb:sec?C.t:C.tx}};k.alignment={horizontal:'right',vertical:'middle',wrapText:true,readingOrder:'rtl'}}
+    ws.mergeCells(er,1,er,W);R.height=sec?24:Math.max(20,16*Math.ceil(String(row[0]).length/(cw.reduce((a,b)=>a+b,0)*1.05)));return}
+   let lines=1;
+   for(let c=0;c<W;c++){const v=row[c],k=ws.getCell(er,c+1),has=v!==''&&v!=null;if(has)k.value=v;const num=typeof v=='number';
+    if(isH){k.fill=fill((s['!hcol']||{})[c]||C.t);k.font={name:F,size:11,bold:true,color:{argb:'FFFFFFFF'}};k.alignment={horizontal:'center',vertical:'middle',wrapText:true,readingOrder:'rtl'};k.border=bd(C.g)}
+    else if(isT){k.fill=fill(C.gl);k.font={name:F,size:11,bold:true,color:{argb:C.t}};k.alignment={horizontal:num?'center':'right',vertical:'middle'};k.border={...bd(),top:{style:'medium',color:{argb:C.t}}};if(num)k.numFmt=s['!zd']?'0;-0;"–"':'0'}
+    else{const z=(r-hdr)%2?C.s:'FFFFFFFF';k.fill=fill(kv&&c==0?C.s:z);k.border=bd();
+     const sm=!num&&has?sem(v):null;
+     if(kv&&c==1){k.font={name:F,size:15,bold:true,color:{argb:C.t2}};k.alignment={horizontal:'center',vertical:'middle'}}
+     else if(num){k.numFmt=s['!zd']?'0;-0;"–"':'0';k.font={name:F,size:10.5,bold:!!(s['!zd']&&v>0),color:{argb:s['!zd']?(v>0?C.t:'FFB5C2C0'):C.tx}};k.alignment={horizontal:'center',vertical:'middle'}}
+     else{k.font={name:F,size:10.5,bold:(c==0&&(!!s['!c0b']||kv))||!!sm,color:{argb:sm?sm[0]:C.tx}};if(sm)k.fill=fill(sm[1]);k.alignment={horizontal:sm?'center':'right',vertical:'middle',wrapText:true,readingOrder:'rtl'}}
+     if(s['!tpl']||s['!txt']&&s['!txt'].includes(c)){k.numFmt='@'}}
+    if(has&&typeof v=='string'&&cw[c])lines=Math.max(lines,Math.ceil(v.length*1.1/cw[c]))}
+   R.height=isH?(r==0&&hdr>1?24:Math.max(30,hdr>1?22:30)):kv?30:Math.min(90,Math.max(21,16*lines))});
+  merges.forEach(m=>{if(m.r1!=m.r2||m.c1!=m.c2)ws.mergeCells(off+m.r1+1,m.c1+1,off+m.r2+1,m.c2+1)});
+  const last=off+aoa.length;
+  if(hdr==1&&W>1&&aoa.length>1&&!s['!tpl'])ws.autoFilter={from:{row:off+1,column:1},to:{row:off+1,column:W}};
+  if(s['!tpl'])ws.autoFilter={from:{row:1,column:1},to:{row:1,column:W}};
+  (s['!bars']||[]).forEach(c=>{const L=ws.getColumn(c+1).letter;if(last>off+hdr+1)ws.addConditionalFormatting({ref:`${L}${off+hdr+1}:${L}${last}`,rules:[{type:'dataBar',cfvo:[{type:'num',value:0},{type:'max'}],color:{argb:'FF7CC4BC'},gradient:false,priority:1}]})});
+  Object.entries(s['!dv']||{}).forEach(([c,l])=>{const L=ws.getColumn(+c+1).letter;ws.dataValidations.add(`${L}${off+hdr+1}:${L}${Math.max(last,off+hdr+300)}`,{type:'list',allowBlank:true,formulae:['"'+l.join(',')+'"'],showErrorMessage:true,errorStyle:'warning',errorTitle:'قيمة غير معتادة',error:'اختر من القائمة: '+l.join(' | ')})});
+  Object.entries(s['!notes']||{}).forEach(([c,t])=>{ws.getCell(off+1,+c+1).note={texts:[{font:{name:F,size:10},text:t}],margins:{insetmode:'auto'}}});
+  ws.pageSetup={paperSize:9,orientation:W>7?'landscape':'portrait',fitToPage:true,fitToWidth:1,fitToHeight:0,horizontalCentered:true,margins:{left:.35,right:.35,top:.55,bottom:.6,header:.25,footer:.3}};
+  if(hdr)ws.pageSetup.printTitlesRow=`${off+1}:${off+hdr}`;
+  ws.headerFooter={oddFooter:'&C&"Arial,Regular"&9صفحة &P من &N&R&"Arial,Regular"&9&D'}});
+ return E.xlsx.writeBuffer()}
+
+</script>
+</body></html>
