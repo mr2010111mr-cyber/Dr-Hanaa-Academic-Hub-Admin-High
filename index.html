@@ -350,7 +350,7 @@ html body .tc.on::after{content:'✓';position:absolute;top:8px;left:8px;width:2
 .ea .wn{margin:0 0 8px}
 .ef{display:flex;gap:10px;justify-content:flex-start;padding:4px 0 0}
 .ef .btn{height:46px;padding:0 28px;font-size:15px}
-@media(min-width:601px){.es .fg.c2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:601px){.es .fg.fc2{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.ew{grid-template-columns:minmax(0,1fr);padding:14px 12px 40px}.ea{position:static;order:-1}.ea .sm{display:none}.es{padding:16px}.eb{padding:10px 12px}.eb h3{font-size:17px!important}.ef .btn{flex:1;padding:0}.eb .btn.sv span{display:none}.eb .btn.sv{width:42px;padding:0}}
 @media(max-width:600px){#md.full .mc.ed{padding:0}.es .fg{grid-template-columns:minmax(0,1fr)}}
 
@@ -1201,7 +1201,7 @@ M(`<div class="mc ed"><div class=eb><button type=button class="btn xb" onclick="
 <div class=ew><div class=ems>
 ${esec('res','البيانات الشخصية','الاسم والوظيفة وبيانات التواصل',efg(['name','job','nationality','gender','natId','foreignId','phone','birthPlace']))}
 ${(r.id||draft)?esec('gr','المسار الأكاديمي','كل درجات الباحث (بنفس الرقم القومي / الوطني) بالترتيب',pathHtml(r),r.id?`<button type=button class="btn w" onclick="newDeg('${r.id}')">${ic('plus')}درجة جديدة</button>`:''):''}
-${esec('reg','البيانات الأكاديمية','القسم والتخصص والدرجة وحالة القيد',efg(['dept','specialty','degree','status','rtype'],'c2'))}
+${esec('reg','البيانات الأكاديمية','القسم والتخصص والدرجة وحالة القيد',efg(['dept','specialty','degree','status','rtype'],'fc2'))}
 ${esec('due','التواريخ المهمة','القيد والتسجيل والمقررات والمناقشة',efg(['enrollDate','enrollEnd','regDate','coursesDate','committeeDate','defenseDate'])).replace('<section class=es>','<section class=es id=est1>')}
 ${esec('tit','الرسالة والملاحظات','عنوان الرسالة بالعربية والإنجليزية',efg(['titleAr','titleEn','notes'])).replace('<section class=es>','<section class=es id=est2>')}
 ${esec('sup','المشرفون','أدخل الرقم القومي فقط. ينشئ النظام حساب المشرف وكلمة مروره تلقائياً عند إضافته لأول مرة، ثم يستخدم الحساب نفسه مع جميع الباحثين. حتى 4 مشرفين.',`<div id=ls>${r.supervisors.map(o=>lrow('s',o)).join('')}</div>`,`<button type=button class="btn w" onclick="$('#ls').insertAdjacentHTML('beforeend',lrow('s'));edUp('${id||''}')">${ic('plus')}مشرف</button>`).replace('<section class=es>','<section class=es data-th>')}
