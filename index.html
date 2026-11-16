@@ -2170,12 +2170,12 @@ function stBuild(Y,sp){const B={Y,rows:Object.fromEntries(STK.map(k=>[k,new Map(
  B.keys=ks=>{const m=new Map();ks.forEach(k=>B.rows[k].forEach((o,key)=>m.set(key,[o.d,o.s])));return[...m.entries()].sort((a,b)=>a[1][0].localeCompare(b[1][0],'ar')||a[1][1].localeCompare(b[1][1],'ar'))};
  return B}
 function stTbl(B,fk,pr){const Y=B.Y,L=STL(),ks=STF[fk],ord=B.ord[fk]=B.keys(ks),n12=ks.length*12;
- const hd=`<thead><tr><th rowspan=4 class=sd0>القسم</th><th rowspan=4 class=sd0>التخصص</th>${ks.map(k=>`<th colspan=12>${L[k].t}</th>`).join('')}</tr><tr>${ks.map(k=>`<th colspan=4>${L[k].a} من الأعوام السابقة</th><th colspan=4>${L[k].a} العام الجامعي ${Y}/${Y+1}</th><th colspan=4>الحاصلون العام الجامعي ${Y-1}/${Y}</th>`).join('')}</tr><tr>${ks.map(()=>'<th colspan=2>ذكر</th><th colspan=2>أنثى</th>'.repeat(3)).join('')}</tr><tr>${ks.map(()=>'<th>مصري</th><th>وافد</th>'.repeat(6)).join('')}</tr></thead>`;
+ const hd=`<thead><tr><th rowspan=4 class=sd0>القسم</th><th rowspan=4 class=sd0>التخصص</th>${ks.map(k=>`<th colspan=12 class=kh>${L[k].t}</th>`).join('')}</tr><tr>${ks.map(k=>`<th colspan=4 class=gh>${L[k].a} من الأعوام السابقة</th><th colspan=4 class=gh>${L[k].a} العام الجامعي ${Y}/${Y+1}</th><th colspan=4 class=gh>الحاصلون العام الجامعي ${Y-1}/${Y}</th>`).join('')}</tr><tr>${ks.map(()=>'<th colspan=2 class=gm>ذكر</th><th colspan=2 class=gw>أنثى</th>'.repeat(3)).join('')}</tr><tr>${ks.map(()=>'<th>مصري</th><th>وافد</th>'.repeat(6)).join('')}</tr></thead>`;
  const cnt={},seen={};ord.forEach(e=>cnt[e[1][0]]=(cnt[e[1][0]]||0)+1);
- const cell=(k,key,j,c,i)=>{const o=B.rows[k].get(key),n=o?o.c[c][i].length:0;return`<td class="${n?'nz':'z'}"${n&&!pr?` onclick="stDrill('${fk}',${j},'${k}','${c}',${i})"`:''}>${n||'–'}</td>`};
+ const cell=(k,key,j,c,i)=>{const o=B.rows[k].get(key),n=o?o.c[c][i].length:0;return`<td class="${n?'nz':'z'}${i==0?' gs':i==2?' gf':''}${c=='p'&&i==0?' ks':''}"${n&&!pr?` onclick="stDrill('${fk}',${j},'${k}','${c}',${i})"`:''}>${n||'–'}</td>`};
  let body=ord.map((e,j)=>{const d=e[1][0],s=e[1][1],h=`<tr>${seen[d]?'':`<td class=dn rowspan=${cnt[d]}>${esc(d)}</td>`}<td class=sn>${esc(s)}</td>${ks.map(k=>['p','c','g'].map(c=>[0,1,2,3].map(i=>cell(k,e[0],j,c,i)).join('')).join('')).join('')}</tr>`;seen[d]=1;return h}).join('');
  if(!ord.length)body=`<tr><td colspan=${n12+2} style="padding:18px;color:var(--m)">لا توجد بيانات لهذه المرحلة في العام الجامعي المحدد</td></tr>`;
- else body+=`<tr class=tr><td colspan=2>الاجمالي</td>${ks.map(k=>{const t=B.sum(k);return['p','c','g'].map(c=>t[c].map(n=>`<td>${n||'–'}</td>`).join('')).join('')}).join('')}</tr>`;
+ else body+=`<tr class=tr><td colspan=2>الاجمالي</td>${ks.map(k=>{const t=B.sum(k);return['p','c','g'].map(c=>t[c].map((n,i)=>`<td class="${i==0?'gs':i==2?'gf':''}${c=='p'&&i==0?' ks':''}">${n||'–'}</td>`).join('')).join('')}).join('')}</tr>`;
  return`<table class=stt>${hd}<tbody>${body}</tbody></table>`}
 function stDrill(fk,j,k,c,i){const key=STB.ord[fk][j][0],o=STB.rows[k].get(key),l=o.c[c][i],L=STL()[k];
  M(`<div class="mc"><div class=pt><div class=pth><h3>${esc(o.d)} — ${esc(o.s)}</h3><p>${L.t} • ${c=='g'?'الحاصلون':c=='c'?'العام الجامعي الحالي':'الأعوام السابقة'} • ${i<2?'ذكر':'أنثى'} ${i%2?'وافد':'مصري'} (${l.length})</p></div><button class="btn w ib" onclick="X()" aria-label="إغلاق">${ic('x')}</button></div>${l.map(r=>`<a href="#" class=sdr onclick="event.preventDefault();X();edit('${esc(r.id)}')"><span>${esc(r.name)}</span><span class=tg>${esc(r.degree)}</span><span class="ch ${SX(r.status)[1]}">${esc(r.status)}</span></a>`).join('')}</div>`)}
@@ -2201,9 +2201,52 @@ ${ins.length?ins.map(x=>`<div class=al style="cursor:default"><div>${x}</div></d
 async function stSetG(map){try{await api('gender_bulk',{map});await load();toast('تم تحديد النوع ✅')}catch(e){toast(e.message)}}
 function stGuess(){const m={};STB.bad.nog.forEach(r=>{const g=gGuess(r);if(g)m[r.id]=g});const n=Object.keys(m).length;if(!n||!confirm('سيُحدَّد نوع '+n+' باحث اعتمادًا على الاسم الأول (اقتراح قد يخطئ في الأسماء غير الشائعة — راجع الأسماء بعد الحفظ من ملف كل باحث). متابعة؟'))return;stSetG(m)}
 function stPrint(){const B=STB||stBuild(STY,STSP),Y=B.Y;if(B.bad.nog.length&&!confirm('يوجد '+B.bad.nog.length+' باحث بلا نوع مستبعدون من الأعداد. طباعة البيان رغم ذلك؟'))return;
- const w=open('','_blank');if(!w)return toast('اسمح بالنوافذ المنبثقة للطباعة');const sg=(t,n)=>`<div><b>${t}</b><div style="height:34px"></div>${n?esc(n):'................'}</div>`;
- const pg=['dp','m','d'].map(f=>`<section><div class=lg><img src="${LOGO}" width=60><div>الإدارة العامة للدراسات العليا والبحوث</div></div><div class=tt2><b>بيان إحصائي بأعداد طلاب الدراسات العليا — ${STFN[f]}</b><span>كلية / ${esc(S.faculty||'')}</span><span>العام الجامعي ${Y}/${Y+1}</span></div>${stTbl(B,f,1)}<div class=sgs>${sg('المختص','')}${sg('مدير الدراسات العليا',S.dg)}${sg('وكيل الكلية للدراسات العليا',S.vd)}${sg('عميد الكلية',S.dean)}</div></section>`).join('');
- w.document.write(`<!doctype html><html lang=ar dir=rtl><meta charset=utf-8><title>البيان الإحصائي ${Y}/${Y+1}</title><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel=stylesheet><style>@page{size:A4 landscape;margin:8mm}*{box-sizing:border-box}body{margin:0;font:700 10pt/1.4 Amiri,'Traditional Arabic',Arial,sans-serif;color:#000}section{page-break-after:always;padding:2mm}section:last-child{page-break-after:auto}.lg{display:inline-block;text-align:center;font-size:10pt}.tt2{display:flex;justify-content:space-between;margin:6px 0 8px;font-size:12pt}table{width:100%;border-collapse:collapse;table-layout:fixed}th,td{border:1px solid #000;text-align:center;padding:3px 1px;font-size:8.5pt}th{background:#f2f2f2}.sd0{width:11%;font-size:11pt}tr.tr td{border-top:2.5px solid #000;background:#f2f2f2}.z{color:#999}.sgs{display:flex;justify-content:space-between;margin-top:14px;font-size:11pt;text-align:center}</style>${pg}`);w.document.close();setTimeout(()=>w.print(),700)}
+ const w=open('','_blank');if(!w)return toast('اسمح بالنوافذ المنبثقة للطباعة');
+ const [I,A,T,L,T2]=['#111','#444','#f6f6f6','#8c8c8c','#e6e6e6'];
+ const dt=fd(iso(now())),FS=['dp','m','d'],
+ kp=f=>{let e=0,m=0,fm=0,fr=0,g=0;STF[f].forEach(k=>{const t=B.sum(k);['p','c'].forEach(c=>t[c].forEach((n,i)=>{e+=n;if(i<2)m+=n;else fm+=n;if(i%2)fr+=n}));t.g.forEach(n=>g+=n)});return[['إجمالي المقيدين',e],['ذكور',m],['إناث',fm],['وافدون',fr],['الحاصلون '+(Y-1)+'/'+Y,g]]},
+ sg=(t,n)=>`<div class=sgc><b>${t}</b><i></i><span>${n?esc(n):'&nbsp;'}</span></div>`;
+ const pg=FS.map((f,i)=>{const tb=stTbl(B,f,1),n=B.ord[f].length,sz=n<=6?'r1':n<=12?'r2':n<=20?'r3':'r4';
+  return `<section class="pg ${sz}"><header class=hd><div class=hr><b>${esc(S.univ||'')}</b><span>كلية ${esc(S.faculty||'')}</span><span>الإدارة العامة للدراسات العليا والبحوث</span></div><div class=hc><img src="${LOGO}" alt=""></div><div class=hl><span>العام الجامعي</span><b>${Y}/${Y+1}</b><small>تاريخ الإصدار: ${dt}</small></div></header>
+<div class=ttl><h1>بيان إحصائي بأعداد طلاب الدراسات العليا</h1><div class=orn2><i></i><span>◆</span><i></i></div><h2>مرحلة ${STFN[f]}</h2></div>
+<div class=kp>${kp(f).map(x=>`<div><b>${x[1]}</b><span>${x[0]}</span></div>`).join('')}</div>
+<div class=tw>${tb}</div>
+<div class=sgs>${sg('المختص','')}${sg('مدير الدراسات العليا',S.dg)}${sg('وكيل الكلية للدراسات العليا',S.vd)}${sg('عميد الكلية',S.dean)}</div>
+<footer class=ft><span>${STSP?'الموقوفون محتسبون ضمن المقيدين':'الموقوفون غير محتسبين ضمن المقيدين'} • الأعداد بحسب بيانات المنظومة وقت الإصدار</span><span>صفحة ${i+1} من ${FS.length}</span></footer></section>`}).join('');
+ const css=`@page{size:A4 landscape;margin:7mm}*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;font:400 10.5pt/1.5 Amiri,'Traditional Arabic',Arial,sans-serif;color:#1f2328}
+.pg{position:relative;display:flex;flex-direction:column;min-height:188mm;padding:4mm 7mm 3mm;border:.8pt solid ${L};border-top:2.5pt solid ${I};page-break-after:always}.pg:last-child{page-break-after:auto}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;padding-bottom:6px;border-bottom:1.6pt solid ${I};box-shadow:0 3px 0 -1.5px ${A}}
+.hr{display:flex;flex-direction:column;line-height:1.45}.hr b{font-size:15pt;color:${I}}.hr span{font-size:11pt;color:#444}
+.hc{text-align:center}.hc img{width:64px;height:auto;display:block;margin:auto}
+.hl{text-align:left;display:flex;flex-direction:column;align-items:flex-start;direction:rtl;margin-right:auto;line-height:1.35}.hl{align-items:flex-end;text-align:left}.hl span{font-size:10pt;color:#555}.hl b{font-size:17pt;color:${I};font-family:'IBM Plex Sans Arabic',Arial,sans-serif;letter-spacing:.5pt}.hl small{font-size:9pt;color:#666}
+.ttl{text-align:center;margin:4px 0 3px}.ttl h1{margin:0;font-size:19pt;color:${I};line-height:1.3}.ttl h2{margin:0;font-size:12.5pt;color:${A};font-weight:700;letter-spacing:.5pt}
+.orn2{display:flex;align-items:center;justify-content:center;gap:8px;margin:1px 0}.orn2 i{width:90px;height:0;border-top:.9pt solid ${A}}.orn2 span{color:${A};font-size:9pt}
+.kp{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:4px 0 6px}.kp div{background:#fff;border:.7pt solid ${L};border-top:2.2pt solid ${I};text-align:center;padding:3px 4px 4px;line-height:1.25}
+.kp b{display:block;font:700 15pt 'IBM Plex Sans Arabic',Arial,sans-serif;color:${I}}.kp span{font-size:9.5pt;color:#444}
+.tw{flex:1}table.stt{width:100%;border-collapse:collapse;table-layout:fixed;text-align:center;font-family:'IBM Plex Sans Arabic',Arial,sans-serif}
+.stt thead{display:table-header-group}.stt tr{page-break-inside:avoid}
+.stt th,.stt td{border:.5pt solid ${L};padding:2px 1px;vertical-align:middle}
+.stt thead tr:first-child th:nth-child(1){width:11%}.stt thead tr:first-child th:nth-child(2){width:14%}
+.stt th{font-family:Amiri,'Traditional Arabic',serif;font-weight:700;background:${T};color:${I};font-size:8.5pt;line-height:1.25}
+.stt th.sd0{background:#dcdcdc;color:${I};font-size:11.5pt;border:.6pt solid ${I};border-bottom:1.6pt solid ${I}}
+.stt th.kh{background:#dcdcdc;color:${I};font-size:12pt;border:.6pt solid ${I};border-right:2pt solid ${I};border-bottom:1.6pt solid ${I};padding:4px 2px}
+.stt th.gh{background:${T2};font-size:8.5pt;border-right:1.2pt solid ${I}}.stt th.gm,.stt th.gw{font-size:9pt}.stt th.gw{border-right:.9pt solid ${I}}
+.stt td{font-size:9.5pt;font-weight:700;color:${I}}.stt td.z{color:#b6b6b6;font-weight:400}
+.stt td.gs{border-right:1.2pt solid ${I}}.stt td.gf{border-right:.9pt solid ${L}}.stt td.ks{border-right:2pt solid ${I}}
+.stt tbody tr:nth-child(even):not(.tr) td:not(.dn):not(.sn){background:#fafafa}
+.stt td.dn{background:${T2};font:700 10.5pt Amiri,serif;color:${I};padding:2px 4px;border-left:.5pt solid ${L}}
+.stt td.sn{text-align:right;padding-right:7px;font:700 10pt Amiri,serif;color:#1f2328;background:#fff}
+.stt tr.tr td{background:#e2e2e2;color:${I};font-weight:700;border:.6pt solid ${I};border-top:2.2pt solid ${I};border-bottom:2.2pt solid ${I};font-size:10.5pt;padding:4px 1px}.stt tr.tr td:first-child{font:700 12pt Amiri,serif}
+.stt tr.tr td.gs{border-right:1.2pt solid ${I}}.stt tr.tr td.ks{border-right:2pt solid ${I}}
+.r1 .stt td{padding-top:7px;padding-bottom:7px;font-size:11.5pt}.r2 .stt td{padding-top:3.5px;padding-bottom:3.5px;font-size:10.5pt}.r3 .stt td{padding-top:3.5px;padding-bottom:3.5px}.r4 .stt td{padding-top:1.5px;padding-bottom:1.5px;font-size:8.5pt}
+.sgs{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:8px 0 2px;page-break-inside:avoid;text-align:center}
+.sgc b{display:block;font-size:11pt;color:${I}}.sgc i{display:block;height:24px;border-bottom:.8pt dotted #666}.sgc span{display:block;font-size:11pt;font-weight:700;margin-top:2px}
+.ft{display:flex;justify-content:space-between;margin-top:6px;padding-top:3px;border-top:.6pt solid ${L};font-size:8.5pt;color:#666}
+@media screen{body{background:#dfe3e8;padding:14px}.pg{background:#fff;width:297mm;margin:0 auto 14px;box-shadow:0 4px 18px rgba(0,0,0,.18)}}
+@media print{.pg{border-width:.8pt;border-top-width:2.5pt}}`;
+ w.document.write(`<!doctype html><html lang=ar dir=rtl><meta charset=utf-8><title>البيان الإحصائي ${Y}/${Y+1}</title><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@500;700&display=swap" rel=stylesheet><style>${css}</style>${pg}`);w.document.close();
+ setTimeout(()=>{(w.document.fonts&&w.document.fonts.ready||Promise.resolve()).then(()=>{w.document.querySelectorAll('.pg').forEach(p=>{const H=730,h=p.scrollHeight;if(h>H&&h<H/.6)p.style.zoom=(H/h*.98).toFixed(3)});w.print()})},700)}
 function stXlsx(){const B=STB||stBuild(STY,STSP),Y=B.Y,L=STL(),wb=XLSX.utils.book_new();
  ['dp','m','d'].forEach(f=>{const ks=STF[f],ord=B.keys(ks),W=2+ks.length*12,mg=[{s:{r:0,c:0},e:{r:3,c:0}},{s:{r:0,c:1},e:{r:3,c:1}}],r0=['القسم','التخصص'],r1=['',''],r2=['',''],r3=['',''];
   ks.forEach((k,x)=>{const c0=2+x*12;r0.push(L[k].t,...Array(11).fill(''));mg.push({s:{r:0,c:c0},e:{r:0,c:c0+11}});['p','c','g'].forEach((c,y)=>{const a=c0+y*4;r1.push((c=='g'?'الحاصلون':L[k].a+(c=='p'?' من':''))+(c=='p'?' الأعوام السابقة':c=='c'?` العام الجامعي ${Y}/${Y+1}`:` العام الجامعي ${Y-1}/${Y}`),'','','');mg.push({s:{r:1,c:a},e:{r:1,c:a+3}});r2.push('ذكر','','أنثى','');mg.push({s:{r:2,c:a},e:{r:2,c:a+1}},{s:{r:2,c:a+2},e:{r:2,c:a+3}});r3.push('مصري','وافد','مصري','وافد')})});
