@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>منظومة الدراسات العليا</title>
 <script>try{var d=document.documentElement,t=localStorage.getItem('lk_th'),s=localStorage.getItem('lk_sk');if(t)d.dataset.th=t;if(s)d.dataset.sk=s;var q=localStorage.getItem('lk_rl');if(q)d.dataset.rl=q}catch(e){}</script>
-<meta name="theme-color" content="#0e4748"><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#2f6f6b"><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 :root{--p:#0e4748;--p2:#18696a;--pt:var(--p);--g:#b8923f;--g2:#e3c984;--bg:#eff3f2;--t:#14282a;--m:#667b7b;--r:#c4443a;--o:#d4832a;--y:#9a7420;--ok:#1f8a5b;--b:#e0e8e6;--b2:#cdd9d6;
@@ -564,7 +564,60 @@ body:has(#md.on) .mx-fab{display:none!important}
 body:has(#md.on){overflow:hidden}
 @media(max-width:600px){.fg[style*="2fr"]{grid-template-columns:minmax(0,1fr) auto!important}.fg[style*="2fr"]>input{grid-column:1/-1}}
 @media(max-width:700px){.qk-ov{align-items:flex-start!important;padding-top:calc(var(--mx-sat) + 10px)!important}}
-</style></head><body>
+</style><style id="comfort-css">
+/* ===== Comfort layer · لوحة هادئة مريحة للعين (تُحقن آخر الـ head) ===== */
+:root{--p:#2f6f6b;--p2:#4a8c86;--g:#c4a35a;--g2:#ecd9a4;--bg:#f5f3ee;--t:#2b3a3a;--m:#6b7b79;--b:#e8e4da;--b2:#d8d3c6;
+--card:#fffefb;--cardrgb:255,254,251;--soft:#faf8f3;--soft2:#f6f5ee;--hov:#edf2ee;--blob:#dfeae4;--stage:#e3e1d9;--track:#e6e8e0;--hd:#255855;--lg1:#1d4745;
+--r:#c85a50;--o:#cf8a3c;--y:#98782a;--ok:#3f9a6e;--okbg:#e4f1e8;--rbg:#faeceb;--obg:#fbf0dd;--obt:#9b6523;--gbg:#f3ead0;--gbt:#6d5516;--wnt:#7a4f14;
+--rc:18px;--rs:12px;--rm:16px;--rb:24px;
+--sh:0 1px 2px color-mix(in srgb,var(--p) 4%,transparent),0 8px 24px -14px color-mix(in srgb,var(--p) 18%,transparent)}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{scrollbar-width:thin;scrollbar-color:var(--b2) transparent}
+::selection{background:color-mix(in srgb,var(--g2) 60%,transparent);color:var(--t)}
+body{font-size:15.5px;line-height:1.8;color:var(--t);
+background:radial-gradient(900px 380px at 90% -120px,var(--blob),transparent),radial-gradient(720px 440px at 0 108%,color-mix(in srgb,var(--g2) 24%,transparent),transparent),var(--bg)}
+:focus-visible{outline:2px solid color-mix(in srgb,var(--p2) 70%,transparent);outline-offset:3px}
+::placeholder{color:color-mix(in srgb,var(--m) 68%,transparent);opacity:1}
+header{background:linear-gradient(120deg,var(--hd),var(--p) 62%,var(--p2));box-shadow:0 1px 0 color-mix(in srgb,var(--g2) 30%,transparent),0 10px 26px -16px rgba(0,0,0,.35)}
+header h1{letter-spacing:.2px}
+.bell{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.16)}
+nav{background:rgba(var(--cardrgb),.82);border-bottom-color:color-mix(in srgb,var(--b) 80%,transparent)}
+html body nav button{font-weight:500;color:var(--m)}
+html body nav button.on{background:color-mix(in srgb,var(--p) 11%,var(--card));color:var(--pt);font-weight:600;box-shadow:inset 0 -3px 0 var(--g)}
+.cd,.rc,.st>div,.es{border:1px solid color-mix(in srgb,var(--b) 85%,transparent)}
+.cd h3{font-size:19px;letter-spacing:.1px}
+.st>div{padding:18px 18px 16px}
+.st b{font-variant-numeric:tabular-nums;font-weight:700}
+.st span{font-size:13px}
+.rc:hover{transform:translateY(-2px);box-shadow:0 2px 4px color-mix(in srgb,var(--p) 5%,transparent),0 16px 34px -18px color-mix(in srgb,var(--p) 26%,transparent)}
+.rc::before{height:3px;opacity:.85}
+.al{border-color:color-mix(in srgb,var(--b) 90%,transparent);background:var(--soft)}
+.al:hover{background:var(--card);box-shadow:var(--sh)}
+.em{background:var(--soft);border-color:var(--b2)}
+.tg{background:var(--soft);border-color:var(--b)}
+.rf>div{background:var(--soft)}
+input,select,textarea{border-color:var(--b2);background-color:var(--card)}
+input:hover,select:hover,textarea:hover{border-color:color-mix(in srgb,var(--p2) 45%,var(--b2))}
+input:focus,select:focus,textarea:focus{border-color:var(--p2);box-shadow:0 0 0 4px color-mix(in srgb,var(--p2) 13%,transparent)}
+.btn{font-weight:600;letter-spacing:.1px}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn.w{background:var(--card);box-shadow:inset 0 0 0 1px var(--b2)}
+.btn.w:hover{background:var(--soft2);filter:none}
+.btn.g{background:var(--gbg)}
+.btn.r{background:var(--rbg)}
+#md{background:color-mix(in srgb,var(--lg1) 42%,transparent);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px)}
+.mc{box-shadow:0 28px 70px -24px rgba(20,40,40,.4)}
+.mc h4{border-bottom-color:var(--b)}
+.eb{background:linear-gradient(120deg,var(--hd),var(--p) 62%,var(--p2))}
+#ts{background:var(--hd)}
+.lc{background:rgba(var(--cardrgb),.98);box-shadow:0 36px 80px -34px rgba(0,0,0,.5)}
+.lc h2,#appSplash h1{letter-spacing:.3px}
+.stt th{background:var(--soft2)}
+.stt th,.stt td{border-color:var(--b)}
+@media(max-width:700px){body{font-size:15px}.cd{padding:16px}.st>div{padding:14px}}
+</style>
+</head><body>
 <div id="appSplash" role="status" aria-label="جارٍ التحميل"><div class="aspl"><i class="aspr"></i><img data-l alt=""></div><h1>منظومة الدراسات العليا</h1><p>الإدارة</p><div class="aspb"><i></i></div></div>
 <script>(function(){var s=document.getElementById('appSplash'),t=Date.now(),d=0;function h(){if(d||!s)return;d=1;s.classList.add('out');setTimeout(function(){s.remove()},700)}function g(){setTimeout(h,Math.max(0,1500-(Date.now()-t)))}if(document.readyState=='complete')g();else addEventListener('load',g);setTimeout(h,5000)})()</script>
 
@@ -704,12 +757,12 @@ async function saveR(r){need();const sups=arr(r.supervisors),com=arr(r.committee
   if(seen[nid]){if(!same(seen[nid],name))throw mkErr('تم إدخال الرقم القومي نفسه لأكثر من مشرف باسم مختلف. راجع بيانات المشرفين.');return}
   seen[nid]=name;const list=Object.values(SUP),byId=list.find(x=>x.nid===nid),byName=list.find(x=>same(x.name,name)),acc=byId||(byName&&!byName.nid?byName:null);
   if(acc&&acc.name&&!same(acc.name,name))throw mkErr('الرقم القومي '+nid+' مرتبط بالفعل بحساب باسم «'+acc.name+'». راجع الرقم أو بيانات الحساب.');
-  plan.push({acc,name,job:String(s.j||'').trim(),nid})});
+  plan.push({acc,name,job:String(s.j||'').trim(),nid,ph:s.ph===undefined?undefined:String(s.ph).replace(/[^\d+]/g,'').slice(0,20)})});
  const id=r.id||nk(),created=r.created||cairo().d,upd={},creds=[],sids=[];
  for(const x of plan){let sid=x.acc?x.acc.id:nk();sids.push(sid);
-  if(x.acc&&x.acc.uid){const b='supervisors/'+sid+'/';if(x.acc.name!==x.name)upd[b+'name']=x.name;const j=x.job||x.acc.job;if(j!==x.acc.job)upd[b+'job']=j;if(x.acc.nid!==x.nid)upd[b+'nid']=x.nid;continue}
+  if(x.acc&&x.acc.uid){const b='supervisors/'+sid+'/';if(x.acc.name!==x.name)upd[b+'name']=x.name;const j=x.job||x.acc.job;if(j!==x.acc.job)upd[b+'job']=j;if(x.acc.nid!==x.nid)upd[b+'nid']=x.nid;if(x.ph!==undefined&&x.ph!==(x.acc.phone||''))upd[b+'phone']=x.ph;continue}
   const P=await provision({nid:x.nid,ver0:x.acc?x.acc.ver:0});
-  writeSup(upd,{sid,name:x.name,job:x.job||(x.acc&&x.acc.job)||'',phone:x.acc?x.acc.phone:'',nid:x.nid,active:x.acc?x.acc.active:true,oldUid:x.acc&&x.acc.uid,lastLogin:x.acc?x.acc.lastLogin:undefined},P);
+  writeSup(upd,{sid,name:x.name,job:x.job||(x.acc&&x.acc.job)||'',phone:x.ph!==undefined?x.ph:(x.acc?x.acc.phone:''),nid:x.nid,active:x.acc?x.acc.active:true,oldUid:x.acc&&x.acc.uid,lastLogin:x.acc?x.acc.lastLogin:undefined},P);
   creds.push({name:x.name,natId:x.nid,code:P.code});
   linksFor(x.nid,items).forEach(rid=>upd['sup_researchers/'+sid+'/'+rid]=true)}
  const old=items[id]?arr((items[id].priv||{}).sup).map(s=>clean(s.natId)).filter(Boolean):[],oldSids=Object.values(SUP).filter(s=>old.includes(s.nid)).map(s=>s.id);
@@ -1183,7 +1236,8 @@ if(/ماجستير|دكتوراه/.test(r.degree)&&r.regDate&&!s.length)w.push('
 if(/ماجستير|دكتوراه/.test(r.degree)&&c.length&&c.length!=3)w.push('لجنة الحكم 3 أعضاء (المادة 15)');
 if(/ماجستير|دكتوراه/.test(r.degree)&&c.length&&!c.some(x=>x.w=='ممتحن خارجي'))w.push('يلزم عضو واحد على الأقل من خارج الكلية/الجامعة');
 return w}
-const lrow=(k,o={})=>`<div class=lr data-k="${k}"><input placeholder="الاسم بالكامل" aria-label="اسم ${k=='s'?'المشرف':'العضو'}" value="${esc(o.n)}"><input placeholder="الوظيفة والجهة" aria-label="الوظيفة والجهة" value="${esc(o.j)}">${k=='s'?`<input class="snid" inputmode="numeric" maxlength=14 placeholder="الرقم القومي للمشرف (14 رقم)" aria-label="الرقم القومي للمشرف" value="${esc(o.natId||'')}"><button type="button" class="btn w" onclick="resetSupervisorAccess(this)" title="إصدار كلمة مرور جديدة للحساب الموحد">إعادة تعيين كلمة المرور</button>`:''}${k=='c'?`<select style="width:150px">${RL.map(x=>`<option ${o.w==x?'selected':''}>${x}</option>`).join('')}</select>`:''}<button type=button class="btn r" onclick="const m=this.closest('.mc');this.parentNode.remove();m.dispatchEvent(new Event('input'))">${ic('x')}</button></div>`;
+const phOf=o=>{const n=String(o.natId||'').replace(/\D/g,''),m=n&&SUPS.find(x=>String(x.natId||'').replace(/\D/g,'')==n);return m&&m.phone||''};
+const lrow=(k,o={})=>`<div class=lr data-k="${k}"><input placeholder="الاسم بالكامل" aria-label="اسم ${k=='s'?'المشرف':'العضو'}" value="${esc(o.n)}"><input placeholder="الوظيفة والجهة" aria-label="الوظيفة والجهة" value="${esc(o.j)}">${k=='s'?`<input class="snid" inputmode="numeric" maxlength=14 placeholder="الرقم القومي للمشرف (14 رقم)" aria-label="الرقم القومي للمشرف" value="${esc(o.natId||'')}"><input class="sph" type="tel" dir="ltr" inputmode="tel" maxlength=20 placeholder="رقم تليفون المشرف (اختياري)" aria-label="رقم تليفون المشرف" value="${esc(o.ph!=null?o.ph:phOf(o))}"><button type="button" class="btn w" onclick="resetSupervisorAccess(this)" title="إصدار كلمة مرور جديدة للحساب الموحد">إعادة تعيين كلمة المرور</button>`:''}${k=='c'?`<input class="sph" type="tel" dir="ltr" inputmode="tel" maxlength=20 placeholder="رقم التليفون (اختياري)" aria-label="رقم تليفون العضو" value="${esc(o.ph||'')}"><select style="width:150px">${RL.map(x=>`<option ${o.w==x?'selected':''}>${x}</option>`).join('')}</select>`:''}<button type=button class="btn r" onclick="const m=this.closest('.mc');this.parentNode.remove();m.dispatchEvent(new Event('input'))">${ic('x')}</button></div>`;
 const TK=['regDate','committeeDate','defenseDate','titleAr','titleEn'],fld=(k,l,t,o,v,p='f_')=>`<div ${p=='f_'&&TK.indexOf(k)>=0?'data-th ':''}style="${t=='t'?'grid-column:1/-1':''}"><label>${l}</label>${t=='t'?`<textarea id="${p}${k}" rows=2>${esc(v)}</textarea>`:t=='s'?`<select id="${p}${k}">${o.map(x=>`<option ${v==x?'selected':''}>${x}</option>`).join('')}</select>`:t=='d'?dpk(p+k,v):`<input id="${p}${k}" type="text" value="${esc(v)}">`}</div>`;
 const EK=['name','job','nationality','dept','specialty','degree','natId','phone','enrollDate','enrollEnd'];
 const esec=(i,t,d,b,x='')=>`<section class=es><div class=esh><span class=ei>${ic(i)}</span><div><b>${t}</b><small>${d}</small></div>${x}</div>${b}</section>`;
@@ -1216,13 +1270,14 @@ const m=$('.mc');m.addEventListener('input',()=>{ED.d=1;edUp(id);degUp()});degUp
 document.addEventListener('keydown',e=>{if(e.key=='Escape'&&$('#md.full .mc.ed'))edClose()});
 function gather(id){const r={...(R.find(x=>x.id==id)||{})};FD.forEach(f=>r[f[0]]=$('#f_'+f[0]).value.trim());
 r.natId=en(r.natId).replace(/\s/g,'');r.foreignId=en(r.foreignId||'').replace(/[\s\-]/g,'').toUpperCase();
-r.supervisors=[...document.querySelectorAll('.lr[data-k=s]')].map(d=>{const i=d.querySelectorAll('input');return{n:i[0].value.trim(),j:i[1].value.trim(),natId:en(i[2].value).replace(/\D/g,'')}}).filter(x=>x.n);
-r.committee=[...document.querySelectorAll('.lr[data-k=c]')].map(d=>{const i=d.querySelectorAll('input');return{n:i[0].value.trim(),j:i[1].value.trim(),w:d.querySelector('select').value}}).filter(x=>x.n);return r}
+r.supervisors=[...document.querySelectorAll('.lr[data-k=s]')].map(d=>{const i=d.querySelectorAll('input');return{n:i[0].value.trim(),j:i[1].value.trim(),natId:en(i[2].value).replace(/\D/g,''),ph:en(i[3]?i[3].value:'').replace(/[^\d+]/g,'')}}).filter(x=>x.n);
+r.committee=[...document.querySelectorAll('.lr[data-k=c]')].map(d=>{const i=d.querySelectorAll('input'),o={n:i[0].value.trim(),j:i[1].value.trim(),w:d.querySelector('select').value},ph=en(i[2]?i[2].value:'').replace(/[^\d+]/g,'');if(ph)o.ph=ph;return o}).filter(x=>x.n);return r}
 async function sv(id){
 const r=gather(id);
 if(!r.name)return toast('اكتب اسم الباحث');
 if($('.mc .dpk[data-s=bad]'))return toast('تأكد من صحة التواريخ المُدخلة');
-for(const q of r.supervisors){if(q.natId.length!==14)return toast('أدخل الرقم القومي الصحيح (14 رقم) للمشرف: '+q.n)}
+for(const q of r.supervisors){if(q.natId.length!==14)return toast('أدخل الرقم القومي الصحيح (14 رقم) للمشرف: '+q.n);if(q.ph&&q.ph.replace(/\D/g,'').length<8)return toast('رقم تليفون المشرف غير صحيح: '+q.n)}
+for(const q of r.committee){if(q.ph&&q.ph.replace(/\D/g,'').length<8)return toast('رقم تليفون عضو اللجنة غير صحيح: '+q.n)}
 const dp=R.find(x=>x.id!=r.id&&dk(x)==dk(r));
 if(dp&&!confirm('يوجد باحث مسجّل بنفس '+(r.natId||r.foreignId?'الرقم':'الاسم')+' ونفس الدرجة ('+(r.degree||'—')+') — غالباً مكرر.\n\nإن كنت تسجّل نفس الشخص في درجة أخرى فغيّر «الدرجة» أولاً.\nحفظ رغم ذلك؟'))return;
 try{
@@ -1372,12 +1427,49 @@ if(L=='ring')return `${o}<div class="rg ${p==null?'g':c}" style="--pc:${p==null?
 if(L=='path'){const ms=[['القيد',r.enrollDate],['المقررات',r.coursesDate],['التسجيل',r.regDate],['اللجنة',r.committeeDate],['المناقشة',r.defenseDate]];let la=-1;ms.forEach((m,i)=>{if(m[1])la=i});
 return `${o}<div class=rt><span class=av>${ini}</span><div class=ri><h4 title="${nm}">${nm}</h4><p>${job}</p></div>${ch}</div><div class=rtg>${tags}</div>${th}<div class=rpg><div class=rpl><span>مراحل الرسالة</span><b>${la+1} من 5</b></div><div class=stp>${ms.map((m,i)=>`<div class="s${m[1]?' d':''}${i==la?' cur':''}"><i></i><small>${m[0]}</small></div>`).join('')}</div></div>${bar}${due}${ac}</article>`}
 return `${o}<span class=wm>${ini}</span><small class=kk>${esc(r.degree||'باحث')}${r.dept?' • '+esc(r.dept):''}</small><h4 title="${nm}">${nm}</h4><p>${job}</p>${th}<div class=ln>${r.enrollDate?`<span>قيد ${fd(r.enrollDate)}</span>`:''}${r.enrollEnd?`<span>انتهاء ${fd(r.enrollEnd)}</span>`:''}<span>${sp} مشرف</span></div><div class=mf>${ch}${lt?`<em class=${c}>${lt}</em>`:''}</div>${due}${ac}</article>`}
-const DSL=[['classic','الحالي','التصميم الأصلي'],['diwan','ديوان','ترويسة مركزية وإطار مزدوج وزخرفة فاصلة'],['clean','نقي','سطور رفيعة بلا شبكة وعنوان واضح'],['frame','إطار','إطار علوي وسفلي سميك وشرائط عناوين رمادية'],['book','كتاب','جداول بأسلوب الكتب وفواصل مزخرفة'],['tab','بطاقات','حواف مستديرة وعناوين على هيئة بطاقات']];
+const DSL=[['classic','الحالي','التصميم الأصلي'],['diwan','ديوان','ترويسة مركزية وإطار مزدوج وزخرفة فاصلة'],['clean','نقي','سطور رفيعة بلا شبكة وعنوان واضح'],['frame','إطار','إطار علوي وسفلي سميك وشرائط عناوين رمادية'],['book','كتاب','جداول بأسلوب الكتب وفواصل مزخرفة'],['tab','بطاقات','حواف مستديرة وعناوين على هيئة بطاقات'],['royal','ملكي','كحلي وذهبي بترويسة مركزية وزخرفة ذهبية رقيقة'],['calm','هادئ','مساحات رحبة وخطوط ناعمة وبطاقات فاتحة مريحة للعين'],['acad','أكاديمي','شريط أخضر عميق وجداول منظمة بطابع جامعي رسمي']];
 const ORN=c=>`<table class=orn><tr><td class=ol></td><td class=om>${c}</td><td class=or></td></tr></table>`;
 function DH(k,h,u,f,d){const lg=`<img src="${LOGO}" width=78>`;
-if(k=='diwan')return `<div class=c>${lg}</div><div class="c ut">${u}</div><div class="c ft">كلية ${f} — إدارة الدراسات العليا</div>${ORN('❖')}<div class=dt>التاريخ: ${d}</div>`;
+if(k=='diwan'||k=='royal')return `<div class=c>${lg}</div><div class="c ut">${u}</div><div class="c ft">كلية ${f} — إدارة الدراسات العليا</div>${ORN('❖')}<div class=dt>التاريخ: ${d}</div>`;
 if(k=='book')return `<div class="c ut">${u}</div><div class="c ft">كلية ${f}</div><div class="c fs">إدارة الدراسات العليا</div>${ORN('◆ ◆ ◆')}<div class=dt>التاريخ: ${d}</div>`;
 return h}
+
+const DS2P=['royal','calm','acad'];
+const DS2=(()=>{const C={royal:['#1b2f4e','#a8864a','#f4f6fa','#b8c2d1'],calm:['#2d3239','#8b6f47','#f7f5f1','#d3ccc0'],acad:['#123f3d','#b8923f','#f1f6f5','#a9bfbc']};let s='';
+for(const p of DS2P){const[i,a,t,l]=C[p],q=x=>x.split(',').map(y=>'.ds-'+p+' '+y).join(',');
+s+=`body.ds-${p}{color:#1f2328;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+${q('.lt b,.tt,.dcr,.hh,th,.sg .rl,.bx .m1,.ut')}{color:${i}}${q('.lt,.ld,.dt,.fs,.sub,.bx .m2')}{color:#555}
+${q('.cl,.art,.lb,.rc2')}{color:#1f2328}
+`}
+s+=`body.ds-royal{border:.8pt solid #b8c2d1;border-top:5pt solid #1b2f4e;padding:36px 52px}
+.ds-royal .orn .ol,.ds-royal .orn .or{border-bottom:.9pt solid #a8864a}.ds-royal .orn .om{color:#a8864a}
+.ds-royal .bx{background:#f4f6fa;border:.8pt solid #b8c2d1;border-top:2.5pt solid #a8864a;border-bottom:2.5pt solid #a8864a;border-radius:0}
+.ds-royal .hh{border:0;border-right:4px solid #a8864a;background:#f4f6fa;padding:2px 10px}
+.ds-royal table{border:1.2pt solid #1b2f4e}.ds-royal td,.ds-royal th{border:.6pt solid #b8c2d1}.ds-royal th{background:#eef1f7}
+.ds-royal .sg .nm{border-top:.9pt solid #a8864a}.ds-royal .cn{border:.8pt solid #b8c2d1;border-right:3pt solid #a8864a;background:#fff;border-radius:0}
+.ds-royal .dcr span{border-top:1.2pt solid #a8864a;border-bottom:1.2pt solid #a8864a;letter-spacing:1pt}
+body.ds-calm{font-family:'IBM Plex Sans Arabic',Tahoma,Arial,sans-serif;font-size:11.5pt;line-height:1.95;padding:46px 62px}
+.ds-calm .lt{font-weight:normal;font-size:10.5pt}.ds-calm .lt b{font-size:14.5pt}
+.ds-calm .rl2{border:0;border-top:.6pt solid #d3ccc0;height:0;margin:12px 0 22px}
+.ds-calm .bx{background:#f7f5f1;border:0;border-radius:12px;padding:14px 18px}.ds-calm .bx .m1{font-size:20pt}.ds-calm .bx .m2{font-size:10.5pt}.ds-calm .bx .m3{font-size:12.5pt}
+.ds-calm .hh{border:0;border-bottom:.6pt solid #d3ccc0;color:#8b6f47;padding:0 0 3px;margin:20px 0 8px;font-size:12pt}
+.ds-calm table{border-top:1.2pt solid #2d3239}.ds-calm td,.ds-calm th{border:0;border-bottom:.5pt solid #d3ccc0;font-size:11pt}.ds-calm th{background:none;color:#666;font-weight:600}
+.ds-calm .sg .nm{border-top:.6pt solid #888}.ds-calm .cn{background:#f7f5f1;border:0;border-radius:12px}
+.ds-calm .dcr span{border:0;border-bottom:1.5pt solid #8b6f47}.ds-calm .tt{font-size:21pt}.ds-calm .lb{font-size:12.5pt;line-height:2.1}.ds-calm .ad2{font-size:13pt}.ds-calm .lz{font-size:14pt}.ds-calm .sgl{font-size:12.5pt}
+body.ds-acad{border-top:3pt solid #123f3d;border-bottom:3pt solid #123f3d;padding:36px 52px}
+.ds-acad .rl2{border-top:1.6pt solid #123f3d;border-bottom:.6pt solid #b8923f;height:3px}
+.ds-acad .bx{background:#f1f6f5;border:1pt solid #123f3d;border-radius:3px}
+.ds-acad .hh{background:#f1f6f5;border:0;border-top:1.2pt solid #123f3d;border-bottom:.5pt solid #a9bfbc;padding:2px 10px}
+.ds-acad table{border:1.2pt solid #123f3d}.ds-acad td,.ds-acad th{border:.7pt solid #a9bfbc}.ds-acad th{background:#e6efed}
+.ds-acad .sg .nm{border-top:1pt solid #123f3d}.ds-acad .cn{border:.8pt dashed #b8923f;background:#fff;border-radius:3px}
+.ds-acad .dcr span{border-top:1.4pt solid #123f3d;border-bottom:1.4pt solid #123f3d}
+`;return s})();
+function dsPrev2(k){const R=(x,y,w,h,f,e='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" ${e}/>`,P={royal:['#1b2f4e','#a8864a','#f4f6fa','#b8c2d1'],calm:['#2d3239','#8b6f47','#f7f5f1','#d3ccc0'],acad:['#123f3d','#b8923f','#f1f6f5','#a9bfbc']}[k],[I,A,T,L]=P;let s=R(0,0,100,70,'#fff');
+if(k=='royal'){s+=R(3,3,94,64,'none',`stroke="${L}" stroke-width=".6"`)+R(3,3,94,2.6,I)+R(44,9,12,7,A,'rx="1.5"')+R(28,18,44,2.6,I)+R(36,22.5,28,1.8,'#9a9a9a')+R(12,28,34,.7,A)+R(54,28,34,.7,A)+'<path d="M50 25.6l2.4 2.7-2.4 2.7-2.4-2.7z" fill="'+A+'"/>'+R(20,33,60,10,T,`stroke="${A}" stroke-width="1"`)+R(34,36.5,32,3,I)}
+if(k=='calm'){s+=R(78,9,12,9,'#c9bfae','rx="1.5"')+R(18,10,50,2.6,I)+R(18,15,36,1.8,'#aaa')+R(10,21,80,.5,L)+R(10,28,80,12,T,'rx="3"')+R(34,32.5,32,3,I)+R(10,44,22,1.8,A)}
+if(k=='acad'){s+=R(3,3,94,2,I)+R(3,65,94,2,I)+R(78,9,12,9,A,'rx="1.5"')+R(18,10,54,2.6,I)+R(18,15,38,1.8,'#9a9a9a')+R(10,21,80,1.2,I)+R(10,23,80,.4,A)+R(20,29,60,10,T,`stroke="${I}" stroke-width="1" rx="1"`)+R(34,32.5,32,3,I)}
+for(let i=0;i<4;i++){const y=45+i*5;s+=k=='calm'?(i?R(12,y+4,76,.4,L):'')+(i==0?R(12,y+4,76,.4,L):''):R(12,y,76,4,i==0?T:'#fff',`stroke="${L}" stroke-width=".5"`)}
+return `<svg viewBox="0 0 100 70" aria-hidden="true">${s}</svg>`}
 const DSS=`
 .orn{width:100%;border-collapse:collapse;margin:4px 0 8px}.orn td{border:0;padding:0}.orn .ol,.orn .or{width:44%;height:11px;border-bottom:.9pt solid #000}.orn .om{width:12%;text-align:center;font-size:13pt;color:#000}
 .ut{font-size:21pt;font-weight:bold;line-height:1.4}.ft{font-size:13.5pt}.fs{font-size:12pt;color:#333}.dt{font-size:11pt;color:#333;text-align:left;margin-bottom:8px}
@@ -1425,8 +1517,8 @@ body.ds-tab{border:1.2pt solid #333;border-radius:18px;padding:34px 46px}
 .ds-tab table{border:1.6pt solid #000;border-radius:10px}.ds-tab td,.ds-tab th{border:.8pt solid #444}.ds-tab th{background:#f2f2f2}
 .ds-tab .sg .nm{border-top:1pt dashed #000}.ds-tab .cn{border:1pt dashed #000;background:#fff;border-radius:12px}
 .ds-tab .dcr span{border:1.4pt solid #000;border-radius:16px;padding:3px 28px}
-`;
-function dsPrev(k){const R=(x,y,w,h,f,e='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" ${e}/>`,K='#222',G='#9a9a9a',L='#eee';let s=R(0,0,100,70,'#fff');
+`+DS2;
+function dsPrev(k){if(DS2P.includes(k))return dsPrev2(k);const R=(x,y,w,h,f,e='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" ${e}/>`,K='#222',G='#9a9a9a',L='#eee';let s=R(0,0,100,70,'#fff');
 if(k=='diwan')s+=R(3,3,94,64,'none',`stroke="${K}" stroke-width="2"`)+R(5.2,5.2,89.6,59.6,'none',`stroke="${K}" stroke-width=".5"`);
 if(k=='frame')s+=R(3,3,94,64,'none',`stroke="${K}" stroke-width=".6"`)+R(3,3,94,2.6,K)+R(3,64.4,94,2.6,K);
 if(k=='tab')s+=R(3,3,94,64,'none',`rx="7" stroke="${K}" stroke-width=".9"`);
@@ -1436,7 +1528,7 @@ s+=k=='diwan'?R(20,32,60,10,'#fff',`stroke="${K}" stroke-width="1.8"`)+R(34,35.5
 for(let i=0;i<4;i++){const y=45+i*5;s+=k=='clean'?R(12,y+4,76,.4,G):k=='book'?(i==0?R(12,y,76,.9,K):R(12,y+4,76,.4,G)):R(12,y,76,4,i==0?L:'#fff',`${k=='tab'?'rx="1.5" ':''}stroke="${K}" stroke-width=".4"`)}
 if(k=='book')s+=R(12,64,76,1.1,K);
 return `<svg viewBox="0 0 100 70" aria-hidden="true">${s}</svg>`}
-const TH=[['emerald','زمردي','#0a3435','#0e4748','#18696a','#b8923f','#eff3f2','#fff'],['navy','كحلي ملكي','#0e1c3b','#172b55','#2a4a8c','#b8923f','#eef1f7','#fff'],['burgundy','عنابي','#4a1223','#6d1f36','#9a3350','#c09a5b','#f6f0f1','#fff'],['violet','بنفسجي','#2f2058','#46327e','#6a4fb3','#c29a46','#f3f0f9','#fff'],['graphite','جرافيت','#1a2029','#2b3440','#4a5a6e','#c07a3c','#f1f2f4','#fff'],['sand','رملي','#3d3019','#5b4a2e','#8c7344','#a9803a','#f6f2ea','#fff'],['night','ليلي','#071b1c','#1b807a','#2a9d94','#d3a84e','#0c1416','#142124']];
+const TH=[['emerald','زمردي هادئ','#255855','#2f6f6b','#4a8c86','#c4a35a','#f5f3ee','#fffefb'],['navy','كحلي ملكي','#0e1c3b','#172b55','#2a4a8c','#b8923f','#eef1f7','#fff'],['burgundy','عنابي','#4a1223','#6d1f36','#9a3350','#c09a5b','#f6f0f1','#fff'],['violet','بنفسجي','#2f2058','#46327e','#6a4fb3','#c29a46','#f3f0f9','#fff'],['graphite','جرافيت','#1a2029','#2b3440','#4a5a6e','#c07a3c','#f1f2f4','#fff'],['sand','رملي','#3d3019','#5b4a2e','#8c7344','#a9803a','#f6f2ea','#fff'],['night','ليلي','#071b1c','#1b807a','#2a9d94','#d3a84e','#0c1416','#142124']];
 const SKS=[['soft','ناعم','زوايا مستديرة وظلال هادئة'],['glass','زجاجي','شفافية وضبابية فوق خلفية متدرجة'],['formal','رسمي','خطوط دقيقة وزوايا حادة بطابع إداري'],['modern','عصري','بطاقات ملوّنة وأزرار دائرية'],['compact','مدمج','مساحات أصغر لعرض بيانات أكثر']];
 const LK={th:'emerald',sk:'soft',rl:'classic',ds:'classic'};
 try{const a=localStorage.getItem('lk_th'),b=localStorage.getItem('lk_sk');if(TH.some(t=>t[0]==a))LK.th=a;if(SKS.some(t=>t[0]==b))LK.sk=b;const c=localStorage.getItem('lk_rl');if(RLS.some(t=>t[0]==c))LK.rl=c;const e=localStorage.getItem('lk_ds');if(DSL.some(t=>t[0]==e))LK.ds=e}catch(e){}
@@ -1481,10 +1573,14 @@ ${d.ex.length?`<div class=sec><h4>بيانات هذا النموذج</h4><div cl
 ${ap.length?`<div class=sec><h4>تواريخ الموافقات</h4><div class=fg>${ap.map(a=>fld(a[0],a[1],a[2],0,q[a[0]]||'','x_')).join('')}</div></div>`:''}
 <div class=fa><button class=btn onclick="pv('${id}','${t}')">${ic('doc')}معاينة وطباعة</button><button class="btn w" onclick="X()">إلغاء</button></div></div>`)}
 function pv(id,t){if($('.mc .dpk[data-s=bad]'))return toast('تأكد من صحة التواريخ المُدخلة');const r=R.find(x=>x.id==id),x={};[...DT[t].ex,...AP.map(a=>a[0])].forEach(k=>{const e=$('#x_'+k);if(e)x[k]=e.value.trim()});const h=mk(t,r,x),z=Math.min(1,(innerWidth-130)/794);
-M(`<div class="mc pvw"><div class=pt><div class=pth><h3>${DT[t].n}</h3><p>${esc(r.name)}</p></div><div class=pta><button class=btn onclick="$('#pf').contentWindow.print()">${ic('print')}طباعة / PDF</button><button class="btn g" onclick="wd('${t}')">${ic('doc')}تحميل Word</button><button class="btn w" onclick="lg('${id}','${t}')">${ic('save')}حفظ في السجل</button><button class="btn w" onclick="dform('${id}','${t}')">${ic('edit')}تعديل البيانات</button><button class="btn w ib" onclick="X()" aria-label="إغلاق">${ic('x')}</button></div></div><p class=hint>${ic('edit')}اضغط على أي نص داخل الورقة لتعديله قبل الطباعة.</p><div class=stage><div class=sheet style="zoom:${z}"><iframe id=pf srcdoc="${esc(h)}" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+'px'"></iframe></div></div></div>`);window.CX={x,k:id+'|'+t}}
+M(`<div class="mc pvw"><div class=pt><div class=pth><h3>${DT[t].n}</h3><p>${esc(r.name)}</p></div><div class=pta><button class=btn onclick="pfPrint()">${ic('print')}طباعة / PDF</button><button class="btn g" onclick="wd('${t}')">${ic('doc')}تحميل Word</button><button class="btn w" onclick="lg('${id}','${t}')">${ic('save')}حفظ في السجل</button><button class="btn w" onclick="dform('${id}','${t}')">${ic('edit')}تعديل البيانات</button><button class="btn w ib" onclick="X()" aria-label="إغلاق">${ic('x')}</button></div></div><p class=hint>${ic('edit')}اضغط على أي نص داخل الورقة لتعديله قبل الطباعة.</p><div class=stage><div class=sheet style="zoom:${z}"><iframe id=pf srcdoc="${esc(h)}" onload="this.style.height=this.contentDocument.documentElement.scrollHeight+'px'"></iframe></div></div></div>`);window.CX={x,k:id+'|'+t}}
+function pfPrint(){const f=$('#pf'),w=f.contentWindow,d=f.contentDocument,b=d.body;b.style.zoom='';
+const cs=w.getComputedStyle(b),pad=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0),h=b.getBoundingClientRect().height-(LK.ds=='classic'?pad:0),AV=1000;
+if(h>AV){const z=Math.max(.55,AV/h);b.style.zoom=z.toFixed(3);toast('تم ضغط النموذج تلقائياً ليناسب صفحة واحدة')}
+const rs=()=>{b.style.zoom=''};w.addEventListener('afterprint',rs,{once:true});setTimeout(()=>w.print(),80)}
 const wd=t=>{const b=new Blob(['\ufeff'+$('#pf').contentDocument.documentElement.outerHTML],{type:'application/msword'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=DT[t].n+'.doc';a.click()};
 async function lg(id,t){await api('save',{t:'docs',row:{rid:id,type:DT[t].n,date:iso(now()),data:window.CX.x}});toast('تم الحفظ في سجل النماذج')}
-function mk(t,r,x){const d=DT[t],F=fd,v=s=>esc(s||''),css=`<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet"><style>
+function mk(t,r,x){const d=DT[t],F=fd,v=s=>esc(s||''),css=`<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet"><style>
 @page{size:A4;margin:12mm 14mm}*{box-sizing:border-box}
 body{font:13.5pt/1.75 Amiri,'Traditional Arabic','Sakkal Majalla',Arial,sans-serif;direction:rtl;margin:0;padding:48px 56px;color:#14282a;outline:0}
 @media print{body{padding:0}}
